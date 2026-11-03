@@ -23,7 +23,7 @@ O arquivo [TechTalent_01_Excel.xlsx](../01-excel/TechTalent_01_Excel.xlsx) forne
 - Preparação das entradas e organização das pastas: concluída e conferida.
 - Parâmetros, importações e diagnóstico de colunas: concluídos e executados no Excel.
 - Tratamento, dimensões e registros rejeitados: concluídos e executados no Excel.
-- Metas, exportações e conferências de atualização: próximo marco.
+- Metas, exportações e conferências de atualização: concluídas no Excel.
 - Documentação e evidências finais: próximo marco.
 
 Nesta etapa, os arquivos `.pq` de cada consulta são parte da entrega exigida pelo professor e serão publicados em `scripts_m/`. Scripts Python, PowerShell e metadados técnicos de apoio permanecem no ZIP local.
@@ -80,3 +80,22 @@ Cada registro recusado recebe o primeiro motivo efetivo do fluxo. A auditoria da
 Campos descritivos opcionais ausentes recebem rótulos explícitos de ausência. Quantidade e salário não recebem zero no lugar de nulo. Códigos de cargo ou órgão sem correspondência são rejeitados. Valores fora das listas auxiliares permanecem identificáveis; não são substituídos por uma categoria arbitrária.
 
 A moeda das vagas do portal não foi informada na extração e permanece `Não informada`. A periodicidade da base salarial histórica permanece `Não confirmada`. Os anúncios são uma amostra do portal NYC, com publicações internas e externas; não representam todo o mercado nem necessariamente oportunidades ainda abertas. Comparações salariais futuras precisam respeitar essas limitações.
+
+## Metas, conferências e dados limpos
+
+O planejamento fictício é despivotado de duas linhas largas para 12 combinações empresa/mês. A soma de 31 contratações planejadas é preservada. Os valores foram criados para a demonstração acadêmica: as fontes reais utilizadas não fornecem esse planejamento das empresas simuladas.
+
+A pasta de trabalho possui 49 consultas nativas e 13 tabelas carregadas. `Conf_Reconciliacao`, `Conf_Motivos`, `Conf_Etapas`, `Conf_Metas` e `Conf_Colunas` mostram a cobertura dos registros, as razões dos descartes, as contagens por estágio, a preservação das metas e o contrato de entrada.
+
+| Base | Lidas | Aceitas | Rejeitadas | Diferença |
+| --- | ---: | ---: | ---: | ---: |
+| Vagas NYC | 225 | 225 | 0 | 0 |
+| Vagas simuladas | 15 | 7 | 8 | 0 |
+| Observações salariais | 6.599 | 6.599 | 0 | 0 |
+| Total | 6.839 | 6.831 | 8 | 0 |
+
+Os CSV públicos são [fVagas.csv](dados_limpos/fVagas.csv), com 232 linhas e 36 colunas, e [fSalarios.csv](dados_limpos/fSalarios.csv), com 6.599 linhas e 21 colunas. Usam UTF-8 com BOM, vírgula, campos entre aspas, datas ISO e decimais com ponto. A leitura integral dos arquivos exportados reproduziu os valores obtidos na atualização nativa. Exportações complementares ficam somente no pacote local de apoio.
+
+Foram aprovadas 63 verificações independentes, 34 casos de funções e 21 cenários nativos. O reenvio de uma planilha com 225 anúncios produziu 465 registros brutos de vagas, mantendo 232 aceitos e 233 rejeitados; ao retirar o reenvio, a base voltou a 240/232/8. A diferença permaneceu zero. A segunda deduplicação reconheceu variações normalizadas, a quantidade 1,5 foi rejeitada antes da conversão inteira e um novo mês passou de 12 para 14 linhas de planejamento, sem alterar o código do despivotamento.
+
+As 13 cargas passaram por atualização síncrona com a combinação rápida desativada. Após reabrir o arquivo de teste, 149.000 células conferiram sem divergências. As provas alteraram somente cópias temporárias. A organização visual dos grupos e as três capturas exigidas pelo guia ainda serão concluídas no último marco.
