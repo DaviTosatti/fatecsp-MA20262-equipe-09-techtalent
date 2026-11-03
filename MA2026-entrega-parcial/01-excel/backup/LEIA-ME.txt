@@ -12,5 +12,12 @@ commit d6da846, arquivo MA2026-entrega-parcial/01-excel/data_science_salaries_or
 O histórico menciona Kaggle, mas não informa URL, autor, licença ou metodologia.
 Esses dados de proveniência permanecem pendentes de confirmação.
 
+Atualização da conferência em 03/11/2026: o CSV público de Sazidul Islam,
+https://www.kaggle.com/datasets/sazidthe1/data-science-salaries,
+possui os mesmos 6.599 registros, 11 campos e ordem do Excel preservado.
+A origem e a licença declarada estão descritas em
+../../04-documentacao/roteiro-fase-um.md. A periodicidade salarial continua
+sem confirmação na descrição consultada.
+
 Não editar estas cópias. Os tratamentos da Fase I pertencem ao novo arquivo
 de trabalho e devem preservar a comparação com os valores de origem.
