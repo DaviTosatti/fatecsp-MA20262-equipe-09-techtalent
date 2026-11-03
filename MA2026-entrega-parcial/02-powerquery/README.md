@@ -1,101 +1,242 @@
-# Etapa II — Power Query aplicado ao TechTalent
+# TechTalent — Etapa 2: Power Query
 
-A preparação segue o Guia Prático da Etapa 2, com 42 páginas, e o projeto-modelo complementar de 14 páginas. As consultas serão adaptadas ao mercado de tecnologia e manterão os grãos distintos de vagas e observações salariais.
+Preparação de vagas e observações salariais para analisar cargos, habilidades, faixas salariais e localidades do mercado de tecnologia. A execução adapta as nove atividades do **Guia Prático — Etapa 2: Power Query**, preservando os dados e os cadastros da [Etapa 1](../01-excel/TechTalent_01_Excel.xlsx).
 
-## Preparação das entradas
+**Situação da revisão:** consultas, cargas, exportações, testes funcionais e organização dos seis grupos conferidos no Excel nativo. As três capturas exigidas pelo guia estão disponíveis em `evidencias/`; os 13 itens de conferência estão concluídos.
 
-| Arquivo | Conteúdo | Natureza |
-| --- | --- | --- |
-| `dados_brutos/vagas/vagas_portal_publico.xlsx` | 225 anúncios e os 30 campos originais do NYC Open Data, acrescidos de marcadores de origem e ligação com a Etapa I. | Real. |
-| `dados_brutos/vagas/vagas_estudo_simulado.xlsx` | Os mesmos 15 registros fictícios da tabela mista da Etapa I, com os valores originais preservados. Os cabeçalhos `Qtd` e `Data_Publicacao` demonstram diferenças de estrutura. | Simulado. |
-| `dados_brutos/planejamento_contratacoes_SIMULADO.xlsx` | Planejamento fictício de contratações de duas empresas, em seis meses de 2026. O despivotamento deverá produzir 12 linhas, com total de 31 contratações planejadas. | Simulado. |
+## Arquivos e fontes
 
-As cópias de ingresso preservam valores e tipos da base da Etapa I. Os marcadores adicionais explicam a fonte, a cultura numérica e o registro anterior. Não representam dados novos coletados do mercado.
+```text
+02-powerquery/
+├── TechTalent_02_PowerQuery.xlsx
+├── README.md
+├── dados_brutos/
+│   ├── vagas/
+│   │   ├── vagas_portal_publico.xlsx
+│   │   └── vagas_estudo_simulado.xlsx
+│   └── planejamento_contratacoes_SIMULADO.xlsx
+├── dados_limpos/
+│   ├── fVagas.csv
+│   └── fSalarios.csv
+├── scripts_m/                    49 consultas, um arquivo UTF-8 por consulta
+└── evidencias/                   três capturas reais do Excel
+```
 
-O planejamento mensal foi criado ficcionalmente para demonstrar a transformação de uma fonte larga em linhas por empresa e mês. Não é previsão de mercado. Os 15 cenários das vagas também são fictícios e continuam identificados pela coluna `Fonte`.
-
-A pasta de ingestão de vagas contém somente os dois arquivos elegíveis. Backups, arquivos temporários e saídas ficam fora dela. A base salarial possui uma única entrada canônica: a tabela da Etapa I, evitando importar novamente o backup ou o CSV equivalente.
-
-O arquivo [TechTalent_01_Excel.xlsx](../01-excel/TechTalent_01_Excel.xlsx) fornece os cadastros e a base salarial. Ele deve permanecer salvo e fechado durante a atualização. A Etapa I e os seus backups são preservados.
-
-## Marcos de desenvolvimento
-
-- Preparação das entradas e organização das pastas: concluída e conferida.
-- Parâmetros, importações e diagnóstico de colunas: concluídos e executados no Excel.
-- Tratamento, dimensões e registros rejeitados: concluídos e executados no Excel.
-- Metas, exportações e conferências de atualização: concluídas no Excel.
-- Documentação e evidências finais: próximo marco.
-
-Nesta etapa, os arquivos `.pq` de cada consulta são parte da entrega exigida pelo professor e serão publicados em `scripts_m/`. Scripts Python, PowerShell e metadados técnicos de apoio permanecem no ZIP local.
-
-## Parâmetros e importação
-
-A pasta [TechTalent_02_PowerQuery.xlsx](TechTalent_02_PowerQuery.xlsx) contém consultas nativas do Power Query. Neste marco, são 21 consultas: parâmetros, funções de leitura e conversão, contrato de colunas, acesso à Etapa I, estágio bruto e diagnóstico. Somente `Conf_Colunas` está carregada, na aba `Conferencia`, a partir de A60. As tabelas de saída serão preenchidas no próximo marco.
-
-Ao mover o repositório para outro computador, abra o Editor do Power Query e ajuste **pPastaProjeto**, em Gerenciar Parâmetros, para o caminho absoluto de `MA2026-entrega-parcial/02-powerquery/`, incluindo a barra final. Os parâmetros `pPastaVagas`, `pArquivoEtapa1` e `pArquivoMetas` derivam desse caminho. A aba `Parametros` mostra a pasta atual para ajudar na configuração. As culturas numéricas são explícitas: `en-US` para os números textuais do portal e `pt-BR` para os cenários simulados.
-
-`fnLerPlanilha` seleciona uma aba do tipo `Sheet`, promove o cabeçalho e preserva a linha de origem antes dos filtros. A leitura da pasta aceita `.xlsx` sem diferenciar maiúsculas e ignora arquivos de bloqueio iniciados por `~$`. A referência cadastral lê as tabelas estruturadas do arquivo da Etapa I salvo e fechado.
-
-O diagnóstico registra os cabeçalhos originais e padronizados de cada arquivo. Na execução deste marco, os dois arquivos tiveram zero colunas não mapeadas, ausentes ou em colisão. Nomes divergentes, como `Qtd` e `Data_Publicacao`, possuem correspondência explícita em `DeParaColunas`.
-
-Foram conferidos 34 casos de conversão no motor nativo: datas tipadas, seriais e textuais; horários tipados, fracionários e textuais; datas impossíveis; números nos dois padrões; campos nulos; espaços repetidos e NBSP. Todos passaram. Os valores não conversíveis permanecem nulos para a validação posterior; quantidades fracionárias não são arredondadas para aparentar validade.
-
-## Tratamento e relacionamento
-
-O segundo marco de consultas acrescenta os cadastros, as dimensões, os tratamentos e os rejeitados. A pasta de trabalho passa a ter 43 consultas nativas e oito tabelas carregadas, incluindo o diagnóstico inicial.
-
-| Saída | Linhas | Significado |
-| --- | ---: | --- |
-| `fVagas` | 232 | 225 anúncios reais e sete eventos simulados aceitos. Inclui localidade, jornada, habilidades, faixa salarial e linhagem. |
-| `fSalarios` | 6.599 | Observações salariais reais da Etapa I, sem deduplicar observações apenas por terem os mesmos valores. |
-| `Rejeitados` | 8 | Registros simulados recusados pelas regras, com campos originais, arquivo, linha e motivo principal. |
-| `dCargo` | 45 | 41 códigos de cargos públicos da fonte NYC e quatro cargos simulados. |
-| `dOrgao` | 31 | 29 órgãos reais e duas empresas fictícias. |
-| `dCargoSalarios` | 132 | Cadastro próprio dos cargos das observações salariais. |
-| `dPais` | 89 | Cadastro de países da Etapa I. |
-
-O grão das vagas é um evento de publicação identificado por fonte, identificador, tipo de publicação, data, horário e códigos de cargo e órgão. Publicações internas e externas do mesmo cargo permanecem distintas. Os dois eventos `SIM-001` também permanecem, pois suas datas e horários diferem.
-
-As duplicidades são tratadas em duas passagens: chave bruta e chave oficial após a normalização e os relacionamentos. A ordenação por arquivo e linha, seguida de `Table.Buffer`, define qual registro permanece. Os relacionamentos usam correspondências explícitas; não há aproximação de nomes para preencher códigos desconhecidos.
-
-`proc_Vagas` concentra as regras, os descartes e as contagens. `fVagas` apresenta os 21 estágios desse mesmo processo como Etapas Aplicadas selecionáveis, sem repetir as regras. A limpeza inclui espaços excedentes e NBSP; as siglas são preservadas. A categoria usa `Text.Proper` e a descrição oficial do cadastro quando existe.
-
-As colunas calculadas próprias do tema são `Amplitude_Salarial`, `Ponto_Medio_Faixa` e `Mes_Publicacao`. Os cálculos de faixa mantêm a moeda e a periodicidade de cada registro; não convertem moedas nem transformam salários de periodicidade desconhecida em valores anuais.
-
-## Rejeições e pendências
-
-Cada registro recusado recebe o primeiro motivo efetivo do fluxo. A auditoria da Etapa I pode ter várias ocorrências para o mesmo registro e continua preservada.
-
-| Registro da Etapa I | Motivo principal |
+| Entrada | Conteúdo e origem |
 | --- | --- |
-| SIM-VAG-004 | Quantidade vazia. |
-| SIM-VAG-005 | Quantidade zero. |
-| SIM-VAG-006 | Quantidade negativa. |
-| SIM-VAG-007 | Quantidade não numérica (`duas`). Seu salário textual `10000,00` é conversível. |
-| SIM-VAG-008 | Data inválida (`31/02/2026`). |
-| SIM-VAG-009 | Data fora do recorte de 2026. O horário 05:30 é válido nesta etapa. |
-| SIM-VAG-010 | Hora inválida. O desvio salarial, isoladamente, não provoca rejeição. |
-| SIM-VAG-012 | Órgão sem correspondência confirmada. O cargo com erro de grafia também permanece pendente na Etapa I. |
+| `vagas_portal_publico.xlsx` | 225 anúncios reais do [Jobs NYC Postings / NYC Open Data](https://data.cityofnewyork.us/City-Government/Jobs-NYC-Postings/kpav-sd4t), já preservados na Etapa 1; 30 campos originais e metadados de rastreio. Extração de 03/11/2026. |
+| `vagas_estudo_simulado.xlsx` | Os mesmos 15 casos fictícios de vagas da Etapa 1, identificados como `SIMULADO`. Os cabeçalhos `Qtd` e `Data_Publicacao` demonstram diferenças de estrutura. |
+| `TechTalent_01_Excel.xlsx`, na pasta `01-excel` | Tabelas de referência e 6.599 observações da base [Data Science Salaries 2024](https://www.kaggle.com/datasets/sazidthe1/data-science-salaries), de 2020 a 2024. |
+| `planejamento_contratacoes_SIMULADO.xlsx` | Planejamento fictício de duas empresas e seis meses de 2026: 12 combinações empresa/mês, total de 31 contratações planejadas. |
 
-Campos descritivos opcionais ausentes recebem rótulos explícitos de ausência. Quantidade e salário não recebem zero no lugar de nulo. Códigos de cargo ou órgão sem correspondência são rejeitados. Valores fora das listas auxiliares permanecem identificáveis; não são substituídos por uma categoria arbitrária.
+O [roteiro da Etapa 1](../04-documentacao/roteiro-fase-um.md) detalha a proveniência, os cadastros e a auditoria anterior. Os dados NYC seguem os [termos do portal](https://data.cityofnewyork.us/stories/s/Terms-of-Use/k9k7-3cje). A atualização lê cópias locais; não realiza nova coleta na internet.
 
-A moeda das vagas do portal não foi informada na extração e permanece `Não informada`. A periodicidade da base salarial histórica permanece `Não confirmada`. Os anúncios são uma amostra do portal NYC, com publicações internas e externas; não representam todo o mercado nem necessariamente oportunidades ainda abertas. Comparações salariais futuras precisam respeitar essas limitações.
+As fontes reais e os casos fictícios permanecem identificáveis pela coluna `Fonte`. Os 15 casos aparecem uma única vez na entrada de vagas desta etapa; o laboratório da Etapa 1 não é acrescentado novamente. O planejamento é uma demonstração acadêmica, sem representar previsão de mercado.
 
-## Metas, conferências e dados limpos
+Foram conferidos os hashes dos nove arquivos de origem, referência e backup, sem alteração de conteúdo. Os três arquivos de ingresso da Etapa 2 permanecem como Somente Leitura. Após clonar, marque novamente essas entradas como Somente Leitura, pois o Git não preserva esse atributo do Windows. A pasta de vagas contém somente os dois arquivos elegíveis; backups e saídas ficam fora dela.
 
-O planejamento fictício é despivotado de duas linhas largas para 12 combinações empresa/mês. A soma de 31 contratações planejadas é preservada. Os valores foram criados para a demonstração acadêmica: as fontes reais utilizadas não fornecem esse planejamento das empresas simuladas.
+## Configuração e atualização
 
-A pasta de trabalho possui 49 consultas nativas e 13 tabelas carregadas. `Conf_Reconciliacao`, `Conf_Motivos`, `Conf_Etapas`, `Conf_Metas` e `Conf_Colunas` mostram a cobertura dos registros, as razões dos descartes, as contagens por estágio, a preservação das metas e o contrato de entrada.
+Use o Excel para Windows com Power Query. Mantenha a estrutura de pastas, salve e feche a Etapa 1 e abra [TechTalent_02_PowerQuery.xlsx](TechTalent_02_PowerQuery.xlsx). Em **Dados → Obter Dados → Iniciar Editor do Power Query → Gerenciar Parâmetros**, ajuste `pPastaProjeto` para a pasta absoluta de `02-powerquery`, incluindo a barra final. Os outros caminhos derivam desse parâmetro.
 
-| Base | Lidas | Aceitas | Rejeitadas | Diferença |
-| --- | ---: | ---: | ---: | ---: |
-| Vagas NYC | 225 | 225 | 0 | 0 |
-| Vagas simuladas | 15 | 7 | 8 | 0 |
-| Observações salariais | 6.599 | 6.599 | 0 | 0 |
-| Total | 6.839 | 6.831 | 8 | 0 |
+| Parâmetro | Valor ou expressão |
+| --- | --- |
+| `pPastaProjeto` | Texto editável: caminho absoluto local de `MA2026-entrega-parcial\02-powerquery\`. |
+| `pPastaVagas` | `pPastaProjeto & "dados_brutos\vagas\"` |
+| `pArquivoEtapa1` | `pPastaProjeto & "..\01-excel\TechTalent_01_Excel.xlsx"` |
+| `pArquivoMetas` | `pPastaProjeto & "dados_brutos\planejamento_contratacoes_SIMULADO.xlsx"` |
+| `pDataInicio` | `#date(2026, 1, 1)` |
+| `pDataFim` | `#date(2026, 12, 31)` |
+| `pCulturaPadrao` | `"pt-BR"`; os números textuais NYC usam `en-US` conforme a origem. |
 
-Os CSV públicos são [fVagas.csv](dados_limpos/fVagas.csv), com 232 linhas e 36 colunas, e [fSalarios.csv](dados_limpos/fSalarios.csv), com 6.599 linhas e 21 colunas. Usam UTF-8 com BOM, vírgula, campos entre aspas, datas ISO e decimais com ponto. A leitura integral dos arquivos exportados reproduziu os valores obtidos na atualização nativa. Exportações complementares ficam somente no pacote local de apoio.
+Os sete parâmetros são obrigatórios e possuem metadados de parâmetro no M. O intervalo de datas vale para as vagas; as observações salariais mantêm os anos de sua própria fonte, de 2020 a 2024.
 
-Foram aprovadas 63 verificações independentes, 34 casos de funções e 21 cenários nativos. O reenvio de uma planilha com 225 anúncios produziu 465 registros brutos de vagas, mantendo 232 aceitos e 233 rejeitados; ao retirar o reenvio, a base voltou a 240/232/8. A diferença permaneceu zero. A segunda deduplicação reconheceu variações normalizadas, a quantidade 1,5 foi rejeitada antes da conversão inteira e um novo mês passou de 12 para 14 linhas de planejamento, sem alterar o código do despivotamento.
+Após configurar, use **Dados → Atualizar Tudo**, aguarde o término e confira `Conferencia`. As 13 cargas foram atualizadas sincronamente no Excel, com `Refresh(false)` e `FastCombine=False`, sem erros. Caminho inexistente gera erro de atualização explícito. Corrija dados na origem ou no cadastro da Etapa 1, salve e atualize; edições nas tabelas carregadas serão substituídas pela próxima atualização.
 
-As 13 cargas passaram por atualização síncrona com a combinação rápida desativada. Após reabrir o arquivo de teste, 149.000 células conferiram sem divergências. As provas alteraram somente cópias temporárias. A organização visual dos grupos e as três capturas exigidas pelo guia ainda serão concluídas no último marco.
+## Procedimentos das nove atividades
+
+| Atividade do guia | Adaptação implementada |
+| --- | --- |
+| 1. Preparar e conectar | Pastas separadas, parâmetros centralizados, conexão à pasta de vagas e às tabelas da Etapa 1 salva e fechada; seis grupos nativos conferidos. |
+| 2. Unificar e consolidar | Leitura dos dois XLSX, seleção de aba do tipo `Sheet`, promoção de cabeçalhos e aplicação do de-para para 39 campos canônicos antes de anexar. `Conf_Colunas` denuncia campos desconhecidos, ausentes ou em colisão. |
+| 3. Limpar, tratar nulos e duplicidades | Identificação de linhas sem conteúdo desconsiderando metadados, validação de campos críticos e primeira deduplicação pela chave bruta. Arquivo e linha são preservados antes dos filtros. |
+| 4. Ajustar tipos e localidade | Conversões de datas, horas e números por cultura; datas impossíveis não são normalizadas para outro dia; quantidade fracionária é recusada antes de `Int64.Type`. |
+| 5. Padronizar textos | Remoção de espaços excedentes e NBSP, chaves de busca uniformes e grafia oficial dos cadastros. `Text.Proper` nas categorias é complementado pelo cadastro; siglas de tecnologias são preservadas. |
+| 6. Mesclar cadastros | Junções externas à esquerda com cargos e órgãos, verificação de correspondência e da cardinalidade e segunda deduplicação pela chave oficial. Os cargos salariais têm cadastro próprio. |
+| 7. Criar colunas | Amplitude salarial, ponto médio da faixa e mês de publicação, mantendo moeda e periodicidade. Inclusão de localidade, jornada, requisitos e habilidades para as próximas etapas. |
+| 8. Tratar exceções | Rejeitados por anti junção à esquerda, com um motivo principal e rastreio por registro; reconciliação de entradas, aceitos e rejeitados. |
+| 9. Despivotar, carregar e publicar | Planejamento largo despivotado em empresa/mês; 13 cargas, dois CSV públicos e 49 arquivos M conferidos. Capturas reais de grupos, Etapas Aplicadas e Conferencia disponíveis. |
+
+## Grãos, chaves e regras
+
+**Vagas:** uma linha aceita representa um evento de publicação, com chave formada por fonte, identificador da vaga, tipo de publicação, data, horário, cargo e órgão. A primeira passagem usa os valores brutos; a segunda usa os valores normalizados e os códigos dos cadastros. Ordenação por arquivo e linha, seguida de `Table.Buffer`, torna a escolha da linha preservada determinística. Publicações `Internal` e `External` não são fundidas. Os dois eventos `SIM-001` permanecem porque as datas e os horários diferem.
+
+Nos registros reais, `Cod_Cargo` acrescenta o prefixo `NYC` ao `title_code_no` existente. `Cod_Orgao`, no formato `NYC|<nome normalizado>`, é uma chave técnica do projeto derivada da agência informada, sem alegar um código oficial de órgão fornecido pela fonte.
+
+**Salários:** uma linha representa uma observação da fonte histórica. Valores iguais não comprovam que duas observações são duplicatas; as 6.599 linhas permanecem. `dCargoSalarios` não é usada para rejeitar cargos NYC. Os códigos internos de países servem ao relacionamento e não são apresentados como códigos ISO.
+
+**Metas:** uma linha representa uma empresa simulada em um mês. `Table.UnpivotOtherColumns` transforma duas linhas largas em 12 linhas. O total é 31: 18 para `SIM-E01` e 13 para `SIM-E02`. Novas colunas mensais válidas entram pelo mesmo despivotamento; metas nulas, negativas ou fracionárias são denunciadas.
+
+As regras de vagas recusam fonte desconhecida, identificador obrigatório vazio, quantidade vazia, não numérica, fracionária ou não positiva, data inválida ou fora de 2026, horário informado inválido, faixa salarial inválida e ausência de correspondência obrigatória de cargo ou órgão. As duas passagens de deduplicação também registram os descartes. Nulos numéricos não são preenchidos com zero.
+
+O horário ausente nas vagas NYC é não aplicável, sem criar meia-noite fictícia. O horário `05:30` é válido nesta etapa. Salário zero permitido pela fonte NYC permanece identificável; não é confundido com nulo. Divergência superior a 20% da referência didática não causa rejeição automática, e referência zero não provoca divisão por zero. As comparações com referências pertencem à auditoria preservada da Etapa 1, respeitando moeda e periodicidade; esta etapa não recalcula esse desvio.
+
+Categorias desconhecidas nas listas auxiliares são preservadas e sinalizadas. Descrições opcionais ausentes recebem rótulos de ausência, como `Não informada` para localidade e `Não informado` para jornada. Não há correspondência aproximada para resolver órgão ambíguo ou cargo desconhecido.
+
+### Oito registros rejeitados na base atual
+
+Cada registro recebe o primeiro motivo efetivo do fluxo. `Rejeitados` contém oito registros, não oito tipos genéricos nem a contagem de ocorrências da auditoria anterior.
+
+| Registro da Etapa 1 | Motivo principal | Observação preservada |
+| --- | --- | --- |
+| `SIM-VAG-004` | Quantidade vazia | Ausência mantida na origem. |
+| `SIM-VAG-005` | Quantidade zero | Salário zero original também permanece rastreável. |
+| `SIM-VAG-006` | Quantidade negativa | Sem converter para valor positivo. |
+| `SIM-VAG-007` | Quantidade não numérica | `duas` é inválido; o salário textual `10000,00` é conversível para 10000. |
+| `SIM-VAG-008` | Data inválida | `31/02/2026` não é convertido em uma data de março. |
+| `SIM-VAG-009` | Data fora do período | A data pertence a 2025; `05:30` é um horário válido. |
+| `SIM-VAG-010` | Hora inválida | O salário discrepante, isoladamente, não causa rejeição. |
+| `SIM-VAG-012` | Órgão sem correspondência | A empresa ambígua não é associada arbitrariamente; o cargo também continua pendente na Etapa 1. |
+
+As linhas rejeitadas conservam os campos de origem, `Arquivo_Origem`, `Linha_Origem`, a ligação com `ID_Registro_FaseI` e o motivo. As pendências exigem confirmação da origem ou do cadastro antes de eventual correção; não foram eliminadas para melhorar artificialmente os resultados.
+
+## Saídas e conferências
+
+As dez abas são `Parametros`, `fVagas`, `fSalarios`, `dCargo`, `dOrgao`, `dCargoSalarios`, `dPais`, `Rejeitados`, `fMetas` e `Conferencia`. Há oito tabelas de saída e cinco de conferência; as demais consultas são de apoio, sem carga em planilha. Não foi criado Modelo de Dados.
+
+| Tabela carregada | Local | Linhas atuais | Finalidade |
+| --- | --- | ---: | --- |
+| `fVagas` | Aba homônima, A1 | 232 | 225 anúncios reais e sete casos simulados aceitos; 36 colunas. |
+| `fSalarios` | Aba homônima, A1 | 6.599 | Observações salariais; 21 colunas. |
+| `dCargo` | Aba homônima, A1 | 45 | 41 cargos NYC e quatro cargos simulados. |
+| `dOrgao` | Aba homônima, A1 | 31 | 29 órgãos NYC e duas empresas simuladas. |
+| `dCargoSalarios` | Aba homônima, A1 | 132 | Cadastro de cargos da fonte salarial. |
+| `dPais` | Aba homônima, A1 | 89 | Cadastro de países de residência e empresa. |
+| `Rejeitados` | Aba homônima, A1 | 8 | Registros recusados com motivo e linhagem. |
+| `fMetas` | Aba homônima, A1 | 12 | Planejamento fictício por empresa/mês, soma 31. |
+| `Conf_Reconciliacao` | Conferencia, A1 | 4 | Entradas = aceitos + rejeitados, por base/fonte e total. |
+| `Conf_Motivos` | Conferencia, J1 | 8 | Quantidade por motivo principal; soma oito. |
+| `Conf_Etapas` | Conferencia, A14 | 25 | Contagens efetivas dos 21 estágios de vagas e quatro de salários. |
+| `Conf_Metas` | Conferencia, J24 | 4 | Duas linhas de origem, 12 despivotadas, soma 31 e zero órgãos sem par. |
+| `Conf_Colunas` | Conferencia, A60 | 2 | Diagnóstico de cabeçalhos de cada arquivo de vagas. |
+
+Reconciliação conferida: **vagas 240 = 232 + 8; salários 6.599 = 6.599 + 0; total 6.839 = 6.831 + 8**. As diferenças são zero; os dois arquivos de vagas não apresentam colunas não mapeadas, ausentes ou em colisão. As junções não multiplicaram registros.
+
+## Catálogo das 49 consultas
+
+Os seis grupos foram conferidos no painel nativo, com 7, 10, 12, 7, 8 e 5 consultas, respectivamente, totalizando 49.
+
+### 01_Parametros — sete consultas
+
+| Consulta | Função |
+| --- | --- |
+| `pPastaProjeto` | Centraliza a pasta absoluta editável da Etapa 2. |
+| `pPastaVagas` | Deriva a pasta de ingestão de vagas. |
+| `pArquivoEtapa1` | Deriva o caminho da pasta de trabalho da Etapa 1. |
+| `pArquivoMetas` | Deriva o caminho do planejamento fictício. |
+| `pDataInicio` | Define o início do período das vagas. |
+| `pDataFim` | Define o fim do período das vagas. |
+| `pCulturaPadrao` | Define a cultura padrão de conversão. |
+
+### 02_Funcoes — dez consultas
+
+| Consulta | Função |
+| --- | --- |
+| `fnLimparTexto` | Limpa espaços externos, repetidos e NBSP, preservando siglas. |
+| `fnChave` | Gera chave textual normalizada em maiúsculas para busca. |
+| `fnNumero` | Converte números pela cultura da origem sem trocar ausência por zero. |
+| `fnData` | Converte datas tipadas, seriais e textuais; recusa datas impossíveis. |
+| `fnHora` | Converte horas tipadas, frações e textos; sinaliza valores inválidos. |
+| `fnValorOficial` | Recupera grafia oficial de listas; preserva texto desconhecido para conferência. |
+| `fnLerPlanilha` | Abre uma aba `Sheet` do XLSX e promove seus cabeçalhos. |
+| `fnPadronizarColunas` | Aplica o de-para dos 39 campos e denuncia colisões. |
+| `fnLerVagas` | Integra leitura, padronização e índice da linha de origem. |
+| `fnRotuloCadastro` | Recupera rótulos de apresentação nos cadastros da Etapa 1. |
+
+### 03_Cadastros — 12 consultas
+
+| Consulta | Função |
+| --- | --- |
+| `ColunasAlvo` | Define o contrato de 39 campos de entrada das vagas. |
+| `DeParaColunas` | Relaciona cabeçalhos ingleses e portugueses ao contrato canônico. |
+| `cad_Etapa1` | Acessa as tabelas da Etapa 1 salva em disco. |
+| `cad_Publicacoes` | Reutiliza o cadastro de tipos de publicação. |
+| `cad_Vinculos` | Reutiliza o cadastro de vínculos das vagas. |
+| `cad_Frequencias` | Reutiliza o cadastro de periodicidades salariais. |
+| `lst_Publicacoes` | Disponibiliza os valores oficiais de publicação. |
+| `lst_Vinculos` | Disponibiliza os valores oficiais de vínculo. |
+| `lst_Frequencias` | Disponibiliza os valores oficiais de periodicidade. |
+| `cad_DeParaOrgao` | Relaciona nomes NYC e variantes das empresas simuladas aos órgãos. |
+| `cad_CargoChave` | Prepara chaves, códigos e atributos dos cargos de vagas. |
+| `cad_AtributosSalarios` | Reúne referências de experiência, vínculo, modalidade e porte salarial. |
+
+### 04_Staging — sete consultas
+
+| Consulta | Função |
+| --- | --- |
+| `stg_Vagas_Bruto` | Lê a pasta, ignora `~$`, aceita `.xlsx` sem diferenciar maiúsculas e anexa as origens padronizadas com rastreio. |
+| `stg_Salarios_Bruto` | Recupera os 11 campos originais e metadados de `Tab_Salarios`. |
+| `proc_Vagas` | Executa o pipeline único de vagas, registrando estágios, aceitos e descartes. |
+| `Rejeitados_Vagas` | Identifica por anti junção os registros de vagas não aceitos. |
+| `proc_Salarios` | Converte e relaciona observações salariais sem deduplicar valores iguais. |
+| `Rejeitados_Salarios` | Identifica observações salariais não aceitas; vazio na base atual. |
+| `stg_Metas_Bruto` | Lê o planejamento largo antes do despivotamento. |
+
+### 05_Saida — oito consultas
+
+| Consulta | Função |
+| --- | --- |
+| `dCargo` | Expõe o cadastro próprio de cargos NYC e simulados. |
+| `dOrgao` | Expõe os órgãos NYC e as empresas simuladas. |
+| `dCargoSalarios` | Expõe o cadastro independente de cargos da base salarial. |
+| `dPais` | Expõe os países com códigos internos e nomes em português. |
+| `fVagas` | Apresenta os 21 estágios reais como Etapas Aplicadas e carrega somente o formato final aceito. |
+| `fSalarios` | Carrega as observações salariais aceitas e seus atributos. |
+| `Rejeitados` | Consolida os registros recusados das duas bases. |
+| `fMetas` | Despivota e carrega o planejamento fictício por empresa/mês. |
+
+### 06_Conferencia — cinco consultas
+
+| Consulta | Função |
+| --- | --- |
+| `Conf_Colunas` | Mostra cabeçalhos originais, padronizados e problemas de contrato por arquivo. |
+| `Conf_Reconciliacao` | Confere lidas, aceitas, rejeitadas e diferença por base/fonte e total. |
+| `Conf_Motivos` | Agrupa os rejeitados pelo primeiro motivo efetivo. |
+| `Conf_Etapas` | Mostra a contagem de cada estágio do pipeline. |
+| `Conf_Metas` | Confere origem, despivotamento, total planejado e correspondência de órgãos. |
+
+## Testes e conferência dos 13 itens do guia
+
+Foram aprovadas 63 verificações independentes dos resultados, 34 casos de funções no motor nativo e 21 cenários nativos de atualização. Os cenários incluem reenvio de arquivo, repetição de atualização, reabertura, quantidade fracionária, cultura `10000,00`, horário `05:30`, desvio salarial, segunda deduplicação, diagnóstico de coluna desconhecida, novo mês e caminho inexistente. Os testes transitórios foram desfeitos nas cópias usadas para conferência.
+
+Após fechar e reabrir a pasta de trabalho, 149.000 células foram comparadas sem divergências. Os dois CSV públicos, de 232 × 36 e 6.599 × 21, foram lidos integralmente de volta e conferidos. A serialização passou em oito testes: nulo, decimal, data, hora, vírgulas e aspas, quebra de linha, booleano e zero real.
+
+O perfil de `fVagas` no Editor mostra 232 linhas e zero erros. A configuração de perfil baseada nas primeiras 1.000 linhas abrange todas as 232 linhas dessa consulta. As 6.599 observações de `fSalarios` foram conferidas integralmente pelos testes nativos e pela verificação independente dos resultados.
+
+| Item do guia | Resultado nesta adaptação | Situação |
+| --- | --- | --- |
+| 1. Parâmetros configurados | Sete parâmetros e caminhos derivados funcionais; grupo nativo conferido. | Concluído |
+| 2. Pasta lida inteira | Dois arquivos, 240 registros de vagas, com arquivo e linha. | Concluído |
+| 3. D10 resolvido | Zero campos não mapeados, ausentes ou em colisão nos dois arquivos. | Concluído |
+| 4. Nulos e duplicatas | Etapas contadas; duas passagens; reenvio e casos legítimos repetidos conferidos. | Concluído |
+| 5. Tipos com localidade | Culturas por fonte, datas, horas, números e frações conferidos no Excel. | Concluído |
+| 6. Textos padronizados | Espaços e NBSP tratados; grafias oficiais e siglas preservadas. | Concluído |
+| 7. Mesclagens | Sem multiplicação; códigos obrigatórios presentes nos aceitos. | Concluído |
+| 8. Colunas calculadas | Amplitude, ponto médio e mês confrontados com os valores de origem. | Concluído |
+| 9. Rejeitados rastreáveis | Oito registros, motivos e linhagem conferidos contra as entradas. | Concluído |
+| 10. Reconciliação | Diferença zero por base/fonte e no total. | Concluído |
+| 11. Atualização funciona | Reenvio, restauração, atualização repetida e reabertura aprovados. | Concluído |
+| 12. Artefatos no repositório | XLSX, 49 M, dois CSV, documentação e três capturas reais conferidos. | Concluído |
+| 13. Escopo respeitado | Sem Modelo de Dados, relacionamentos no modelo, DAX, VBA, SQL ou Power BI. | Concluído |
+
+Evidências: [painel com os seis grupos](evidencias/01_grupos_consultas.jpg), [Etapas Aplicadas e perfil de `fVagas`](evidencias/02_etapas_aplicadas_vagas.jpg) e [Conferencia com a reconciliação](evidencias/03_conferencia_reconciliacao.jpg).
+
+## Limites de interpretação e publicação
+
+Os 225 anúncios reais incluem 115 publicações externas e 110 internas, com 116 identificadores de vaga. São eventos publicados por órgãos de Nova York; a contagem de anúncios não equivale a vagas únicas nem representa todo o mercado de tecnologia, o Brasil ou oportunidades necessariamente abertas na data de leitura.
+
+A moeda dos anúncios NYC não foi explicitada na extração e permanece `Não informada`. A frequência salarial dos anúncios é preservada; a periodicidade das observações salariais históricas permanece `Não confirmada`. `Salario_USD` é o valor fornecido pela fonte histórica, sem atualização cambial nesta etapa. O ponto médio de uma faixa não é salário efetivamente recebido. Comparações futuras devem separar fonte, moeda, periodicidade e período; cargos de taxonomias diferentes não são equiparados automaticamente.
+
+Os arquivos públicos de dados limpos são somente [fVagas.csv](dados_limpos/fVagas.csv) e [fSalarios.csv](dados_limpos/fSalarios.csv), em UTF-8 com BOM, vírgula como delimitador, campos entre aspas, datas ISO e decimais com ponto. Os arquivos `.pq`, com o nome da consulta no comentário inicial, fazem parte da entrega exigida pelo guia. CSV complementares, scripts Python/PowerShell e relatórios JSON de apoio ficam no ZIP local de evidências técnicas, fora do Git.
+
+Cada integrante deve registrar suas contribuições com a própria conta, conforme o guia.
