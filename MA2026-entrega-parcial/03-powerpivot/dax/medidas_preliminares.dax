@@ -2,17 +2,17 @@
 // Funções DAX em inglês; separador padrão vírgula. No Excel pt-BR, pode ser necessário usar ponto e vírgula.
 
 // Qtd Anúncios — Eventos de publicação aceitos no recorte; não equivale a contratações.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Qtd Anúncios :=
     COUNTROWS(fVagas)
 
 // Posições Anunciadas — Posições reportadas pelos anúncios; publicações diferentes podem repetir as mesmas posições.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Posições Anunciadas :=
     SUMX(fVagas, fVagas[Quantidade])
 
 // IDs de Vaga Distintos — Identificadores distintos por fonte. Um mesmo ID pode possuir vários eventos de publicação.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 IDs de Vaga Distintos :=
     SUMX(VALUES(fVagas[Fonte]), CALCULATE(DISTINCTCOUNT(fVagas[ID_Vaga])))
 
@@ -22,7 +22,7 @@ Posições por Anúncio :=
     DIVIDE([Posições Anunciadas], [Qtd Anúncios])
 
 // Observações Salariais — Observações da fonte histórica, sem presumir pessoas distintas.
-// Tabela: fSalarios; formato: inteiro; casas: 2
+// Tabela: fSalarios; formato: inteiro; casas: 0
 Observações Salariais :=
     COUNTROWS(fSalarios)
 
@@ -32,12 +32,12 @@ Salário Médio Informado USD :=
     ROUND(AVERAGEX(fSalarios, fSalarios[Salario_USD]), 2)
 
 // Posições SIM Anunciadas — Posições reportadas nos anúncios fictícios, por órgão e período.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Posições SIM Anunciadas :=
     CALCULATE([Posições Anunciadas], fVagas[Fonte] = "SIMULADO")
 
 // Meta de Contratações SIM — Contratações planejadas ficticiamente; não são contratações realizadas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Meta de Contratações SIM :=
     CALCULATE(SUM(fMetas[Meta_Contratacoes]), fMetas[Fonte] = "SIMULADO")
 
@@ -57,12 +57,12 @@ Valor Anunciado SIM BRL Mensal :=
     SUMX(FILTER(fVagas, fVagas[Fonte] = "SIMULADO" && fVagas[Moeda] = "BRL" && fVagas[Periodicidade] = "Mensal" && fVagas[Moeda] = RELATED(dCargo[Moeda_Ref]) && fVagas[Periodicidade] = RELATED(dCargo[Periodicidade_Ref]) && RELATED(dCargo[Salario_Ref]) > 0), fVagas[Quantidade] * fVagas[Salario_Min])
 
 // Anúncios NYC — Eventos de publicação da amostra municipal NYC.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Anúncios NYC :=
     CALCULATE([Qtd Anúncios], fVagas[Fonte] = "NYC")
 
 // Anúncios SIM — Eventos fictícios aceitos para demonstração.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Anúncios SIM :=
     CALCULATE([Qtd Anúncios], fVagas[Fonte] = "SIMULADO")
 
@@ -72,122 +72,122 @@ Cresc. Anúncios MoM % :=
     IF(HASONEVALUE(dCalendario[AnoMes]), VAR Atual = [Qtd Anúncios] VAR Anterior = CALCULATE([Qtd Anúncios], DATEADD(dCalendario[Data], (-1), MONTH)) RETURN IF(NOT ISBLANK(Atual), DIVIDE(Atual - Anterior, Anterior)))
 
 // Conf Linhas fVagas — Quantidade de registros aceitos de vagas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Linhas fVagas :=
     COUNTROWS(fVagas) + 0
 
 // Conf Linhas fSalarios — Quantidade de observações salariais preservadas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Linhas fSalarios :=
     COUNTROWS(fSalarios) + 0
 
 // Conf Linhas fMetas — Quantidade de combinações empresa/mês do planejamento.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Linhas fMetas :=
     COUNTROWS(fMetas) + 0
 
 // Conf Linhas Rejeitados — Quantidade de registros descartados; tabela isolada, sem filtros de dimensões.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Linhas Rejeitados :=
     COUNTROWS(Rejeitados) + 0
 
 // Conf Rejeitados Vagas — Rejeitados da base de vagas pelo protocolo da Etapa 2.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Rejeitados Vagas :=
     CALCULATE(COUNTROWS(Rejeitados), Rejeitados[Base] = "Vagas") + 0
 
 // Conf Rejeitados Salários — Rejeitados da base salarial pelo protocolo da Etapa 2.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Rejeitados Salários :=
     CALCULATE(COUNTROWS(Rejeitados), Rejeitados[Base] = "Salários") + 0
 
 // Conf Aceitos Total — Soma de registros aceitos das duas bases; não representa uma única unidade de negócio.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Aceitos Total :=
     [Conf Linhas fVagas] + [Conf Linhas fSalarios]
 
 // Conf Lidas Vagas — Entradas de vagas do protocolo, aceitas mais rejeitadas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Lidas Vagas :=
     [Conf Linhas fVagas] + [Conf Rejeitados Vagas]
 
 // Conf Lidas Salários — Entradas salariais do protocolo, aceitas mais rejeitadas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Lidas Salários :=
     [Conf Linhas fSalarios] + [Conf Rejeitados Salários]
 
 // Conf Lidas Total — Protocolo combinado: aceitos e rejeitados, sem somar as metas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Lidas Total :=
     [Conf Aceitos Total] + [Conf Linhas Rejeitados]
 
 // Conf PK Duplicada — Duplicatas nas PKs de todas as dimensões; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf PK Duplicada :=
     (COUNTROWS(dCargo) - DISTINCTCOUNT(dCargo[Cod_Cargo])) + (COUNTROWS(dOrgao) - DISTINCTCOUNT(dOrgao[Cod_Orgao])) + (COUNTROWS(dCalendario) - DISTINCTCOUNT(dCalendario[Data])) + (COUNTROWS(dCargoSalarios) - DISTINCTCOUNT(dCargoSalarios[Cod_Cargo_Salarial])) + (COUNTROWS(dPaisEmpresa) - DISTINCTCOUNT(dPaisEmpresa[Cod_Pais])) + (COUNTROWS(dPaisResidencia) - DISTINCTCOUNT(dPaisResidencia[Cod_Pais])) + (COUNTROWS(dAno) - DISTINCTCOUNT(dAno[Ano])) + 0
 
 // Conf PK Vazia — PKs vazias nas dimensões; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf PK Vazia :=
     COUNTROWS(FILTER(dCargo, ISBLANK(dCargo[Cod_Cargo]))) + COUNTROWS(FILTER(dOrgao, ISBLANK(dOrgao[Cod_Orgao]))) + COUNTROWS(FILTER(dCalendario, ISBLANK(dCalendario[Data]))) + COUNTROWS(FILTER(dCargoSalarios, ISBLANK(dCargoSalarios[Cod_Cargo_Salarial]))) + COUNTROWS(FILTER(dPaisEmpresa, ISBLANK(dPaisEmpresa[Cod_Pais]))) + COUNTROWS(FILTER(dPaisResidencia, ISBLANK(dPaisResidencia[Cod_Pais]))) + COUNTROWS(FILTER(dAno, ISBLANK(dAno[Ano]))) + 0
 
 // Conf Vagas sem Cargo — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Vagas sem Cargo :=
     COUNTROWS(FILTER(fVagas, ISBLANK(RELATED(dCargo[Cod_Cargo])))) + 0
 
 // Conf Vagas sem Órgão — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Vagas sem Órgão :=
     COUNTROWS(FILTER(fVagas, ISBLANK(RELATED(dOrgao[Cod_Orgao])))) + 0
 
 // Conf Vagas sem Data — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Vagas sem Data :=
     COUNTROWS(FILTER(fVagas, ISBLANK(RELATED(dCalendario[Data])))) + 0
 
 // Conf Metas sem Órgão — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Metas sem Órgão :=
     COUNTROWS(FILTER(fMetas, ISBLANK(RELATED(dOrgao[Cod_Orgao])))) + 0
 
 // Conf Metas sem Mês — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Metas sem Mês :=
     COUNTROWS(FILTER(fMetas, ISBLANK(RELATED(dCalendario[Data])))) + 0
 
 // Conf Salários sem Cargo — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Salários sem Cargo :=
     COUNTROWS(FILTER(fSalarios, ISBLANK(RELATED(dCargoSalarios[Cod_Cargo_Salarial])))) + 0
 
 // Conf Salários sem País Empresa — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Salários sem País Empresa :=
     COUNTROWS(FILTER(fSalarios, ISBLANK(RELATED(dPaisEmpresa[Cod_Pais])))) + 0
 
 // Conf Salários sem País Residência — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Salários sem País Residência :=
     COUNTROWS(FILTER(fSalarios, ISBLANK(RELATED(dPaisResidencia[Cod_Pais])))) + 0
 
 // Conf Salários sem Ano — Registros sem correspondência na dimensão indicada; deve ser zero.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Salários sem Ano :=
     COUNTROWS(FILTER(fSalarios, ISBLANK(RELATED(dAno[Ano])))) + 0
 
 // Conf Dias Calendário — Quantidade de dias da dimensão de datas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Dias Calendário :=
     COUNTROWS(dCalendario) + 0
 
 // Conf Falhas Calendário — Diferença entre extensão diária do intervalo e quantidade de dias; unicidade é conferida separadamente.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Falhas Calendário :=
     DATEDIFF(MIN(dCalendario[Data]), MAX(dCalendario[Data]), DAY) + 1 - COUNTROWS(dCalendario)
 
 // Conf Cálculos de Faixa — Compara amplitude e ponto médio por linha: entradas e saídas em inteiros de quatro casas; QUOTIENT/MOD arredondam centavos com empate para o par, como Number.Round da Etapa 2. Tolerância zero, sem soma de moedas.
-// Tabela: fVagas; formato: inteiro; casas: 2
+// Tabela: fVagas; formato: inteiro; casas: 0
 Conf Cálculos de Faixa :=
     COUNTROWS(
     FILTER(

@@ -12,6 +12,7 @@ Projeto da equipe 09 de Microinformática Aplicada — Fatec São Paulo, 2026/2.
 | --- | --- |
 | 1. Excel Avançado | [Planilha](MA2026-entrega-parcial/01-excel/TechTalent_01_Excel.xlsx) e [roteiro](MA2026-entrega-parcial/04-documentacao/roteiro-fase-um.md) |
 | 2. Power Query | [Planilha](MA2026-entrega-parcial/02-powerquery/TechTalent_02_PowerQuery.xlsx) e [instruções](MA2026-entrega-parcial/02-powerquery/README.md) |
+| 3. Power Pivot e DAX | [Planilha](MA2026-entrega-parcial/03-powerpivot/TechTalent_03_PowerPivot.xlsx) e [instruções](MA2026-entrega-parcial/03-powerpivot/README.md) |
 
 ## Bases utilizadas
 
