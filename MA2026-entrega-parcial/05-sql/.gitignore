@@ -1,0 +1,4 @@
+# Arquivos temporarios do SQLite; o banco techtalent.db pode ser versionado.
+*.db-journal
+*.db-wal
+*.db-shm
