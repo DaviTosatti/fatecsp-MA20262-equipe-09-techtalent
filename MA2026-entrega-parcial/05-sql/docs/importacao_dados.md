@@ -43,15 +43,31 @@ Fonte,Cod_Orgao,AnoMes,Mes_Inicio,Meta_Contratacoes
 
 Mantenha `Fonte = SIMULADO`. `Mes_Inicio` deve ser o primeiro dia do mês no formato `YYYY-MM-01`. Não converta metas em contratações realizadas.
 
-### 2.4 `stg_rejeitados`
+### 2.4 `stg_rejeitados` — formato corrigido
 
-Exporte os oito registros da tabela `Rejeitados`. O destino precisa conter `Base`, os 36 campos originais de `fVagas` na mesma ordem do arquivo `fVagas.csv` e, ao final, `Motivo_Rejeicao`:
+**Não exporte `Rejeitados` como se tivesse o mesmo esquema de `fVagas`.** A consulta de rejeitados conserva colunas da origem com seus próprios nomes, como `ID_Vaga_Original` e `Quantidade_Original`. A exportação original atual possui 51 colunas; o script não fixa essa quantidade: ele preserva dinamicamente todos os cabeçalhos e valores presentes no CSV.
 
-```text
-Base,Fonte,Fonte_Dados,Arquivo_Origem,Linha_Origem,ID_Registro_FaseI,Linha_FaseI,ID_Vaga,Cod_Orgao,Orgao,Cod_Cargo,Cargo,Titulo,Categoria,Tipo_Publicacao,Quantidade,Salario_Min,Salario_Max,Amplitude_Salarial,Ponto_Medio_Faixa,Moeda,Periodicidade,Data_Publicacao,Hora_Atendimento_Tratada,Mes_Publicacao,Atualizacao,Limite_Candidatura,Modalidade,Vinculo,Localidade,Localidade_Detalhe,Horario_Jornada,Descricao,Requisitos,Habilidades,Observacao_Qualidade,ID_Cenario,Motivo_Rejeicao
-```
+1. Exporte a tabela/consulta `Rejeitados` inteira diretamente para CSV. Não renomeie, remova ou reordene colunas; mantenha `ID_Vaga_Original`, `Quantidade_Original`, o motivo e todas as demais colunas originais.
+2. Execute o preparador a partir da pasta `05-sql`:
 
-Se a coluna de motivo na consulta tiver outro cabeçalho (por exemplo, `Motivo`), renomeie-a para `Motivo_Rejeicao` no CSV exportado. Preserve o valor original de cada campo rejeitado; não tente corrigir quantidade, data, hora, cargo ou órgão durante a exportação. Os oito rejeitados documentados são de vagas; a base salarial não possui rejeitados na reconciliação da Etapa 2.
+   ```bash
+   python techtalent_preparar_rejeitados.py \
+     --input caminho/Rejeitados.csv \
+     --output csv/stg_rejeitados.csv \
+     --base Vagas
+   ```
+
+3. O script exige `ID_Vaga_Original`, `Quantidade_Original` e uma coluna de motivo (`Motivo`, `Motivo_Rejeicao` ou `Diagnostico`). Se um desses campos estiver ausente, a execução para e mostra os cabeçalhos encontrados, em vez de produzir uma carga parcial.
+4. O preparador gera um CSV intermediário com oito campos na ordem esperada pela staging:
+
+   ```text
+   Base,Fonte,Arquivo_Origem,Linha_Origem,ID_Vaga_Original,Quantidade_Original,Motivo_Rejeicao,Dados_Originais_JSON
+   ```
+
+5. `Dados_Originais_JSON` contém todos os campos e valores de cada linha original, com os nomes originais dos cabeçalhos. Isso inclui outras colunas `*_Original` e campos adicionais que venham a ser incluídos na consulta futuramente. Os valores originais não são convertidos nem corrigidos.
+6. Importe `csv/stg_rejeitados.csv` na tabela existente `stg_rejeitados`. Não edite o conteúdo do JSON e não converta `Quantidade_Original` em número: até mesmo valores inválidos precisam permanecer disponíveis para auditoria.
+
+Na versão atual do conjunto de dados, são esperados oito rejeitados. O total é conferido pela consulta K1 e a preservação integral pelo bloco K5/K5.1 de `techtalent_conferencia.sql`.
 
 ## 3. Importação no DB Browser for SQLite
 
@@ -88,5 +104,13 @@ Depois de executar carga, views e conferência:
 - Os testes K3 e K4 devem retornar zero ocorrências.
 - O calendário deve cobrir 365 dias de 01/01/2026 a 31/12/2026.
 - A consulta K8 deve reproduzir R$ 48.000 de referência simulada BRL/mês e R$ 45.500 de limite mínimo anunciado, conforme a documentação da Etapa 3.
+- A consulta K9 deve apresentar, para NYC, 225 publicações, 70 sem habilidades informadas e 31,11%.
+- Na conferência K5, `json_invalidos`, `sem_motivo`, `divergencias_id_vaga_original` e `divergencias_quantidade_original` devem ser zero.
 
 Se algum batimento falhar, não corrija diretamente os dados da tabela final. Confira o export da Etapa 2, corrija a etapa de origem e refaça a carga.
+
+## 6. DDL e banco local
+
+O DDL atualizado usa `CREATE TABLE IF NOT EXISTS` e `CREATE INDEX IF NOT EXISTS`; não contém `DROP TABLE` nem `DROP VIEW`. Executá-lo outra vez não apaga tabelas, views ou dados. As views são criadas/atualizadas somente por `techtalent_views.sql`.
+
+Atenção: `IF NOT EXISTS` não altera uma tabela que já existe. Se o seu arquivo SQLite local foi criado com uma versão anterior do DDL, cujo esquema de `stg_rejeitados`/`tb_rejeitado` era diferente, preserve o arquivo antigo como backup e crie um novo banco SQLite para a estrutura atualizada. Reimporte os CSVs de origem e execute o fluxo novamente. Não existe migração automática do esquema antigo.

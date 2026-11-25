@@ -21,6 +21,8 @@ GROUP BY fonte, categoria, cod_cargo, cargo
 ORDER BY fonte, posicoes_reportadas DESC, qtd_publicacoes DESC, cargo;
 
 -- C2) Busca textual exploratoria de habilidades. Nao e taxonomia/NLP validado.
+-- A view vw_vagas_habilidades ja exclui os marcadores de ausencia usados pelo
+-- Power Query, incluindo "Não informado" (e suas variacoes de caixa/til).
 WITH palavras_chave(palavra, termo) AS (
     VALUES
       ('SQL', 'sql'),
@@ -41,29 +43,25 @@ SELECT
     v.fonte,
     p.palavra AS habilidade_pesquisada,
     COUNT(DISTINCT v.id_registro_fase1) AS publicacoes_com_mencao
-FROM tb_fato_vagas v
+FROM vw_vagas_habilidades v
 CROSS JOIN palavras_chave p
-WHERE NULLIF(TRIM(v.habilidades), '') IS NOT NULL
-  AND lower(v.habilidades) NOT LIKE '%habilidades não informadas%'
+WHERE v.sem_habilidades_informadas = 0
   AND instr(lower(v.habilidades), lower(p.termo)) > 0
 GROUP BY v.fonte, p.palavra
 ORDER BY v.fonte, publicacoes_com_mencao DESC, habilidade_pesquisada;
 
 -- C2.1) Cobertura da coluna Habilidades por fonte.
+-- Numerador e denominador usam a mesma classificacao de vw_vagas_habilidades.
+-- Para a versao atual dos dados, NYC deve apresentar 70 de 225 (31,11%).
 SELECT
     fonte,
     COUNT(*) AS publicacoes,
-    SUM(CASE
-          WHEN habilidades IS NULL OR TRIM(habilidades) = ''
-            OR lower(habilidades) LIKE '%habilidades não informadas%'
-          THEN 1 ELSE 0
-        END) AS publicacoes_sem_habilidades_informadas,
-    ROUND(100.0 * SUM(CASE
-          WHEN habilidades IS NULL OR TRIM(habilidades) = ''
-            OR lower(habilidades) LIKE '%habilidades não informadas%'
-          THEN 1 ELSE 0
-        END) / COUNT(*), 2) AS pct_sem_informacao
-FROM tb_fato_vagas
+    SUM(sem_habilidades_informadas) AS publicacoes_sem_habilidades_informadas,
+    ROUND(
+        100.0 * SUM(sem_habilidades_informadas) / NULLIF(COUNT(*), 0),
+        2
+    ) AS pct_sem_informacao
+FROM vw_vagas_habilidades
 GROUP BY fonte;
 
 -- C3) Distribuicao dos salarios historicos por cargo, experiencia e ano.

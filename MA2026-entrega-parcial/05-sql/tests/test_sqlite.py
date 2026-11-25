@@ -27,6 +27,19 @@ def execute(connection: sqlite3.Connection, filename: str) -> None:
     connection.executescript((ROOT / filename).read_text(encoding="utf-8"))
 
 
+def extract_query_section(filename: str, start_marker: str, end_marker: str) -> str:
+    """Extrai uma consulta delimitada por comentarios do arquivo SQL real."""
+    content = (ROOT / filename).read_text(encoding="utf-8")
+    section = content.split(start_marker, 1)[1].split(end_marker, 1)[0]
+    # O marcador esta no comentario de titulo; descarta o restante dessa linha.
+    section = section.split("\n", 1)[1] if "\n" in section else ""
+    sql_lines = [
+        line for line in section.splitlines()
+        if not line.lstrip().startswith("--")
+    ]
+    return "\n".join(sql_lines).strip().rstrip(";")
+
+
 class TechTalentSQLiteTests(unittest.TestCase):
     def setUp(self) -> None:
         self.db = sqlite3.connect(":memory:")
@@ -156,6 +169,61 @@ class TechTalentSQLiteTests(unittest.TestCase):
         audit_view = self.db.execute("SELECT * FROM auditoria_rejeitados").fetchone()
         self.assertEqual(audit_view[5], "VAGA-ORIGINAL-42")
         self.assertEqual(json.loads(audit_view[8]), raw)
+
+    def test_nyc_missing_skills_marker_matches_70_of_225(self) -> None:
+        execute(self.db, "techtalent_carga.sql")
+        execute(self.db, "techtalent_views.sql")
+
+        # Regressao baseada na distribuicao conferida para a base atual de NYC:
+        # 70 registros com o marcador Power Query "Não informado" e 155 com
+        # habilidades textuais preenchidas.
+        rows = []
+        for index in range(225):
+            skill_text = "Não informado" if index < 70 else "Python, SQL"
+            rows.append((
+                "NYC",
+                f"NYC-REG-{index + 1:03d}",
+                "SIM-E01",
+                "Empresa Teste",
+                "SIM-C01",
+                "Analista de dados",
+                "NYC",
+                1,
+                "2026-03-03",
+                skill_text,
+            ))
+        self.db.executemany(
+            """INSERT INTO tb_fato_vagas (
+                fonte, id_registro_fase1, cod_orgao, orgao, cod_cargo, cargo,
+                tipo_publicacao, quantidade, data_publicacao, habilidades
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            rows,
+        )
+
+        coverage_sql = extract_query_section(
+            "techtalent_consultas.sql", "-- C2.1)", "-- C3)"
+        )
+        coverage_rows = self.db.execute(coverage_sql).fetchall()
+        nyc = next(row for row in coverage_rows if row["fonte"] == "NYC")
+        self.assertEqual(nyc["publicacoes"], 225)
+        self.assertEqual(nyc["publicacoes_sem_habilidades_informadas"], 70)
+        self.assertEqual(nyc["pct_sem_informacao"], 31.11)
+
+        skills_sql = extract_query_section(
+            "techtalent_consultas.sql", "-- C2)", "-- C2.1)"
+        )
+        skills_rows = self.db.execute(skills_sql).fetchall()
+        nyc_counts = {row["habilidade_pesquisada"]: row["publicacoes_com_mencao"]
+                      for row in skills_rows if row["fonte"] == "NYC"}
+        self.assertEqual(nyc_counts["Python"], 155)
+        self.assertEqual(nyc_counts["SQL"], 155)
+
+        conference_sql = extract_query_section(
+            "techtalent_conferencia.sql", "-- K9)", "-- K9-FIM)"
+        ) if "-- K9-FIM)" in (ROOT / "techtalent_conferencia.sql").read_text(encoding="utf-8") else ""
+        if conference_sql:
+            checks = self.db.execute(conference_sql).fetchall()
+            self.assertTrue(all(row["diferenca"] == 0 for row in checks))
 
     def test_load_is_repeatable_without_duplicate_final_rows(self) -> None:
         execute(self.db, "techtalent_carga.sql")

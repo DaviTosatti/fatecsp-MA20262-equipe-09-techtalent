@@ -176,3 +176,32 @@ WHERE v.fonte = 'SIMULADO'
   AND v.moeda = c.moeda_ref
   AND v.periodicidade = c.periodicidade_ref
   AND c.salario_ref > 0;
+
+
+-- K9) Regressao do indicador de habilidades para NYC.
+-- Referencia verificada na versao atual: 225 publicacoes, 70 sem informacao,
+-- percentual de 31,11%. Diferencas esperadas = 0.
+SELECT
+    'NYC - publicacoes' AS indicador,
+    225 AS referencia,
+    COUNT(*) AS banco,
+    COUNT(*) - 225 AS diferenca
+FROM vw_vagas_habilidades
+WHERE fonte = 'NYC'
+UNION ALL
+SELECT
+    'NYC - sem habilidades informadas',
+    70,
+    SUM(sem_habilidades_informadas),
+    SUM(sem_habilidades_informadas) - 70
+FROM vw_vagas_habilidades
+WHERE fonte = 'NYC'
+UNION ALL
+SELECT
+    'NYC - percentual sem informacao',
+    31.11,
+    ROUND(100.0 * SUM(sem_habilidades_informadas) / NULLIF(COUNT(*), 0), 2),
+    ROUND(100.0 * SUM(sem_habilidades_informadas) / NULLIF(COUNT(*), 0), 2) - 31.11
+FROM vw_vagas_habilidades
+WHERE fonte = 'NYC';
+-- K9-FIM)

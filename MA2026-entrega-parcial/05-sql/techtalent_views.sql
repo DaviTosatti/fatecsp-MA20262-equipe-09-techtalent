@@ -5,6 +5,7 @@
 -- ============================================================================
 
 DROP VIEW IF EXISTS auditoria_rejeitados;
+DROP VIEW IF EXISTS vw_vagas_habilidades;
 DROP VIEW IF EXISTS fato_metas;
 DROP VIEW IF EXISTS fato_salarios;
 DROP VIEW IF EXISTS fato_vagas;
@@ -137,6 +138,43 @@ SELECT
     mes_inicio AS Mes_Inicio,
     meta_contratacoes AS Meta_Contratacoes
 FROM tb_fato_metas;
+
+
+-- Classifica ausencia de habilidades em um unico lugar para evitar divergencia
+-- entre C2 (busca de termos) e C2.1 (percentual sem informacao).
+-- O Power Query da equipe grava o literal "Não informado". A normalizacao
+-- remove a variacao de maiusculas/minusculas e o til de "ã" antes da comparacao.
+CREATE VIEW vw_vagas_habilidades AS
+WITH valores_normalizados AS (
+    SELECT
+        id_registro_fase1,
+        fonte,
+        habilidades,
+        replace(
+            replace(lower(trim(coalesce(habilidades, ''))), 'ã', 'a'),
+            'Ã', 'a'
+        ) AS habilidades_normalizadas
+    FROM tb_fato_vagas
+)
+SELECT
+    id_registro_fase1,
+    fonte,
+    habilidades,
+    CASE
+        WHEN habilidades_normalizadas = ''
+          OR habilidades_normalizadas IN (
+                'nao informado',
+                'nao informada',
+                'nao informados',
+                'nao informadas',
+                'habilidade nao informada',
+                'habilidades nao informadas'
+          )
+          OR instr(habilidades_normalizadas, 'habilidade nao informada') > 0
+        THEN 1
+        ELSE 0
+    END AS sem_habilidades_informadas
+FROM valores_normalizados;
 
 CREATE VIEW auditoria_rejeitados AS
 SELECT

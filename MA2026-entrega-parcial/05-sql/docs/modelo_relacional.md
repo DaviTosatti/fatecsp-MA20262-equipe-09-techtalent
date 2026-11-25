@@ -24,7 +24,7 @@ O banco distingue quatro unidades de negócio que não devem ser somadas como se
 | `tb_dim_cargo_salarios` | Um cargo da fonte salarial | `cod_cargo_salarial` | referenciada por `tb_fato_salarios` |
 | `tb_pais` | Um país | `cod_pais` | dois papéis FKs em `tb_fato_salarios` |
 | `tb_dim_ano` | Um ano salarial | `ano` | referenciada por `tb_fato_salarios` |
-| `tb_rejeitado` | Um registro rejeitado por base | `(base, id_registro_fase1)` | isolada intencionalmente, sem FKs |
+| `tb_rejeitado` | Um registro rejeitado | `id_rejeitado` | isolada intencionalmente, sem FKs |
 
 As tabelas `stg_*` são áreas de recebimento e não fazem parte do modelo analítico final.
 
@@ -63,6 +63,7 @@ erDiagram
 | `fato_vagas` | `tb_fato_vagas` | Eventos de publicação, preservando os 36 campos originais |
 | `fato_salarios` | `tb_fato_salarios` | Observações salariais, preservando os 21 campos originais |
 | `fato_metas` | `tb_fato_metas` | Planejamento fictício por empresa/mês |
+| `vw_vagas_habilidades` | `tb_fato_vagas` | Classifica se o anúncio informa habilidades, com regra compartilhada por C2/C2.1 |
 
 As views usam os nomes dos campos da Etapa 3 sempre que possível, facilitando a conferência e a futura conexão do Power BI.
 
@@ -103,7 +104,9 @@ Não há FKs na tabela de auditoria: os registros podem conter códigos, datas e
 
 ### Habilidades
 
-`Habilidades` permanece como texto original na fato de vagas. O projeto ainda não documenta uma tabela normalizada de competências nem regras aprovadas para extrair termos das descrições. A consulta C2 usa pesquisa textual exploratória e explicita essa limitação.
+`Habilidades` permanece como texto original na fato de vagas. A view `vw_vagas_habilidades` centraliza a identificação de ausência de informação: além de `NULL` e texto vazio, reconhece o marcador literal `Não informado` gravado pelo Power Query, sem depender de uma comparação sensível ao til ou à caixa das letras. C2 filtra anúncios classificados como informados; C2.1 calcula o percentual usando a mesma classificação.
+
+Na versão atual dos dados, a conferência esperada para NYC é 70 de 225 anúncios sem informação (31,11%). A busca de termos da C2 continua exploratória e não equivale a uma taxonomia normalizada de competências.
 
 ## Quantidades de referência
 
