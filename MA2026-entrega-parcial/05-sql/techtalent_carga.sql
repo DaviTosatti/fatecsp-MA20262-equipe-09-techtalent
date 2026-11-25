@@ -1,14 +1,16 @@
 -- ============================================================================
 -- techtalent_carga.sql
--- Carga reexecutavel: converte os campos da staging e popula as tabelas finais.
--- Pre-requisito: DDL executado e todas as tabelas stg_* importadas.
--- Formato esperado dos CSVs: UTF-8, virgula, datas ISO (YYYY-MM-DD), decimal com ponto.
+-- Carga reexecutavel: staging -> dimensoes, fatos e auditoria.
+-- Pre-requisito: executar techtalent_ddl.sql uma vez e importar todos os CSVs.
+--
+-- A carga limpa e repopula as tabelas finais, mas NAO apaga a staging.
+-- Assim, a importacao pode ser repetida sem precisar importar CSVs novamente.
 -- ============================================================================
 
 PRAGMA foreign_keys = ON;
 BEGIN IMMEDIATE TRANSACTION;
 
--- Limpa somente as tabelas finais. A staging permanece preenchida para auditoria.
+-- Limpeza das tabelas finais (staging permanece intacta).
 DELETE FROM tb_rejeitado;
 DELETE FROM tb_fato_metas;
 DELETE FROM tb_fato_salarios;
@@ -21,7 +23,7 @@ DELETE FROM tb_dim_orgao;
 DELETE FROM tb_dim_cargo;
 
 -- ---------------------------------------------------------------------------
--- 1. Dimensoes derivadas dos dados aceitos e dos cadastros da Etapa 2
+-- 1. Dimensoes oriundas dos cadastros tratados na Etapa 2
 -- ---------------------------------------------------------------------------
 
 INSERT INTO tb_dim_cargo (
@@ -73,7 +75,8 @@ SELECT DISTINCT CAST(TRIM(Ano) AS INTEGER)
 FROM stg_salarios
 WHERE NULLIF(TRIM(Ano), '') IS NOT NULL;
 
--- Calendario continuo de 01/01 a 31/12/2026; feriados nao informados.
+-- Calendario continuo de 01/01 a 31/12/2026.
+-- Feriado fica como "Não informado", pois nao ha cadastro confirmado.
 WITH RECURSIVE dias(data) AS (
     SELECT '2026-01-01'
     UNION ALL
@@ -98,7 +101,7 @@ SELECT
     CASE CAST(strftime('%m', data) AS INTEGER)
         WHEN 1 THEN 'Jan' WHEN 2 THEN 'Fev' WHEN 3 THEN 'Mar'
         WHEN 4 THEN 'Abr' WHEN 5 THEN 'Mai' WHEN 6 THEN 'Jun'
-        WHEN 7 THEN 'Jul' WHEN 8 THEN 'Ago' WHEN 9 THEN 'Set'
+        WHEN 7 THEN 'Jul' WHEN 8 THEN 'Ago' WHEN 9 THEN 'Set' 
         WHEN 10 THEN 'Out' WHEN 11 THEN 'Nov' WHEN 12 THEN 'Dez'
     END,
     substr(data, 1, 7),
@@ -185,45 +188,32 @@ SELECT
 FROM stg_metas;
 
 -- ---------------------------------------------------------------------------
--- 5. Auditoria: registros rejeitados, sem conversao e sem FKs intencionais
+-- 5. Auditoria: importa os rejeitados sem remodelar a linha de origem.
+-- ID_Vaga_Original e Quantidade_Original ficam como TEXT; Dados_Originais_JSON
+-- contem todos os campos/valores do CSV original, inclusive colunas extras.
 -- ---------------------------------------------------------------------------
 
 INSERT INTO tb_rejeitado (
-    base, fonte, fonte_dados, arquivo_origem, linha_origem, id_registro_fase1,
-    linha_fase1, id_vaga, cod_orgao, orgao, cod_cargo, cargo, titulo,
-    categoria, tipo_publicacao, quantidade, salario_min, salario_max,
-    amplitude_salarial, ponto_medio_faixa, moeda, periodicidade,
-    data_publicacao, hora_atendimento_tratada, mes_publicacao, atualizacao,
-    limite_candidatura, modalidade, vinculo, localidade, localidade_detalhe,
-    horario_jornada, descricao, requisitos, habilidades, observacao_qualidade,
-    id_cenario, motivo_rejeicao
+    base, fonte, arquivo_origem, linha_origem,
+    id_vaga_original, quantidade_original, motivo_rejeicao,
+    dados_originais_json
 )
 SELECT
-    COALESCE(NULLIF(TRIM(Base), ''), 'Vagas'), NULLIF(TRIM(Fonte), ''),
-    NULLIF(TRIM(Fonte_Dados), ''), NULLIF(TRIM(Arquivo_Origem), ''),
-    NULLIF(TRIM(Linha_Origem), ''), TRIM(ID_Registro_FaseI),
-    NULLIF(TRIM(Linha_FaseI), ''), NULLIF(TRIM(ID_Vaga), ''),
-    NULLIF(TRIM(Cod_Orgao), ''), NULLIF(TRIM(Orgao), ''),
-    NULLIF(TRIM(Cod_Cargo), ''), NULLIF(TRIM(Cargo), ''),
-    NULLIF(TRIM(Titulo), ''), NULLIF(TRIM(Categoria), ''),
-    NULLIF(TRIM(Tipo_Publicacao), ''), NULLIF(TRIM(Quantidade), ''),
-    NULLIF(TRIM(Salario_Min), ''), NULLIF(TRIM(Salario_Max), ''),
-    NULLIF(TRIM(Amplitude_Salarial), ''), NULLIF(TRIM(Ponto_Medio_Faixa), ''),
-    NULLIF(TRIM(Moeda), ''), NULLIF(TRIM(Periodicidade), ''),
-    NULLIF(TRIM(Data_Publicacao), ''), NULLIF(TRIM(Hora_Atendimento_Tratada), ''),
-    NULLIF(TRIM(Mes_Publicacao), ''), NULLIF(TRIM(Atualizacao), ''),
-    NULLIF(TRIM(Limite_Candidatura), ''), NULLIF(TRIM(Modalidade), ''),
-    NULLIF(TRIM(Vinculo), ''), NULLIF(TRIM(Localidade), ''),
-    NULLIF(TRIM(Localidade_Detalhe), ''), NULLIF(TRIM(Horario_Jornada), ''),
-    NULLIF(Descricao, ''), NULLIF(Requisitos, ''), NULLIF(Habilidades, ''),
-    NULLIF(Observacao_Qualidade, ''), NULLIF(TRIM(ID_Cenario), ''),
-    TRIM(Motivo_Rejeicao)
-FROM stg_rejeitados;
+    NULLIF(TRIM(base), ''),
+    NULLIF(TRIM(fonte), ''),
+    NULLIF(TRIM(arquivo_origem), ''),
+    NULLIF(TRIM(linha_origem), ''),
+    id_vaga_original,
+    quantidade_original,
+    motivo_rejeicao,
+    dados_originais_json
+FROM stg_rejeitados
+WHERE json_valid(dados_originais_json) = 1;
 
 COMMIT;
 
--- Conferencia rapida apos a carga:
-SELECT 'tb_fato_vagas' AS tabela, COUNT(*) AS linhas FROM tb_fato_vagas
-UNION ALL SELECT 'tb_fato_salarios', COUNT(*) FROM tb_fato_salarios
-UNION ALL SELECT 'tb_fato_metas', COUNT(*) FROM tb_fato_metas
-UNION ALL SELECT 'tb_rejeitado', COUNT(*) FROM tb_rejeitado;
+-- Resumo da carga:
+SELECT 'fato_vagas' AS tabela, COUNT(*) AS linhas FROM tb_fato_vagas
+UNION ALL SELECT 'fato_salarios', COUNT(*) FROM tb_fato_salarios
+UNION ALL SELECT 'fato_metas', COUNT(*) FROM tb_fato_metas
+UNION ALL SELECT 'rejeitado', COUNT(*) FROM tb_rejeitado;

@@ -46,6 +46,12 @@ O DDL é destrutivo: ele apaga e recria os objetos desta etapa. Não o execute n
 - As metas são exclusivamente `SIMULADO`; anúncios não comprovam contratações realizadas.
 - Nenhuma conversão cambial é aplicada. `Salario_USD` é preservado como fornecido pela fonte, e a periodicidade histórica permanece não confirmada.
 
+## Preservação dos rejeitados
+
+`Rejeitados` **não deve ser tratado como se tivesse o mesmo esquema de `fVagas`**. O CSV deve ser exportado diretamente da consulta original, mantendo todos os cabeçalhos e colunas `*_Original`.
+
+O preparador Python cria os campos de consulta rápida e serializa todos os campos originais em JSON. Colunas adicionais que venham a existir na consulta também são preservadas automaticamente.
+
 ## Resultado esperado da conferência
 
 Os valores abaixo são as referências documentadas nas Etapas 2 e 3 do repositório atual. Depois da carga, as diferenças devem ser zero:

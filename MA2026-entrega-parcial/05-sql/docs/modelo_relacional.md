@@ -4,11 +4,12 @@
 
 O modelo implementa a estrutura já documentada em `MA2026-entrega-parcial/03-powerpivot/docs/modelo_relacional.md`. As entradas principais são `fVagas` e `fSalarios`, exportadas pela Etapa 2. Também são necessários os cadastros/referências da Etapa 2 (`dCargo`, `fMetas` e `Rejeitados`).
 
-O banco distingue três unidades de negócio que não devem ser somadas como se fossem equivalentes:
+O banco distingue quatro unidades de negócio que não devem ser somadas como se fossem equivalentes:
 
 1. eventos de publicação de vagas (`fVagas`);
 2. observações salariais históricas (`fSalarios`);
 3. metas de contratação fictícias (`fMetas`).
+4. registros recusados na preparação (`Rejeitados`), usados apenas para auditoria.
 
 ## Tabelas e grãos
 
@@ -89,6 +90,16 @@ A Etapa 3 usa duas dimensões de papel derivadas do mesmo cadastro de países. N
 ### Datas
 
 Apenas vagas e metas usam o calendário de 2026. Os salários históricos possuem apenas o ano (2020–2024), portanto relacionam-se a `tb_dim_ano`, sem criação de datas diárias fictícias.
+
+### Rejeitados — preservação integral
+
+A consulta `Rejeitados` não deve ser convertida para o esquema de `fVagas`. A tabela `tb_rejeitado` guarda:
+
+- `id_vaga_original` e `quantidade_original` em colunas próprias, como texto;
+- `motivo_rejeicao`;
+- `dados_originais_json`, com todos os cabeçalhos e valores da linha original.
+
+Não há FKs na tabela de auditoria: os registros podem conter códigos, datas e quantidades inválidos, justamente a razão pela qual foram rejeitados. A linha original não é corrigida nem descartada.
 
 ### Habilidades
 

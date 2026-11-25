@@ -1,10 +1,8 @@
 -- ============================================================================
 -- techtalent_views.sql
--- Camada de consumo para a Etapa 7 (Power BI), espelhando o modelo estrela
--- documentado na Etapa 3. Execute depois da DDL e da carga.
+-- Views para consumo analitico e futura conexao com o Power BI.
+-- A view auditoria_rejeitados expoe os campos originais e o JSON integral.
 -- ============================================================================
-
-PRAGMA foreign_keys = ON;
 
 DROP VIEW IF EXISTS auditoria_rejeitados;
 DROP VIEW IF EXISTS fato_metas;
@@ -142,13 +140,13 @@ FROM tb_fato_metas;
 
 CREATE VIEW auditoria_rejeitados AS
 SELECT
+    id_rejeitado AS ID_Rejeitado,
     base AS Base,
     fonte AS Fonte,
     arquivo_origem AS Arquivo_Origem,
     linha_origem AS Linha_Origem,
-    id_registro_fase1 AS ID_Registro_FaseI,
-    id_vaga AS ID_Vaga,
-    cod_orgao AS Cod_Orgao,
-    cod_cargo AS Cod_Cargo,
-    motivo_rejeicao AS Motivo_Rejeicao
+    id_vaga_original AS ID_Vaga_Original,
+    quantidade_original AS Quantidade_Original,
+    motivo_rejeicao AS Motivo_Rejeicao,
+    dados_originais_json AS Dados_Originais_JSON
 FROM tb_rejeitado;
