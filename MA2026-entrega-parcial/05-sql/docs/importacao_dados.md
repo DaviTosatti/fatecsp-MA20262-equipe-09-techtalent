@@ -105,6 +105,7 @@ Depois de executar carga, views e conferência:
 - O calendário deve cobrir 365 dias de 01/01/2026 a 31/12/2026.
 - A consulta K8 deve reproduzir R$ 48.000 de referência simulada BRL/mês e R$ 45.500 de limite mínimo anunciado, conforme a documentação da Etapa 3.
 - A consulta K9 deve apresentar, para NYC, 225 publicações, 70 sem habilidades informadas e 31,11%.
+- A consulta K10 deve apresentar 18 anúncios NYC com `Excel` como palavra completa; ocorrências de `excellent` não devem ser contadas.
 - Na conferência K5, `json_invalidos`, `sem_motivo`, `divergencias_id_vaga_original` e `divergencias_quantidade_original` devem ser zero.
 
 Se algum batimento falhar, não corrija diretamente os dados da tabela final. Confira o export da Etapa 2, corrija a etapa de origem e refaça a carga.

@@ -106,7 +106,7 @@ Não há FKs na tabela de auditoria: os registros podem conter códigos, datas e
 
 `Habilidades` permanece como texto original na fato de vagas. A view `vw_vagas_habilidades` centraliza a identificação de ausência de informação: além de `NULL` e texto vazio, reconhece o marcador literal `Não informado` gravado pelo Power Query, sem depender de uma comparação sensível ao til ou à caixa das letras. C2 filtra anúncios classificados como informados; C2.1 calcula o percentual usando a mesma classificação.
 
-Na versão atual dos dados, a conferência esperada para NYC é 70 de 225 anúncios sem informação (31,11%). A busca de termos da C2 continua exploratória e não equivale a uma taxonomia normalizada de competências.
+A view também gera `habilidades_busca`, em que pontuações são normalizadas como separadores. C2 procura palavras/expressões completas com limites dos dois lados; por isso, `Excel` corresponde a `MS-Excel`, mas não a `excellent`. Na versão atual, a conferência esperada para NYC é 70 de 225 anúncios sem informação (31,11%) e 18 menções da palavra Excel. A busca continua exploratória e não equivale a uma taxonomia normalizada de competências.
 
 ## Quantidades de referência
 

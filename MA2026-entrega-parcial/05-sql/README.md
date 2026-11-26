@@ -72,15 +72,15 @@ Os valores abaixo são as referências documentadas nas Etapas 2 e 3 do reposit�
 | Anos salariais | 5 |
 | Dias do calendário | 365 |
 
-A conferência também deve apresentar `PRAGMA foreign_key_check` sem linhas, nenhum registro órfão e nenhuma duplicidade de chave. A seção K9 deve mostrar 225 publicações NYC, 70 sem informação de habilidades e 31,11%; as diferenças devem ser zero.
+A conferência também deve apresentar `PRAGMA foreign_key_check` sem linhas, nenhum registro órfão e nenhuma duplicidade de chave. A seção K9 deve mostrar 225 publicações NYC, 70 sem informação de habilidades e 31,11%; a K10 deve confirmar 18 anúncios com a palavra Excel completa. As diferenças devem ser zero.
 
 ## Análise de habilidades e cobertura da informação
 
 O campo `Habilidades` de `fVagas` é texto livre. O Power Query da equipe representa a ausência de informação pelo texto literal `Não informado`; por isso, verificar apenas `NULL`, texto vazio ou `Habilidades não informadas` não é suficiente.
 
-A view `vw_vagas_habilidades`, criada em `techtalent_views.sql`, centraliza a classificação. Ela trata como ausência valores vazios/nulos e marcadores como `Não informado`, considerando variações de caixa e do til em `ã`. As consultas C2 e C2.1 usam essa mesma view, evitando que o ranking de termos e o indicador de cobertura apliquem regras diferentes.
+A view `vw_vagas_habilidades`, criada em `techtalent_views.sql`, centraliza a classificação. Ela trata como ausência valores vazios/nulos e marcadores como `Não informado`, considerando variações de caixa e do til em `ã`. As consultas C2 e C2.1 usam essa mesma view, evitando regras diferentes para o ranking e para a cobertura. A view também gera `habilidades_busca`: pontuação comum (vírgula, ponto, hífen, barra, parênteses, etc.) vira separador, e C2 procura a palavra/expressão com limites dos dois lados. Assim, `Excel` encontra `MS-Excel`, mas não `excellent`.
 
-Na versão atual da base, a referência de NYC é **70 de 225 publicações sem habilidades informadas (31,11%)**. Esse total está incluído como teste de regressão em `tests/test_sqlite.py` e como conferência K9 em `techtalent_conferencia.sql`.
+Na versão atual da base, as referências de NYC são **70 de 225 publicações sem habilidades informadas (31,11%)** e **18 anúncios com Excel como palavra completa**. O retorno incorreto por substring era 71, pois também incluía 53 ocorrências de `excellent`. Esses resultados estão cobertos pelo teste de regressão e pelas conferências K9/K10 em `techtalent_conferencia.sql`.
 
 A C2 continua sendo uma busca textual controlada por termos conhecidos. Ela não representa extração completa de competências nem substitui uma taxonomia validada; além disso, um texto livre pode conter grafias ou sinônimos que não estejam na lista. Uma futura tabela associativa `habilidade` / `vaga_habilidade` deve ser criada somente depois de a equipe definir regras de extração e padronização.
 

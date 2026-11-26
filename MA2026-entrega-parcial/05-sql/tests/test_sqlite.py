@@ -174,12 +174,24 @@ class TechTalentSQLiteTests(unittest.TestCase):
         execute(self.db, "techtalent_carga.sql")
         execute(self.db, "techtalent_views.sql")
 
-        # Regressao baseada na distribuicao conferida para a base atual de NYC:
-        # 70 registros com o marcador Power Query "Não informado" e 155 com
-        # habilidades textuais preenchidas.
+        # Regressao reproduz os pontos conferidos na base atual de NYC:
+        # 70/225 sem informacao e 71 substrings "excel", mas so 18 palavras.
+        # Os outros 53 casos usam "excellent" e nao podem entrar no ranking Excel.
         rows = []
         for index in range(225):
-            skill_text = "Não informado" if index < 70 else "Python, SQL"
+            if index < 70:
+                skill_text = "Não informado"
+            elif index < 88:
+                excel_examples = [
+                    "Excel", "Excel avancado", "MS-Excel", "Excel/Power BI",
+                    "VBA; Excel", "Excel (intermediario)", "Excel, SQL",
+                    "Conhecimento em Excel.", "Excel - avancado",
+                ]
+                skill_text = excel_examples[(index - 70) % len(excel_examples)]
+            elif index < 141:
+                skill_text = "excellent communication skills"
+            else:
+                skill_text = "Python, SQL"
             rows.append((
                 "NYC",
                 f"NYC-REG-{index + 1:03d}",
@@ -212,11 +224,35 @@ class TechTalentSQLiteTests(unittest.TestCase):
         skills_sql = extract_query_section(
             "techtalent_consultas.sql", "-- C2)", "-- C2.1)"
         )
+        # A busca antiga por substring reproduz o erro relatado: 71 registros.
+        old_substring_count = self.db.execute(
+            """SELECT COUNT(*) FROM tb_fato_vagas
+               WHERE fonte = 'NYC' AND instr(lower(habilidades), 'excel') > 0"""
+        ).fetchone()[0]
+        self.assertEqual(old_substring_count, 71)
+
         skills_rows = self.db.execute(skills_sql).fetchall()
         nyc_counts = {row["habilidade_pesquisada"]: row["publicacoes_com_mencao"]
                       for row in skills_rows if row["fonte"] == "NYC"}
-        self.assertEqual(nyc_counts["Python"], 155)
-        self.assertEqual(nyc_counts["SQL"], 155)
+        self.assertEqual(nyc_counts["Excel"], 18)
+        self.assertEqual(nyc_counts["Python"], 84)
+        self.assertEqual(nyc_counts["SQL"], 86)
+
+        k10_sql = extract_query_section(
+            "techtalent_conferencia.sql", "-- K10)", "-- K10-FIM)"
+        )
+        k10 = self.db.execute(k10_sql).fetchone()
+        self.assertEqual(k10["referencia"], 18)
+        self.assertEqual(k10["banco"], 18)
+        self.assertEqual(k10["diferenca"], 0)
+
+        false_positive_count = self.db.execute(
+            """SELECT COUNT(*) FROM vw_vagas_habilidades
+               WHERE fonte = 'NYC'
+                 AND habilidades = 'excellent communication skills'
+                 AND instr(' ' || habilidades_busca || ' ', ' excel ') > 0"""
+        ).fetchone()[0]
+        self.assertEqual(false_positive_count, 0)
 
         conference_sql = extract_query_section(
             "techtalent_conferencia.sql", "-- K9)", "-- K9-FIM)"

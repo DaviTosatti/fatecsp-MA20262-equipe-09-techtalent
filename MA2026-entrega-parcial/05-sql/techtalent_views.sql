@@ -2,6 +2,7 @@
 -- techtalent_views.sql
 -- Views para consumo analitico e futura conexao com o Power BI.
 -- A view auditoria_rejeitados expoe os campos originais e o JSON integral.
+-- vw_vagas_habilidades tambem normaliza pontuacao para busca por palavra inteira.
 -- ============================================================================
 
 DROP VIEW IF EXISTS auditoria_rejeitados;
@@ -153,13 +154,63 @@ WITH valores_normalizados AS (
         replace(
             replace(lower(trim(coalesce(habilidades, ''))), 'ã', 'a'),
             'Ã', 'a'
-        ) AS habilidades_normalizadas
+        ) AS habilidades_normalizadas,
+        lower(trim(coalesce(habilidades, ''))) AS texto_base
     FROM tb_fato_vagas
+), delimitadores_1 AS (
+    SELECT
+        id_registro_fase1, fonte, habilidades, habilidades_normalizadas,
+        replace(replace(replace(replace(texto_base,
+            ',', ' '), '.', ' '), ';', ' '), ':', ' ') AS texto_1
+    FROM valores_normalizados
+), delimitadores_2 AS (
+    SELECT
+        id_registro_fase1, fonte, habilidades, habilidades_normalizadas,
+        replace(replace(replace(replace(texto_1,
+            '/', ' '), char(92), ' '), '-', ' '), '_', ' ') AS texto_2
+    FROM delimitadores_1
+), delimitadores_3 AS (
+    SELECT
+        id_registro_fase1, fonte, habilidades, habilidades_normalizadas,
+        replace(replace(replace(replace(texto_2,
+            '(', ' '), ')', ' '), '[', ' '), ']', ' ') AS texto_3
+    FROM delimitadores_2
+), delimitadores_4 AS (
+    SELECT
+        id_registro_fase1, fonte, habilidades, habilidades_normalizadas,
+        replace(replace(replace(replace(replace(texto_3,
+            '{', ' '), '}', ' '), '+', ' '), '|', ' '), '&', ' ') AS texto_4
+    FROM delimitadores_3
+), delimitadores_5 AS (
+    SELECT
+        id_registro_fase1, fonte, habilidades, habilidades_normalizadas,
+        replace(replace(replace(replace(texto_4,
+            '!', ' '), '?', ' '), char(10), ' '), char(13), ' ') AS texto_5
+    FROM delimitadores_4
+), delimitadores_6 AS (
+    SELECT
+        id_registro_fase1, fonte, habilidades, habilidades_normalizadas,
+        replace(replace(replace(replace(replace(texto_5,
+            char(9), ' '), char(34), ' '), char(39), ' '), '–', ' '), '—', ' ') AS texto_6
+    FROM delimitadores_5
+), espacos_normalizados AS (
+    SELECT
+        id_registro_fase1,
+        fonte,
+        habilidades,
+        habilidades_normalizadas,
+        trim(replace(replace(replace(replace(replace(replace(
+            texto_6,
+            '  ', ' '), '  ', ' '), '  ', ' '),
+            '  ', ' '), '  ', ' '), '  ', ' ')
+        ) AS habilidades_busca
+    FROM delimitadores_6
 )
 SELECT
     id_registro_fase1,
     fonte,
     habilidades,
+    habilidades_busca,
     CASE
         WHEN habilidades_normalizadas = ''
           OR habilidades_normalizadas IN (
@@ -174,7 +225,7 @@ SELECT
         THEN 1
         ELSE 0
     END AS sem_habilidades_informadas
-FROM valores_normalizados;
+FROM espacos_normalizados;
 
 CREATE VIEW auditoria_rejeitados AS
 SELECT

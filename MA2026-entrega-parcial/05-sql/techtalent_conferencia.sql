@@ -205,3 +205,18 @@ SELECT
 FROM vw_vagas_habilidades
 WHERE fonte = 'NYC';
 -- K9-FIM)
+
+
+-- K10) Regressao do ranking da habilidade Excel por palavra completa.
+-- Na base atual: 18 anuncios NYC mencionam Excel como palavra; "excellent"
+-- nao deve ser contado como Excel. Diferenca esperada = 0.
+SELECT
+    'NYC - mencoes da palavra Excel' AS indicador,
+    18 AS referencia,
+    COUNT(*) AS banco,
+    COUNT(*) - 18 AS diferenca
+FROM vw_vagas_habilidades
+WHERE fonte = 'NYC'
+  AND sem_habilidades_informadas = 0
+  AND instr(' ' || habilidades_busca || ' ', ' excel ') > 0;
+-- K10-FIM)

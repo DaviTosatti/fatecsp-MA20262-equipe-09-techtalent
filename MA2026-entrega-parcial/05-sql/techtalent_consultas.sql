@@ -20,9 +20,9 @@ FROM tb_fato_vagas
 GROUP BY fonte, categoria, cod_cargo, cargo
 ORDER BY fonte, posicoes_reportadas DESC, qtd_publicacoes DESC, cargo;
 
--- C2) Busca textual exploratoria de habilidades. Nao e taxonomia/NLP validado.
--- A view vw_vagas_habilidades ja exclui os marcadores de ausencia usados pelo
--- Power Query, incluindo "Não informado" (e suas variacoes de caixa/til).
+-- C2) Ranking exploratorio por palavra/expressao completa.
+-- Pontuacao e tratada como separador: "Excel" corresponde a "MS-Excel",
+-- mas nao a "excellent". A busca nao e uma taxonomia/NLP validado.
 WITH palavras_chave(palavra, termo) AS (
     VALUES
       ('SQL', 'sql'),
@@ -46,7 +46,7 @@ SELECT
 FROM vw_vagas_habilidades v
 CROSS JOIN palavras_chave p
 WHERE v.sem_habilidades_informadas = 0
-  AND instr(lower(v.habilidades), lower(p.termo)) > 0
+  AND instr(' ' || v.habilidades_busca || ' ', ' ' || lower(trim(p.termo)) || ' ') > 0
 GROUP BY v.fonte, p.palavra
 ORDER BY v.fonte, publicacoes_com_mencao DESC, habilidade_pesquisada;
 
