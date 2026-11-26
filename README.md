@@ -4,7 +4,9 @@ Projeto da equipe 09 de Microinformática Aplicada — Fatec São Paulo, 2026/2.
 
 **Tema:** análise do mercado de trabalho em tecnologia.
 
-**Pergunta:** quais são os cargos, habilidades e faixas salariais mais demandados?
+**Pergunta central da N2:** Quais cargos e habilidades técnicas aparecem com mais frequência nos anúncios de tecnologia da Prefeitura de Nova York em 2026, e como os salários históricos de ciência de dados variam por cargo, senioridade e modalidade de trabalho entre 2020 e 2024?
+
+As duas análises usam bases independentes. A frequência de uma habilidade nos anúncios não permite estimar quanto ela paga.
 
 ## Etapas
 
