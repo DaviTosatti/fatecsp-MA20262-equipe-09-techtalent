@@ -1,0 +1,17 @@
+digraph TechTalent {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.65", splines=ortho, fontname="Arial", labelloc="t", label="TechTalent — Modelo relacional (Etapa 5)", fontsize=18];
+  node [shape=plain, fontname="Arial"];
+  edge [color="#596579", penwidth=1.3, arrowsize=0.7];
+  cargo [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dbeafe"><B>tb_dim_cargo</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> cod_cargo</TD></TR><TR><TD ALIGN="LEFT">cargo, categoria, salario_ref</TD></TR></TABLE>>];
+  orgao [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dbeafe"><B>tb_dim_orgao</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> cod_orgao</TD></TR><TR><TD ALIGN="LEFT">orgao</TD></TR></TABLE>>];
+  cal [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dbeafe"><B>tb_dim_calendario</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> data</TD></TR><TR><TD ALIGN="LEFT">ano, mes, trimestre</TD></TR></TABLE>>];
+  vagas [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dcfce7"><B>tb_fato_vagas</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> id_registro_fase1</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> cod_cargo, cod_orgao, data_publicacao</TD></TR><TR><TD ALIGN="LEFT">id_vaga, quantidade, salario_min/max</TD></TR></TABLE>>];
+  cargo_sal [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dbeafe"><B>tb_dim_cargo_salarios</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> cod_cargo_salarial</TD></TR><TR><TD ALIGN="LEFT">cargo</TD></TR></TABLE>>];
+  pais [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dbeafe"><B>tb_pais</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> cod_pais</TD></TR><TR><TD ALIGN="LEFT">pais</TD></TR></TABLE>>];
+  ano [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dbeafe"><B>tb_dim_ano</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> ano</TD></TR></TABLE>>];
+  salarios [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dcfce7"><B>tb_fato_salarios</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> id_registro_fase1</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> cod_cargo_salarial, ano</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> cod_pais_empresa, cod_pais_residencia</TD></TR><TR><TD ALIGN="LEFT">salario, moeda, salario_usd</TD></TR></TABLE>>];
+  metas [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#dcfce7"><B>tb_fato_metas</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> fonte + cod_orgao + ano_mes</TD></TR><TR><TD ALIGN="LEFT"><B>FK</B> cod_orgao, mes_inicio</TD></TR><TR><TD ALIGN="LEFT">meta_contratacoes (simulada)</TD></TR></TABLE>>];
+  rejeitados [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD BGCOLOR="#fef3c7"><B>tb_rejeitado</B></TD></TR><TR><TD ALIGN="LEFT"><B>PK</B> id_rejeitado</TD></TR><TR><TD ALIGN="LEFT">id_vaga_original, quantidade_original</TD></TR><TR><TD ALIGN="LEFT">motivo_rejeicao, dados_originais_json</TD></TR><TR><TD ALIGN="LEFT">sem FKs (auditoria)</TD></TR></TABLE>>];
+  cargo -> vagas; orgao -> vagas; cal -> vagas; orgao -> metas; cal -> metas;
+  cargo_sal -> salarios; ano -> salarios; pais -> salarios; pais -> salarios;
+}
