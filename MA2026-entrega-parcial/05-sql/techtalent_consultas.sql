@@ -4,7 +4,6 @@
 -- NYC, SAL e SIMULADO representam fontes diferentes e nao devem ser misturadas
 -- sem considerar grão, moeda, periodicidade e natureza dos registros.
 -- ============================================================================
-
 -- C1) Ranking de cargos por publicacoes e posicoes anunciadas.
 -- ID_Vaga pode repetir em publicacoes internas/externas; mostramos metricas
 -- distintas para nao confundir publicacao com identificador de vaga.
@@ -19,7 +18,6 @@ SELECT
 FROM tb_fato_vagas
 GROUP BY fonte, categoria, cod_cargo, cargo
 ORDER BY fonte, posicoes_reportadas DESC, qtd_publicacoes DESC, cargo;
-
 -- C2) Ranking exploratorio por palavra/expressao completa.
 -- Pontuacao e tratada como separador: "Excel" corresponde a "MS-Excel",
 -- mas nao a "excellent". A busca nao e uma taxonomia/NLP validado.
@@ -49,7 +47,6 @@ WHERE v.sem_habilidades_informadas = 0
   AND instr(' ' || v.habilidades_busca || ' ', ' ' || lower(trim(p.termo)) || ' ') > 0
 GROUP BY v.fonte, p.palavra
 ORDER BY v.fonte, publicacoes_com_mencao DESC, habilidade_pesquisada;
-
 -- C2.1) Cobertura da coluna Habilidades por fonte.
 -- Numerador e denominador usam a mesma classificacao de vw_vagas_habilidades.
 -- Para a versao atual dos dados, NYC deve apresentar 70 de 225 (31,11%).
@@ -63,7 +60,6 @@ SELECT
     ) AS pct_sem_informacao
 FROM vw_vagas_habilidades
 GROUP BY fonte;
-
 -- C3) Distribuicao dos salarios historicos por cargo, experiencia e ano.
 -- A periodicidade da fonte historica nao foi confirmada. Nao misturar com NYC.
 SELECT
@@ -79,6 +75,25 @@ FROM tb_fato_salarios
 WHERE salario_usd IS NOT NULL AND salario_usd > 0
 GROUP BY ano, cod_cargo_salarial, cargo, experiencia
 ORDER BY ano, media_informada_usd DESC;
+
+-- C3.1) Distribuicao dos salarios historicos por cargo, experiencia, ano e modalidade.
+-- Mantem os mesmos filtros e metricas da C3, separando as modalidades de trabalho.
+-- Conferencia com o Power BI: Data Scientist / Senior / 2023 deve totalizar
+-- 579 observacoes: 357 presenciais, 218 remotas e 4 hibridas.
+SELECT
+    ano,
+    cod_cargo_salarial,
+    cargo,
+    experiencia,
+    modalidade,
+    COUNT(*) AS qtd_observacoes,
+    ROUND(AVG(salario_usd), 2) AS media_informada_usd,
+    MIN(salario_usd) AS minimo_informado_usd,
+    MAX(salario_usd) AS maximo_informado_usd
+FROM tb_fato_salarios
+WHERE salario_usd IS NOT NULL AND salario_usd > 0
+GROUP BY ano, cod_cargo_salarial, cargo, experiencia, modalidade
+ORDER BY ano, cargo, experiencia, modalidade;
 
 -- C4) Faixas salariais de anuncios NYC por cargo e periodicidade.
 -- A moeda da fonte NYC deve permanecer como informada/nao informada no CSV.
@@ -97,7 +112,6 @@ WHERE fonte = 'NYC'
   AND (salario_min IS NOT NULL OR salario_max IS NOT NULL)
 GROUP BY cod_cargo, cargo, moeda, periodicidade
 ORDER BY qtd_publicacoes DESC, cargo;
-
 -- C5) Posicoes anunciadas SIMULADO versus metas ficticias por empresa/mes.
 -- Agrega publicacoes antes do JOIN para nao multiplicar a meta.
 -- O resultado nao representa contratacoes realizadas.
@@ -124,7 +138,6 @@ LEFT JOIN posicoes_simuladas p
        ON p.cod_orgao = m.cod_orgao
       AND p.ano_mes = m.ano_mes
 ORDER BY m.ano_mes, o.orgao;
-
 -- C6) Perfil das publicacoes por fonte e tipo.
 SELECT
     fonte,
@@ -135,7 +148,6 @@ SELECT
 FROM tb_fato_vagas
 GROUP BY fonte, tipo_publicacao
 ORDER BY fonte, qtd_publicacoes DESC;
-
 -- C7) Auditoria: rejeitados agrupados por motivo.
 SELECT
     base,
