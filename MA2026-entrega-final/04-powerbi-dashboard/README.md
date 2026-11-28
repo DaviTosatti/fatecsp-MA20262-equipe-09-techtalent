@@ -7,7 +7,7 @@ Módulo de visualização e inteligência de dados do projeto **TechTalent**, de
 ## 📁 Arquivos desta Pasta
 
 * **`TechTalent_Dashboard.pbix`**: Arquivo completo do Power BI Desktop contendo as transformações em Power Query (Linguagem M), o modelo dimensional e as 22 medidas DAX.
-* **`TechTalent_Dashboard.pdf`**: Exportação em PDF das 3 páginas do relatório para consulta rápida diretamente pelo navegador, sem necessidade de instalar o Power BI Desktop.
+* **`TechTalent_Dashboard.pdf`**: Exportação em PDF das 4 páginas do relatório para consulta rápida diretamente pelo navegador, sem necessidade de instalar o Power BI Desktop.
 * **`README.md`**: Documentação da arquitetura do modelo, indicadores principais e instruções de atualização das fontes de dados.
 
 ---
@@ -35,6 +35,12 @@ Diagnóstico de requisitos técnicos, aderência salarial em BRL e rastreabilida
 Análise evolutiva da remuneração global de profissionais de dados e tecnologia entre **2020 e 2024**:
 * **Indicadores:** Média salarial em USD, mediana salarial em USD e percentual de atuação em regime **Remoto**.
 * **Análises Visuais:** Filtro por ano (`dAno`), curva histórica comparando média e mediana salarial anual e ranking de volume de observações por cargo (`dCargoSalarios`).
+
+### 4. Pergunta central | N2
+
+- **Cargos de NYC:** ranking pela contagem de publicações, não pela quantidade de posições. Os três primeiros são IT PROJECT SPECIALIST (30), COMPUTER SYSTEMS MANAGER (24) e CITY RESEARCH SCIENTIST (16).
+- **Salários históricos:** matriz de média informada em USD e número de observações (`N`), por senioridade e modalidade. Os filtros de ano e cargo se aplicam só à matriz; o ranking de NYC permanece independente.
+- **Conferência:** para Cientista de dados, nível sênior, em 2023, a matriz tem 357 registros presenciais, 218 remotos e 4 híbridos, como no resultado [C3.1 do SQLite](../../MA2026-entrega-parcial/05-sql/evidencias/C3_1_salarios_por_modalidade.csv). As diferenças de média não demonstram um efeito causal da modalidade.
 
 ---
 
