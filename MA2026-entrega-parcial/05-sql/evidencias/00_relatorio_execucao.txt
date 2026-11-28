@@ -1,0 +1,40 @@
+TechTalent — evidências da reprodução da carga SQLite
+
+Execução realizada em ambiente Python/sqlite3. SQLite 3.46.1.
+Scripts oficiais executados na ordem: DDL, carga, views, consultas, conferência.
+
+Contagens da staging:
+- stg_vagas: 232
+- stg_salarios: 6599
+- stg_cargo: 45
+- stg_orgao: 31
+- stg_metas: 12
+- stg_rejeitados: 8
+
+Contagens das tabelas finais:
+- tb_fato_vagas: 232
+- tb_fato_salarios: 6599
+- tb_fato_metas: 12
+- tb_rejeitado: 8
+- tb_dim_cargo: 45
+- tb_dim_orgao: 31
+- tb_dim_cargo_salarios: 132
+- tb_pais: 89
+- tb_dim_ano: 5
+- tb_dim_calendario: 365
+
+PRAGMA foreign_key_check: []
+Duplicidades ID_Registro_FaseI em vagas: 0
+NYC — publicações / sem habilidades / percentual: (225, 70, 31.11)
+NYC — Excel como palavra completa: 18
+Soma das metas simuladas: 31
+
+Consultas analíticas executadas: 9 resultsets.
+Consultas de conferência executadas: 12 resultsets.
+
+Arquivos consultas_*.csv e conferencia_*.csv contêm as saídas integrais dos SELECTs.
+O banco techtalent.db é um artefato local de execução; o .gitignore mantém o banco fora do versionamento.
+
+Validação adicional: techtalent_carga.sql e techtalent_views.sql foram executados novamente sobre a mesma staging para confirmar reexecução sem duplicar os registros finais.
+Os arquivos C1–C7 e K1–K10 têm nomes descritivos; os arquivos consultas_*.csv e conferencia_*.csv são as saídas brutas numeradas dos SELECTs dos scripts.
+A estrutura foi exportada em estrutura_tabelas_colunas.csv, estrutura_indices.csv e estrutura_chaves_estrangeiras.csv.
