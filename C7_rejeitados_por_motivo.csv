@@ -1,0 +1,9 @@
+﻿base,motivo_rejeicao,qtd_rejeitados
+Vagas,Data fora do período,1
+Vagas,Data inválida,1
+Vagas,Hora inválida,1
+Vagas,Quantidade negativa,1
+Vagas,Quantidade não numérica,1
+Vagas,Quantidade vazia,1
+Vagas,Quantidade zero,1
+Vagas,Órgão sem correspondência,1
