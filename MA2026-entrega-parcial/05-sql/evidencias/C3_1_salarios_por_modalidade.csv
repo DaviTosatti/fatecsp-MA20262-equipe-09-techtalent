@@ -1,0 +1,789 @@
+﻿ano,cod_cargo_salarial,cargo,experiencia,modalidade,qtd_observacoes,media_informada_usd,minimo_informado_usd,maximo_informado_usd
+2020,C037,Analista de dados,Nível inicial,Presencial,1,47899.0,47899,47899
+2020,C037,Analista de dados,Nível inicial,Remoto,3,61936.33,22809,91000
+2020,C037,Analista de dados,Nível intermediário,Híbrido,1,46759.0,46759,46759
+2020,C037,Analista de dados,Nível intermediário,Remoto,1,85000.0,85000,85000
+2020,C018,Analista de dados de inteligência de negócios,Nível intermediário,Presencial,1,98000.0,98000,98000
+2020,C023,Analista de dados de negócios,Nível inicial,Remoto,1,100000.0,100000,100000
+2020,C023,Analista de dados de negócios,Nível intermediário,Presencial,1,95000.0,95000,95000
+2020,C023,Analista de dados de negócios,Nível intermediário,Remoto,1,135000.0,135000,135000
+2020,C123,Analista de dados de produto,Nível intermediário,Presencial,1,20000.0,20000,20000
+2020,C128,Analista de dados de vendas,Nível intermediário,Presencial,1,60000.0,60000,60000
+2020,C130,Analista de dados do corpo técnico,Nível executivo,Presencial,1,15000.0,15000,15000
+2020,C130,Analista de dados do corpo técnico,Nível inicial,Híbrido,1,44753.0,44753,44753
+2020,C094,Analista líder de dados,Nível intermediário,Remoto,1,87000.0,87000,87000
+2020,C108,Cientista de aprendizado de máquina,Nível sênior,Presencial,1,260000.0,260000,260000
+2020,C074,Cientista de dados,Nível inicial,Híbrido,2,42197.5,21669,62726
+2020,C074,Cientista de dados,Nível inicial,Presencial,3,46835.0,39916,51321
+2020,C074,Cientista de dados,Nível inicial,Remoto,1,105000.0,105000,105000
+2020,C074,Cientista de dados,Nível intermediário,Híbrido,3,46886.0,35735,62726
+2020,C074,Cientista de dados,Nível intermediário,Presencial,2,60157.0,40481,79833
+2020,C074,Cientista de dados,Nível intermediário,Remoto,6,87140.67,38776,138350
+2020,C074,Cientista de dados,Nível sênior,Híbrido,1,120000.0,120000,120000
+2020,C074,Cientista de dados,Nível sênior,Presencial,1,91237.0,91237,91237
+2020,C074,Cientista de dados,Nível sênior,Remoto,2,240214.0,68428,412000
+2020,C131,Cientista de dados do corpo técnico,Nível sênior,Híbrido,1,164000.0,164000,164000
+2020,C007,Cientista de inteligência artificial,Nível inicial,Híbrido,1,45896.0,45896,45896
+2020,C127,Cientista de pesquisa,Nível inicial,Híbrido,1,42000.0,42000,42000
+2020,C127,Cientista de pesquisa,Nível intermediário,Presencial,1,450000.0,450000,450000
+2020,C096,Cientista líder de dados,Nível intermediário,Presencial,1,115000.0,115000,115000
+2020,C096,Cientista líder de dados,Nível sênior,Remoto,1,190000.0,190000,190000
+2020,C121,Cientista principal de dados,Nível sênior,Remoto,1,148261.0,148261,148261
+2020,C067,Consultor de ciência de dados,Nível intermediário,Remoto,1,103000.0,103000,103000
+2020,C085,Diretor de ciência de dados,Nível executivo,Remoto,1,325000.0,325000,325000
+2020,C112,Diretor executivo de ciência de dados,Nível executivo,Remoto,1,300000.0,300000,300000
+2020,C101,Engenheiro de aprendizado de máquina,Nível inicial,Híbrido,1,250000.0,250000,250000
+2020,C098,Engenheiro de aprendizado de máquina,Nível inicial,Remoto,1,15966.0,15966,15966
+2020,C101,Engenheiro de aprendizado de máquina,Nível inicial,Remoto,1,138000.0,138000,138000
+2020,C101,Engenheiro de aprendizado de máquina,Nível sênior,Híbrido,1,150000.0,150000,150000
+2020,C101,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,1,45618.0,45618,45618
+2020,C047,Engenheiro de dados,Nível executivo,Híbrido,1,79833.0,79833,79833
+2020,C047,Engenheiro de dados,Nível inicial,Remoto,2,48215.5,41689,54742
+2020,C047,Engenheiro de dados,Nível intermediário,Híbrido,3,85713.67,70139,112872
+2020,C047,Engenheiro de dados,Nível intermediário,Remoto,4,101525.75,59303,130800
+2020,C047,Engenheiro de dados,Nível sênior,Híbrido,1,47899.0,47899,47899
+2020,C047,Engenheiro de dados,Nível sênior,Presencial,1,33511.0,33511,33511
+2020,C047,Engenheiro de dados,Nível sênior,Remoto,1,188000.0,188000,188000
+2020,C016,Engenheiro de dados em Azure,Nível inicial,Presencial,1,100000.0,100000,100000
+2020,C022,Engenheiro de grandes volumes de dados,Nível inicial,Remoto,1,70000.0,70000,70000
+2020,C022,Engenheiro de grandes volumes de dados,Nível sênior,Híbrido,1,109024.0,109024,109024
+2020,C022,Engenheiro de grandes volumes de dados,Nível sênior,Remoto,1,114047.0,114047,114047
+2020,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível intermediário,Presencial,1,50180.0,50180,50180
+2020,C034,Engenheiro de visão computacional,Nível sênior,Remoto,1,60000.0,60000,60000
+2020,C095,Engenheiro líder de dados,Nível intermediário,Remoto,1,56000.0,56000,56000
+2020,C095,Engenheiro líder de dados,Nível sênior,Híbrido,1,125000.0,125000,125000
+2020,C103,Gerente de aprendizado de máquina,Nível sênior,Híbrido,1,117104.0,117104,117104
+2020,C071,Gerente de ciência de dados,Nível sênior,Remoto,1,190200.0,190200,190200
+2021,C037,Analista de dados,Nível inicial,Híbrido,2,50565.0,42028,59102
+2021,C037,Analista de dados,Nível inicial,Remoto,4,70000.0,50000,90000
+2021,C037,Analista de dados,Nível intermediário,Híbrido,2,34211.5,16904,51519
+2021,C037,Analista de dados,Nível intermediário,Presencial,2,68500.0,62000,75000
+2021,C037,Analista de dados,Nível intermediário,Remoto,4,99500.0,80000,135000
+2021,C037,Analista de dados,Nível sênior,Híbrido,1,63831.0,63831,63831
+2021,C037,Analista de dados,Nível sênior,Remoto,5,103357.2,50000,200000
+2021,C113,Analista de dados de comercialização,Nível sênior,Remoto,1,88654.0,88654,88654
+2021,C088,Analista de dados de finanças,Nível sênior,Híbrido,1,61896.0,61896,61896
+2021,C018,Analista de dados de inteligência de negócios,Nível executivo,Remoto,1,150000.0,150000,150000
+2021,C018,Analista de dados de inteligência de negócios,Nível inicial,Híbrido,1,55000.0,55000,55000
+2021,C018,Analista de dados de inteligência de negócios,Nível intermediário,Híbrido,1,36259.0,36259,36259
+2021,C018,Analista de dados de inteligência de negócios,Nível intermediário,Remoto,1,100000.0,100000,100000
+2021,C023,Analista de dados de negócios,Nível inicial,Remoto,1,59102.0,59102,59102
+2021,C023,Analista de dados de negócios,Nível intermediário,Remoto,1,56000.0,56000,56000
+2021,C094,Analista líder de dados,Nível intermediário,Remoto,1,19609.0,19609,19609
+2021,C094,Analista líder de dados,Nível sênior,Remoto,1,170000.0,170000,170000
+2021,C118,Analista principal de dados,Nível sênior,Remoto,1,170000.0,170000,170000
+2021,C044,Arquiteto de dados,Nível intermediário,Remoto,3,166666.67,150000,180000
+2021,C030,Arquiteto de dados em nuvem,Nível sênior,Híbrido,1,250000.0,250000,250000
+2021,C021,Arquiteto de grandes volumes de dados,Nível sênior,Híbrido,1,99703.0,99703,99703
+2021,C091,Chefe de ciência de dados,Nível executivo,Presencial,1,85000.0,85000,85000
+2021,C091,Chefe de ciência de dados,Nível intermediário,Presencial,1,110000.0,110000,110000
+2021,C090,Chefe de dados,Nível executivo,Híbrido,1,230000.0,230000,230000
+2021,C090,Chefe de dados,Nível executivo,Remoto,1,235000.0,235000,235000
+2021,C090,Chefe de dados,Nível sênior,Remoto,1,102839.0,102839,102839
+2021,C108,Cientista de aprendizado de máquina,Nível inicial,Remoto,1,225000.0,225000,225000
+2021,C108,Cientista de aprendizado de máquina,Nível sênior,Híbrido,1,120000.0,120000,120000
+2021,C108,Cientista de aprendizado de máquina,Nível sênior,Remoto,1,225000.0,225000,225000
+2021,C013,Cientista de aprendizado de máquina aplicado,Nível intermediário,Híbrido,1,423000.0,423000,423000
+2021,C013,Cientista de aprendizado de máquina aplicado,Nível intermediário,Remoto,1,38400.0,38400,38400
+2021,C074,Cientista de dados,Nível inicial,Híbrido,4,43510.0,29751,58000
+2021,C074,Cientista de dados,Nível inicial,Presencial,1,100000.0,100000,100000
+2021,C074,Cientista de dados,Nível inicial,Remoto,4,74599.75,28399,100000
+2021,C074,Cientista de dados,Nível intermediário,Híbrido,9,101669.44,56256,147000
+2021,C074,Cientista de dados,Nível intermediário,Presencial,2,53404.0,33808,73000
+2021,C074,Cientista de dados,Nível intermediário,Remoto,11,73131.0,16904,160000
+2021,C074,Cientista de dados,Nível sênior,Híbrido,3,50349.0,20171,77684
+2021,C074,Cientista de dados,Nível sênior,Presencial,1,135000.0,135000,135000
+2021,C074,Cientista de dados,Nível sênior,Remoto,4,102630.75,54094,165000
+2021,C011,Cientista de dados aplicados,Nível inicial,Presencial,1,110037.0,110037,110037
+2021,C011,Cientista de dados aplicados,Nível intermediário,Híbrido,1,54238.0,54238,54238
+2021,C131,Cientista de dados do corpo técnico,Nível sênior,Remoto,1,105000.0,105000,105000
+2021,C007,Cientista de inteligência artificial,Nível inicial,Remoto,1,18053.0,18053,18053
+2021,C007,Cientista de inteligência artificial,Nível intermediário,Presencial,1,30000.0,30000,30000
+2021,C007,Cientista de inteligência artificial,Nível sênior,Remoto,1,55000.0,55000,55000
+2021,C127,Cientista de pesquisa,Nível inicial,Híbrido,1,82528.0,82528,82528
+2021,C127,Cientista de pesquisa,Nível inicial,Presencial,1,100000.0,100000,100000
+2021,C127,Cientista de pesquisa,Nível intermediário,Híbrido,3,63128.67,56738,69999
+2021,C127,Cientista de pesquisa,Nível intermediário,Remoto,2,125626.0,63810,187442
+2021,C127,Cientista de pesquisa,Nível sênior,Híbrido,2,78435.0,60757,96113
+2021,C127,Cientista de pesquisa,Nível sênior,Remoto,1,50000.0,50000,50000
+2021,C096,Cientista líder de dados,Nível sênior,Híbrido,1,40570.0,40570,40570
+2021,C121,Cientista principal de dados,Nível executivo,Remoto,1,416000.0,416000,416000
+2021,C121,Cientista principal de dados,Nível intermediário,Remoto,1,151000.0,151000,151000
+2021,C121,Cientista principal de dados,Nível sênior,Presencial,1,220000.0,220000,220000
+2021,C121,Cientista principal de dados,Nível sênior,Remoto,2,204381.0,173762,235000
+2021,C067,Consultor de ciência de dados,Nível executivo,Remoto,1,69741.0,69741,69741
+2021,C067,Consultor de ciência de dados,Nível inicial,Híbrido,1,63831.0,63831,63831
+2021,C067,Consultor de ciência de dados,Nível inicial,Presencial,1,76833.0,76833,76833
+2021,C067,Consultor de ciência de dados,Nível inicial,Remoto,2,83416.5,76833,90000
+2021,C100,Desenvolvedor de aprendizado de máquina,Nível inicial,Híbrido,1,100000.0,100000,100000
+2021,C100,Desenvolvedor de aprendizado de máquina,Nível inicial,Remoto,1,15000.0,15000,15000
+2021,C100,Desenvolvedor de aprendizado de máquina,Nível sênior,Remoto,1,60000.0,60000,60000
+2021,C085,Diretor de ciência de dados,Nível executivo,Híbrido,1,130026.0,130026,130026
+2021,C085,Diretor de ciência de dados,Nível executivo,Presencial,2,195923.0,141846,250000
+2021,C085,Diretor de ciência de dados,Nível executivo,Remoto,1,153667.0,153667,153667
+2021,C085,Diretor de ciência de dados,Nível sênior,Presencial,1,168000.0,168000,168000
+2021,C040,Engenheiro de análise de dados,Nível intermediário,Remoto,1,110000.0,110000,110000
+2021,C040,Engenheiro de análise de dados,Nível sênior,Remoto,2,64598.5,50000,79197
+2021,C101,Engenheiro de aprendizado de máquina,Nível inicial,Híbrido,3,42555.67,21844,81000
+2021,C101,Engenheiro de aprendizado de máquina,Nível inicial,Remoto,3,76666.67,20000,125000
+2021,C098,Engenheiro de aprendizado de máquina,Nível intermediário,Híbrido,2,70537.5,63711,77364
+2021,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Híbrido,3,49962.33,24823,74000
+2021,C098,Engenheiro de aprendizado de máquina,Nível intermediário,Remoto,1,270000.0,270000,270000
+2021,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Remoto,3,60844.33,46597,88654
+2021,C101,Engenheiro de aprendizado de máquina,Nível sênior,Híbrido,3,120769.33,82744,185000
+2021,C101,Engenheiro de aprendizado de máquina,Nível sênior,Presencial,1,66265.0,66265,66265
+2021,C098,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,1,256000.0,256000,256000
+2021,C101,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,2,112171.0,24342,200000
+2021,C132,Engenheiro de aprendizado de máquina do corpo técnico,Nível sênior,Híbrido,1,185000.0,185000,185000
+2021,C069,Engenheiro de ciência de dados,Nível intermediário,Remoto,1,40189.0,40189,40189
+2021,C069,Engenheiro de ciência de dados,Nível sênior,Híbrido,1,127221.0,127221,127221
+2021,C047,Engenheiro de dados,Nível inicial,Híbrido,3,44013.33,21637,65013
+2021,C047,Engenheiro de dados,Nível inicial,Remoto,3,60976.0,30428,80000
+2021,C047,Engenheiro de dados,Nível intermediário,Híbrido,4,60413.25,28369,75050
+2021,C047,Engenheiro de dados,Nível intermediário,Presencial,4,62732.5,20000,111775
+2021,C047,Engenheiro de dados,Nível intermediário,Remoto,11,91468.36,28016,200000
+2021,C047,Engenheiro de dados,Nível sênior,Híbrido,2,86557.5,76833,96282
+2021,C047,Engenheiro de dados,Nível sênior,Presencial,2,157500.0,150000,165000
+2021,C047,Engenheiro de dados,Nível sênior,Remoto,7,150782.29,113476,200000
+2021,C114,Engenheiro de dados de comercialização,Nível inicial,Híbrido,1,66970.0,66970,66970
+2021,C031,Engenheiro de dados em nuvem,Nível intermediário,Híbrido,1,89294.0,89294,89294
+2021,C031,Engenheiro de dados em nuvem,Nível sênior,Remoto,1,160000.0,160000,160000
+2021,C022,Engenheiro de grandes volumes de dados,Nível inicial,Remoto,1,16228.0,16228,16228
+2021,C022,Engenheiro de grandes volumes de dados,Nível intermediário,Híbrido,1,60000.0,60000,60000
+2021,C022,Engenheiro de grandes volumes de dados,Nível intermediário,Presencial,2,20305.5,18000,22611
+2021,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível sênior,Remoto,1,195000.0,195000,195000
+2021,C106,Engenheiro de pesquisa em aprendizado de máquina,Nível inicial,Híbrido,1,20000.0,20000,20000
+2021,C035,Engenheiro de programas de visão computacional,Nível inicial,Híbrido,1,19073.0,19073,19073
+2021,C035,Engenheiro de programas de visão computacional,Nível inicial,Remoto,1,70000.0,70000,70000
+2021,C035,Engenheiro de programas de visão computacional,Nível intermediário,Remoto,1,95746.0,95746,95746
+2021,C034,Engenheiro de visão computacional,Nível inicial,Híbrido,1,28609.0,28609,28609
+2021,C034,Engenheiro de visão computacional,Nível sênior,Presencial,1,18907.0,18907,18907
+2021,C034,Engenheiro de visão computacional,Nível sênior,Remoto,1,24000.0,24000,24000
+2021,C095,Engenheiro líder de dados,Nível sênior,Híbrido,1,160000.0,160000,160000
+2021,C095,Engenheiro líder de dados,Nível sênior,Presencial,1,276000.0,276000,276000
+2021,C095,Engenheiro líder de dados,Nível sênior,Remoto,1,103160.0,103160,103160
+2021,C120,Engenheiro principal de dados,Nível sênior,Remoto,2,192500.0,185000,200000
+2021,C076,Especialista em dados,Nível sênior,Remoto,1,165000.0,165000,165000
+2021,C042,Gerente de análise de dados,Nível sênior,Presencial,1,120000.0,120000,120000
+2021,C042,Gerente de análise de dados,Nível sênior,Remoto,2,130000.0,120000,140000
+2021,C071,Gerente de ciência de dados,Nível sênior,Híbrido,2,74379.5,54094,94665
+2021,C071,Gerente de ciência de dados,Nível sênior,Presencial,1,240000.0,240000,240000
+2021,C071,Gerente de ciência de dados,Nível sênior,Remoto,3,156666.67,144000,174000
+2021,C070,Líder de ciência de dados,Nível intermediário,Remoto,1,150000.0,150000,150000
+2021,C015,Técnico de veículos autônomos,Nível intermediário,Híbrido,1,45555.0,45555,45555
+2022,C037,Analista de dados,Nível executivo,Remoto,2,120000.0,110000,130000
+2022,C037,Analista de dados,Nível inicial,Híbrido,4,55943.0,20000,125404
+2022,C037,Analista de dados,Nível inicial,Presencial,5,47400.0,15000,67000
+2022,C037,Analista de dados,Nível inicial,Remoto,7,60648.0,25216,150000
+2022,C037,Analista de dados,Nível intermediário,Híbrido,1,65257.0,65257,65257
+2022,C037,Analista de dados,Nível intermediário,Presencial,28,115092.82,43096,430967
+2022,C037,Analista de dados,Nível intermediário,Remoto,23,82392.39,20000,167000
+2022,C037,Analista de dados,Nível sênior,Presencial,40,111746.32,36773,216200
+2022,C037,Analista de dados,Nível sênior,Remoto,58,118715.26,55000,236600
+2022,C113,Analista de dados de comercialização,Nível sênior,Remoto,1,200000.0,200000,200000
+2022,C018,Analista de dados de inteligência de negócios,Nível inicial,Presencial,1,60938.0,60938,60938
+2022,C018,Analista de dados de inteligência de negócios,Nível inicial,Remoto,1,57000.0,57000,57000
+2022,C018,Analista de dados de inteligência de negócios,Nível intermediário,Híbrido,2,75058.0,45050,105066
+2022,C018,Analista de dados de inteligência de negócios,Nível intermediário,Remoto,2,51900.0,50432,53368
+2022,C023,Analista de dados de negócios,Nível inicial,Híbrido,1,48000.0,48000,48000
+2022,C023,Analista de dados de negócios,Nível inicial,Remoto,1,50000.0,50000,50000
+2022,C023,Analista de dados de negócios,Nível intermediário,Híbrido,2,43723.5,18314,69133
+2022,C023,Analista de dados de negócios,Nível intermediário,Remoto,2,83902.5,17805,150000
+2022,C023,Analista de dados de negócios,Nível sênior,Remoto,1,100000.0,100000,100000
+2022,C123,Analista de dados de produto,Nível inicial,Remoto,1,100000.0,100000,100000
+2022,C123,Analista de dados de produto,Nível intermediário,Remoto,1,140000.0,140000,140000
+2022,C089,Analista de dados financeiros,Nível inicial,Híbrido,1,100000.0,100000,100000
+2022,C089,Analista de dados financeiros,Nível intermediário,Presencial,1,75000.0,75000,75000
+2022,C017,Analista de inteligência de negócios,Nível inicial,Híbrido,1,76000.0,76000,76000
+2022,C017,Analista de inteligência de negócios,Nível intermediário,Remoto,2,63000.0,48000,78000
+2022,C017,Analista de inteligência de negócios,Nível sênior,Remoto,1,200000.0,200000,200000
+2022,C057,Analista de operações de dados,Nível sênior,Presencial,2,107625.0,92250,123000
+2022,C057,Analista de operações de dados,Nível sênior,Remoto,2,73500.0,66000,81000
+2022,C118,Analista principal de dados,Nível intermediário,Remoto,1,75000.0,75000,75000
+2022,C044,Arquiteto de dados,Nível sênior,Presencial,8,167737.5,63000,345600
+2022,C044,Arquiteto de dados,Nível sênior,Remoto,22,170829.68,66000,266400
+2022,C119,Arquiteto principal de dados,Nível sênior,Remoto,1,38154.0,38154,38154
+2022,C092,Chefe de aprendizado de máquina,Nível executivo,Híbrido,1,76309.0,76309,76309
+2022,C091,Chefe de ciência de dados,Nível executivo,Remoto,2,195937.5,167875,224000
+2022,C090,Chefe de dados,Nível executivo,Presencial,2,182500.0,160000,205000
+2022,C090,Chefe de dados,Nível intermediário,Remoto,1,31520.0,31520,31520
+2022,C090,Chefe de dados,Nível sênior,Remoto,1,200000.0,200000,200000
+2022,C014,Cientista aplicado,Nível sênior,Remoto,11,181963.64,141525,230000
+2022,C108,Cientista de aprendizado de máquina,Nível executivo,Remoto,2,190000.0,180000,200000
+2022,C108,Cientista de aprendizado de máquina,Nível inicial,Híbrido,1,80000.0,80000,80000
+2022,C108,Cientista de aprendizado de máquina,Nível inicial,Remoto,1,34672.0,34672,34672
+2022,C108,Cientista de aprendizado de máquina,Nível intermediário,Híbrido,1,153000.0,153000,153000
+2022,C108,Cientista de aprendizado de máquina,Nível intermediário,Presencial,2,150000.0,135000,165000
+2022,C108,Cientista de aprendizado de máquina,Nível intermediário,Remoto,3,98366.67,22800,160000
+2022,C108,Cientista de aprendizado de máquina,Nível sênior,Presencial,4,170800.0,129300,216000
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível inicial,Remoto,1,30469.0,30469,30469
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível intermediário,Híbrido,1,173000.0,173000,173000
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível intermediário,Remoto,4,69558.75,30523,97712
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível sênior,Presencial,1,108000.0,108000,108000
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível sênior,Remoto,2,113559.5,77119,150000
+2022,C074,Cientista de dados,Nível executivo,Remoto,2,144500.0,130000,159000
+2022,C074,Cientista de dados,Nível inicial,Híbrido,8,51595.25,22892,100000
+2022,C074,Cientista de dados,Nível inicial,Presencial,8,92721.75,73000,130000
+2022,C074,Cientista de dados,Nível inicial,Remoto,11,83851.36,17684,180000
+2022,C074,Cientista de dados,Nível intermediário,Híbrido,5,68890.8,25000,108000
+2022,C074,Cientista de dados,Nível intermediário,Presencial,27,110228.22,36940,225000
+2022,C074,Cientista de dados,Nível intermediário,Remoto,36,93062.81,30000,200000
+2022,C074,Cientista de dados,Nível sênior,Presencial,74,152687.66,37824,249500
+2022,C074,Cientista de dados,Nível sênior,Remoto,79,157083.67,38000,350000
+2022,C011,Cientista de dados aplicados,Nível inicial,Híbrido,1,50000.0,50000,50000
+2022,C011,Cientista de dados aplicados,Nível inicial,Remoto,1,40000.0,40000,40000
+2022,C011,Cientista de dados aplicados,Nível intermediário,Remoto,1,157000.0,157000,157000
+2022,C011,Cientista de dados aplicados,Nível sênior,Remoto,2,278500.0,177000,380000
+2022,C007,Cientista de inteligência artificial,Nível executivo,Remoto,1,200000.0,200000,200000
+2022,C007,Cientista de inteligência artificial,Nível inicial,Híbrido,1,200000.0,200000,200000
+2022,C007,Cientista de inteligência artificial,Nível inicial,Remoto,2,40760.0,31520,50000
+2022,C007,Cientista de inteligência artificial,Nível intermediário,Presencial,1,120000.0,120000,120000
+2022,C007,Cientista de inteligência artificial,Nível intermediário,Remoto,2,200000.0,200000,200000
+2022,C007,Cientista de inteligência artificial,Nível sênior,Remoto,1,125000.0,125000,125000
+2022,C127,Cientista de pesquisa,Nível executivo,Presencial,1,84053.0,84053,84053
+2022,C127,Cientista de pesquisa,Nível inicial,Remoto,1,120000.0,120000,120000
+2022,C127,Cientista de pesquisa,Nível intermediário,Híbrido,1,145000.0,145000,145000
+2022,C127,Cientista de pesquisa,Nível intermediário,Presencial,3,90707.33,61989,126080
+2022,C127,Cientista de pesquisa,Nível intermediário,Remoto,1,23000.0,23000,23000
+2022,C127,Cientista de pesquisa,Nível sênior,Híbrido,2,116653.0,89306,144000
+2022,C127,Cientista de pesquisa,Nível sênior,Presencial,2,199675.0,149850,249500
+2022,C127,Cientista de pesquisa,Nível sênior,Remoto,4,214000.0,150000,300000
+2022,C096,Cientista líder de dados,Nível intermediário,Híbrido,1,61566.0,61566,61566
+2022,C096,Cientista líder de dados,Nível sênior,Híbrido,1,29944.0,29944,29944
+2022,C096,Cientista líder de dados,Nível sênior,Presencial,1,56723.0,56723,56723
+2022,C096,Cientista líder de dados,Nível sênior,Remoto,3,173725.67,156868,192000
+2022,C121,Cientista principal de dados,Nível sênior,Remoto,1,155499.0,155499,155499
+2022,C039,Consultor de análise de dados,Nível inicial,Remoto,1,50000.0,50000,50000
+2022,C039,Consultor de análise de dados,Nível intermediário,Remoto,1,113000.0,113000,113000
+2022,C067,Consultor de ciência de dados,Nível inicial,Híbrido,2,25741.0,24165,27317
+2022,C067,Consultor de ciência de dados,Nível intermediário,Presencial,2,60951.0,51716,70186
+2022,C067,Consultor de ciência de dados,Nível sênior,Presencial,5,125700.0,94500,145000
+2022,C100,Desenvolvedor de aprendizado de máquina,Nível inicial,Remoto,3,84333.33,33000,180000
+2022,C100,Desenvolvedor de aprendizado de máquina,Nível intermediário,Remoto,1,76814.0,76814,76814
+2022,C100,Desenvolvedor de aprendizado de máquina,Nível sênior,Remoto,1,76814.0,76814,76814
+2022,C086,"Desenvolvedor de extração, transformação e carga",Nível intermediário,Presencial,1,52533.0,52533,52533
+2022,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,Presencial,2,156500.0,63000,250000
+2022,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,Remoto,4,145867.5,63000,250000
+2022,C002,Desenvolvedor de inteligência artificial,Nível sênior,Presencial,1,275000.0,275000,275000
+2022,C026,Desenvolvedor de inteligência de negócios,Nível intermediário,Remoto,1,15000.0,15000,15000
+2022,C020,Desenvolvedor de inteligência de negócios,Nível sênior,Remoto,3,130000.0,120000,140000
+2022,C085,Diretor de ciência de dados,Nível executivo,Híbrido,1,192037.0,192037,192037
+2022,C085,Diretor de ciência de dados,Nível sênior,Híbrido,1,57786.0,57786,57786
+2022,C040,Engenheiro de análise de dados,Nível inicial,Presencial,1,20000.0,20000,20000
+2022,C040,Engenheiro de análise de dados,Nível intermediário,Remoto,1,135000.0,135000,135000
+2022,C009,Engenheiro de análises,Nível executivo,Remoto,6,171166.67,135000,210000
+2022,C009,Engenheiro de análises,Nível inicial,Híbrido,1,130000.0,130000,130000
+2022,C009,Engenheiro de análises,Nível intermediário,Presencial,4,108135.75,54000,200000
+2022,C009,Engenheiro de análises,Nível intermediário,Remoto,6,90250.0,48000,122500
+2022,C009,Engenheiro de análises,Nível sênior,Presencial,14,156734.43,63000,250000
+2022,C009,Engenheiro de análises,Nível sênior,Remoto,18,135469.67,48000,231250
+2022,C101,Engenheiro de aprendizado de máquina,Nível inicial,Híbrido,1,115000.0,115000,115000
+2022,C101,Engenheiro de aprendizado de máquina,Nível inicial,Presencial,4,130250.0,83000,189750
+2022,C098,Engenheiro de aprendizado de máquina,Nível inicial,Remoto,1,21013.0,21013,21013
+2022,C101,Engenheiro de aprendizado de máquina,Nível inicial,Remoto,5,55407.8,30000,100000
+2022,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Híbrido,2,74521.0,20984,128058
+2022,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Presencial,10,131722.5,80036,230000
+2022,C098,Engenheiro de aprendizado de máquina,Nível intermediário,Remoto,4,131675.0,98200,180000
+2022,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Remoto,4,98153.5,83864,120000
+2022,C101,Engenheiro de aprendizado de máquina,Nível sênior,Híbrido,2,73546.5,63040,84053
+2022,C098,Engenheiro de aprendizado de máquina,Nível sênior,Presencial,2,200000.0,160000,240000
+2022,C101,Engenheiro de aprendizado de máquina,Nível sênior,Presencial,18,167891.44,110000,248700
+2022,C098,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,8,173337.5,84000,243000
+2022,C101,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,34,157782.35,59888,255000
+2022,C083,Engenheiro de aprendizado profundo,Nível intermediário,Remoto,2,67723.0,49253,86193
+2022,C032,Engenheiro de banco de dados em nuvem,Nível sênior,Remoto,2,175000.0,160000,190000
+2022,C069,Engenheiro de ciência de dados,Nível sênior,Remoto,1,60000.0,60000,60000
+2022,C047,Engenheiro de dados,Nível executivo,Presencial,2,172500.0,145000,200000
+2022,C047,Engenheiro de dados,Nível executivo,Remoto,10,239180.0,116100,324000
+2022,C047,Engenheiro de dados,Nível inicial,Presencial,4,111250.0,65000,160000
+2022,C047,Engenheiro de dados,Nível inicial,Remoto,10,74927.8,43096,129000
+2022,C047,Engenheiro de dados,Nível intermediário,Híbrido,3,51269.67,35610,65666
+2022,C047,Engenheiro de dados,Nível intermediário,Presencial,30,108794.17,24000,260000
+2022,C047,Engenheiro de dados,Nível intermediário,Remoto,32,99346.16,42000,187000
+2022,C047,Engenheiro de dados,Nível sênior,Presencial,93,142563.13,36773,300000
+2022,C047,Engenheiro de dados,Nível sênior,Remoto,94,155934.78,25000,315000
+2022,C022,Engenheiro de grandes volumes de dados,Nível sênior,Híbrido,1,161311.0,161311,161311
+2022,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível intermediário,Híbrido,1,55685.0,55685,55685
+2022,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível sênior,Remoto,2,167400.0,148800,186000
+2022,C099,Engenheiro de operações de aprendizado de máquina,Nível intermediário,Remoto,2,129000.0,124000,134000
+2022,C058,Engenheiro de operações de dados,Nível intermediário,Remoto,2,80000.0,60000,100000
+2022,C058,Engenheiro de operações de dados,Nível sênior,Presencial,2,87500.0,70000,105000
+2022,C126,Engenheiro de pesquisa,Nível inicial,Híbrido,1,41809.0,41809,41809
+2022,C126,Engenheiro de pesquisa,Nível inicial,Remoto,1,16455.0,16455,16455
+2022,C126,Engenheiro de pesquisa,Nível intermediário,Híbrido,1,105066.0,105066,105066
+2022,C126,Engenheiro de pesquisa,Nível intermediário,Remoto,1,240000.0,240000,240000
+2022,C126,Engenheiro de pesquisa,Nível sênior,Presencial,4,199837.5,149850,250000
+2022,C106,Engenheiro de pesquisa em aprendizado de máquina,Nível inicial,Híbrido,1,66192.0,66192,66192
+2022,C006,Engenheiro de pesquisa em inteligência artificial,Nível inicial,Remoto,1,36940.0,36940,36940
+2022,C116,Engenheiro de processamento de linguagem natural,Nível intermediário,Remoto,2,52182.5,44365,60000
+2022,C109,Engenheiro de programas de aprendizado de máquina,Nível sênior,Remoto,5,240440.0,168000,375000
+2022,C035,Engenheiro de programas de visão computacional,Nível inicial,Remoto,1,150000.0,150000,150000
+2022,C034,Engenheiro de visão computacional,Nível inicial,Presencial,1,125000.0,125000,125000
+2022,C034,Engenheiro de visão computacional,Nível intermediário,Remoto,2,37367.0,15897,58837
+2022,C097,Engenheiro líder de aprendizado de máquina,Nível sênior,Híbrido,1,95386.0,95386,95386
+2022,C097,Engenheiro líder de aprendizado de máquina,Nível sênior,Presencial,1,84053.0,84053,84053
+2022,C097,Engenheiro líder de aprendizado de máquina,Nível sênior,Remoto,1,69344.0,69344,69344
+2022,C095,Engenheiro líder de dados,Nível executivo,Remoto,1,115222.0,115222,115222
+2022,C122,Engenheiro principal de aprendizado de máquina,Nível sênior,Remoto,1,190000.0,190000,190000
+2022,C076,Especialista em dados,Nível inicial,Remoto,1,105000.0,105000,105000
+2022,C076,Especialista em dados,Nível intermediário,Presencial,2,150000.0,135000,165000
+2022,C076,Especialista em dados,Nível sênior,Presencial,2,90000.0,70000,110000
+2022,C076,Especialista em dados,Nível sênior,Remoto,4,133750.0,70000,221300
+2022,C053,Especialista em gestão de dados,Nível sênior,Presencial,1,68293.0,68293,68293
+2022,C042,Gerente de análise de dados,Nível intermediário,Presencial,2,147500.0,140000,155000
+2022,C042,Gerente de análise de dados,Nível sênior,Presencial,1,133000.0,133000,133000
+2022,C042,Gerente de análise de dados,Nível sênior,Remoto,4,127485.0,105400,150260
+2022,C103,Gerente de aprendizado de máquina,Nível sênior,Remoto,2,175000.0,150000,200000
+2022,C071,Gerente de ciência de dados,Nível executivo,Presencial,5,189280.0,106000,260500
+2022,C071,Gerente de ciência de dados,Nível intermediário,Remoto,4,173000.0,134000,241000
+2022,C071,Gerente de ciência de dados,Nível sênior,Presencial,8,211745.0,120000,299500
+2022,C071,Gerente de ciência de dados,Nível sênior,Remoto,13,185265.31,133766,300000
+2022,C054,Gerente de dados,Nível executivo,Híbrido,1,125976.0,125976,125976
+2022,C054,Gerente de dados,Nível inicial,Remoto,2,61450.0,45600,77300
+2022,C054,Gerente de dados,Nível intermediário,Presencial,2,116000.0,98000,134000
+2022,C111,Gerente de gestão de dados,Nível sênior,Remoto,1,125000.0,125000,125000
+2022,C041,Líder de análise de dados,Nível sênior,Remoto,1,405000.0,405000,405000
+2022,C075,Líder de cientistas de dados,Nível intermediário,Híbrido,1,89306.0,89306,89306
+2022,C075,Líder de cientistas de dados,Nível sênior,Remoto,1,183000.0,183000,183000
+2022,C070,Líder de ciência de dados,Nível sênior,Híbrido,1,165000.0,165000,165000
+2022,C073,Líder técnico de ciência de dados,Nível sênior,Híbrido,1,375000.0,375000,375000
+2022,C107,Pesquisador de aprendizado de máquina,Nível intermediário,Híbrido,1,105236.0,105236,105236
+2022,C107,Pesquisador de aprendizado de máquina,Nível intermediário,Remoto,3,126666.67,100000,150000
+2022,C005,Programador de inteligência artificial,Nível inicial,Remoto,1,40000.0,40000,40000
+2023,C037,Analista de dados,Nível executivo,Presencial,6,112916.67,70000,170000
+2023,C037,Analista de dados,Nível executivo,Remoto,6,113333.33,55000,180000
+2023,C037,Analista de dados,Nível inicial,Híbrido,4,50168.25,20673,100000
+2023,C037,Analista de dados,Nível inicial,Presencial,68,79657.0,28299,203000
+2023,C037,Analista de dados,Nível inicial,Remoto,32,80400.75,18160,163800
+2023,C037,Analista de dados,Nível intermediário,Híbrido,4,50824.25,15680,86128
+2023,C037,Analista de dados,Nível intermediário,Presencial,119,100314.11,33686,369120
+2023,C037,Analista de dados,Nível intermediário,Remoto,48,87732.98,36000,250000
+2023,C037,Analista de dados,Nível sênior,Presencial,180,125331.73,38868,385000
+2023,C037,Analista de dados,Nível sênior,Remoto,171,122696.02,15809,250000
+2023,C033,Analista de dados de conformidade,Nível inicial,Remoto,2,45000.0,30000,60000
+2023,C088,Analista de dados de finanças,Nível inicial,Presencial,1,40000.0,40000,40000
+2023,C088,Analista de dados de finanças,Nível sênior,Remoto,1,323905.0,323905,323905
+2023,C018,Analista de dados de inteligência de negócios,Nível inicial,Remoto,4,55000.0,25000,85000
+2023,C025,Analista de dados de inteligência de negócios,Nível inicial,Remoto,1,99000.0,99000,99000
+2023,C025,Analista de dados de inteligência de negócios,Nível intermediário,Híbrido,1,67419.0,67419,67419
+2023,C018,Analista de dados de inteligência de negócios,Nível intermediário,Remoto,1,70000.0,70000,70000
+2023,C018,Analista de dados de inteligência de negócios,Nível sênior,Remoto,1,72338.0,72338,72338
+2023,C023,Analista de dados de negócios,Nível inicial,Presencial,1,21593.0,21593,21593
+2023,C023,Analista de dados de negócios,Nível intermediário,Híbrido,1,105000.0,105000,105000
+2023,C023,Analista de dados de negócios,Nível intermediário,Presencial,1,36000.0,36000,36000
+2023,C023,Analista de dados de negócios,Nível intermediário,Remoto,2,26000.0,17000,35000
+2023,C023,Analista de dados de negócios,Nível sênior,Híbrido,1,94000.0,94000,94000
+2023,C023,Analista de dados de negócios,Nível sênior,Remoto,3,112658.67,78000,180000
+2023,C123,Analista de dados de produto,Nível inicial,Híbrido,1,83200.0,83200,83200
+2023,C123,Analista de dados de produto,Nível intermediário,Remoto,1,16417.0,16417,16417
+2023,C123,Analista de dados de produto,Nível sênior,Remoto,1,57000.0,57000,57000
+2023,C130,Analista de dados do corpo técnico,Nível intermediário,Remoto,1,179998.0,179998,179998
+2023,C089,Analista de dados financeiros,Nível inicial,Híbrido,1,56500.0,56500,56500
+2023,C089,Analista de dados financeiros,Nível intermediário,Remoto,1,130000.0,130000,130000
+2023,C093,Analista de descobertas analíticas,Nível intermediário,Presencial,4,45217.0,30760,55368
+2023,C093,Analista de descobertas analíticas,Nível intermediário,Remoto,2,48585.5,43187,53984
+2023,C052,Analista de gestão de dados,Nível inicial,Presencial,2,85000.0,50000,120000
+2023,C052,Analista de gestão de dados,Nível inicial,Remoto,2,56000.0,52000,60000
+2023,C024,Analista de inteligência de negócios,Nível inicial,Presencial,12,76763.25,43064,132567
+2023,C017,Analista de inteligência de negócios,Nível intermediário,Presencial,5,133680.0,86100,172300
+2023,C024,Analista de inteligência de negócios,Nível intermediário,Presencial,10,96013.6,48450,150000
+2023,C024,Analista de inteligência de negócios,Nível intermediário,Remoto,13,120019.08,62500,189000
+2023,C017,Analista de inteligência de negócios,Nível sênior,Presencial,4,132500.0,110000,160000
+2023,C024,Analista de inteligência de negócios,Nível sênior,Presencial,24,125176.88,40603,198200
+2023,C017,Analista de inteligência de negócios,Nível sênior,Remoto,11,124483.73,18381,234485
+2023,C024,Analista de inteligência de negócios,Nível sênior,Remoto,14,145312.14,80000,200000
+2023,C057,Analista de operações de dados,Nível intermediário,Remoto,2,54870.0,44640,65100
+2023,C057,Analista de operações de dados,Nível sênior,Presencial,4,114250.0,77000,154000
+2023,C125,Analista de pesquisa,Nível inicial,Presencial,13,79387.69,43064,179000
+2023,C125,Analista de pesquisa,Nível inicial,Remoto,10,65690.0,43500,90000
+2023,C125,Analista de pesquisa,Nível intermediário,Presencial,5,98800.0,70000,142000
+2023,C125,Analista de pesquisa,Nível intermediário,Remoto,2,64000.0,57000,71000
+2023,C125,Analista de pesquisa,Nível sênior,Presencial,16,139963.75,50000,230000
+2023,C125,Analista de pesquisa,Nível sênior,Remoto,6,58286.5,45150,83000
+2023,C063,Analista de qualidade de dados,Nível inicial,Remoto,2,43064.0,36912,49216
+2023,C063,Analista de qualidade de dados,Nível intermediário,Presencial,2,82500.0,70000,95000
+2023,C063,Analista de qualidade de dados,Nível intermediário,Remoto,2,62500.0,60000,65000
+2023,C063,Analista de qualidade de dados,Nível sênior,Presencial,8,100772.5,64980,172000
+2023,C079,Analista de visualização de dados,Nível sênior,Presencial,2,120000.0,110000,130000
+2023,C094,Analista líder de dados,Nível intermediário,Híbrido,1,18241.0,18241,18241
+2023,C094,Analista líder de dados,Nível intermediário,Presencial,1,68000.0,68000,68000
+2023,C044,Arquiteto de dados,Nível executivo,Presencial,2,167500.0,155000,180000
+2023,C044,Arquiteto de dados,Nível intermediário,Presencial,8,117513.0,79976,167500
+2023,C044,Arquiteto de dados,Nível intermediário,Remoto,5,146000.0,90000,240000
+2023,C044,Arquiteto de dados,Nível sênior,Presencial,62,154585.97,52500,274450
+2023,C044,Arquiteto de dados,Nível sênior,Remoto,50,178672.34,90000,376080
+2023,C008,Arquiteto de dados em AWS,Nível intermediário,Remoto,1,258000.0,258000,258000
+2023,C021,Arquiteto de grandes volumes de dados,Nível sênior,Remoto,1,153799.0,153799,153799
+2023,C001,Arquiteto de inteligência artificial,Nível executivo,Remoto,1,215936.0,215936,215936
+2023,C001,Arquiteto de inteligência artificial,Nível sênior,Presencial,2,267000.0,204000,330000
+2023,C001,Arquiteto de inteligência artificial,Nível sênior,Remoto,3,217333.33,146900,305100
+2023,C092,Chefe de aprendizado de máquina,Nível executivo,Presencial,2,259000.0,188000,330000
+2023,C091,Chefe de ciência de dados,Nível executivo,Híbrido,1,131721.0,131721,131721
+2023,C091,Chefe de ciência de dados,Nível executivo,Presencial,6,226874.33,129058,330000
+2023,C091,Chefe de ciência de dados,Nível intermediário,Híbrido,1,60805.0,60805,60805
+2023,C090,Chefe de dados,Nível executivo,Presencial,8,224517.5,142200,329500
+2023,C090,Chefe de dados,Nível executivo,Remoto,10,192246.0,92280,329500
+2023,C090,Chefe de dados,Nível sênior,Remoto,3,186859.0,75577,258500
+2023,C014,Cientista aplicado,Nível inicial,Presencial,6,180420.0,110680,281700
+2023,C014,Cientista aplicado,Nível intermediário,Híbrido,1,36000.0,36000,36000
+2023,C014,Cientista aplicado,Nível intermediário,Presencial,9,194143.33,125000,260000
+2023,C014,Cientista aplicado,Nível intermediário,Remoto,3,116666.67,20000,198000
+2023,C014,Cientista aplicado,Nível sênior,Presencial,37,195320.54,72000,350000
+2023,C014,Cientista aplicado,Nível sênior,Remoto,22,194158.5,142000,253000
+2023,C108,Cientista de aprendizado de máquina,Nível intermediário,Presencial,8,246250.0,125000,750000
+2023,C108,Cientista de aprendizado de máquina,Nível sênior,Presencial,22,180649.82,105500,300000
+2023,C108,Cientista de aprendizado de máquina,Nível sênior,Remoto,19,197004.95,108308,325000
+2023,C013,Cientista de aprendizado de máquina aplicado,Nível inicial,Híbrido,1,43187.0,43187,43187
+2023,C013,Cientista de aprendizado de máquina aplicado,Nível inicial,Remoto,1,48644.0,48644,48644
+2023,C013,Cientista de aprendizado de máquina aplicado,Nível sênior,Remoto,1,90000.0,90000,90000
+2023,C074,Cientista de dados,Nível executivo,Híbrido,1,100416.0,100416,100416
+2023,C074,Cientista de dados,Nível executivo,Presencial,8,204218.75,100000,300000
+2023,C074,Cientista de dados,Nível executivo,Remoto,10,189699.6,78000,299500
+2023,C074,Cientista de dados,Nível inicial,Híbrido,4,91913.0,57223,122638
+2023,C074,Cientista de dados,Nível inicial,Presencial,35,98200.69,31310,190000
+2023,C074,Cientista de dados,Nível inicial,Remoto,16,81539.56,16000,166000
+2023,C074,Cientista de dados,Nível intermediário,Híbrido,5,46824.6,24613,64781
+2023,C074,Cientista de dados,Nível intermediário,Presencial,113,129144.87,35000,310000
+2023,C074,Cientista de dados,Nível intermediário,Remoto,56,116468.96,17025,209300
+2023,C074,Cientista de dados,Nível sênior,Híbrido,4,87686.5,63701,134960
+2023,C074,Cientista de dados,Nível sênior,Presencial,357,178887.98,38868,750000
+2023,C074,Cientista de dados,Nível sênior,Remoto,218,173000.2,71259,297300
+2023,C011,Cientista de dados aplicados,Nível inicial,Híbrido,1,29691.0,29691,29691
+2023,C011,Cientista de dados aplicados,Nível intermediário,Remoto,2,50336.5,20673,80000
+2023,C011,Cientista de dados aplicados,Nível sênior,Presencial,1,64781.0,64781,64781
+2023,C011,Cientista de dados aplicados,Nível sênior,Remoto,1,67635.0,67635,67635
+2023,C115,Cientista de dados de comercialização,Nível sênior,Híbrido,1,90000.0,90000,90000
+2023,C082,Cientista de decisões,Nível intermediário,Presencial,2,173350.0,142200,204500
+2023,C082,Cientista de decisões,Nível sênior,Presencial,5,157660.0,126400,204500
+2023,C082,Cientista de decisões,Nível sênior,Remoto,6,156299.33,123040,182500
+2023,C007,Cientista de inteligência artificial,Nível inicial,Remoto,1,20000.0,20000,20000
+2023,C007,Cientista de inteligência artificial,Nível intermediário,Híbrido,1,38868.0,38868,38868
+2023,C007,Cientista de inteligência artificial,Nível intermediário,Presencial,1,54000.0,54000,54000
+2023,C007,Cientista de inteligência artificial,Nível intermediário,Remoto,2,100919.0,81838,120000
+2023,C007,Cientista de inteligência artificial,Nível sênior,Híbrido,1,64781.0,64781,64781
+2023,C007,Cientista de inteligência artificial,Nível sênior,Presencial,3,262979.0,152000,417937
+2023,C007,Cientista de inteligência artificial,Nível sênior,Remoto,1,100000.0,100000,100000
+2023,C127,Cientista de pesquisa,Nível executivo,Presencial,2,202500.0,185000,220000
+2023,C127,Cientista de pesquisa,Nível inicial,Híbrido,1,220000.0,220000,220000
+2023,C127,Cientista de pesquisa,Nível inicial,Presencial,10,145368.0,47840,250800
+2023,C127,Cientista de pesquisa,Nível inicial,Remoto,4,183790.0,120000,252990
+2023,C127,Cientista de pesquisa,Nível intermediário,Híbrido,1,280000.0,280000,280000
+2023,C127,Cientista de pesquisa,Nível intermediário,Presencial,31,175802.42,70000,405000
+2023,C127,Cientista de pesquisa,Nível intermediário,Remoto,14,184532.86,118800,340000
+2023,C127,Cientista de pesquisa,Nível sênior,Presencial,81,196741.43,90700,374000
+2023,C127,Cientista de pesquisa,Nível sênior,Remoto,14,158100.0,90600,240000
+2023,C096,Cientista líder de dados,Nível sênior,Remoto,1,36000.0,36000,36000
+2023,C121,Cientista principal de dados,Nível sênior,Remoto,3,147124.67,86374,195000
+2023,C066,Ciência de dados,Nível executivo,Presencial,2,193000.0,168000,218000
+2023,C066,Ciência de dados,Nível intermediário,Presencial,8,161762.5,80000,280000
+2023,C066,Ciência de dados,Nível intermediário,Remoto,2,202450.0,169900,235000
+2023,C066,Ciência de dados,Nível sênior,Presencial,18,141454.17,59200,270250
+2023,C066,Ciência de dados,Nível sênior,Remoto,6,147650.0,95100,230000
+2023,C067,Consultor de ciência de dados,Nível intermediário,Presencial,4,70452.0,51676,90000
+2023,C067,Consultor de ciência de dados,Nível intermediário,Remoto,2,60500.0,21000,100000
+2023,C067,Consultor de ciência de dados,Nível sênior,Híbrido,1,29301.0,29301,29301
+2023,C067,Consultor de ciência de dados,Nível sênior,Presencial,16,132831.25,90000,189750
+2023,C036,Consultor de engenharia de dados,Nível sênior,Remoto,1,118539.0,118539,118539
+2023,C046,Desenvolvedor de dados,Nível intermediário,Presencial,2,97500.0,95000,100000
+2023,C046,Desenvolvedor de dados,Nível intermediário,Remoto,4,98057.25,69139,130000
+2023,C046,Desenvolvedor de dados,Nível sênior,Presencial,2,115100.0,85500,144700
+2023,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,Presencial,6,105483.33,53300,143800
+2023,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,Remoto,2,147925.0,113000,182850
+2023,C002,Desenvolvedor de inteligência artificial,Nível inicial,Híbrido,2,100000.0,80000,120000
+2023,C002,Desenvolvedor de inteligência artificial,Nível inicial,Presencial,1,64781.0,64781,64781
+2023,C002,Desenvolvedor de inteligência artificial,Nível inicial,Remoto,3,131978.67,50000,215936
+2023,C002,Desenvolvedor de inteligência artificial,Nível intermediário,Presencial,1,74883.0,74883,74883
+2023,C002,Desenvolvedor de inteligência artificial,Nível intermediário,Remoto,2,170000.0,140000,200000
+2023,C002,Desenvolvedor de inteligência artificial,Nível sênior,Híbrido,1,161952.0,161952,161952
+2023,C002,Desenvolvedor de inteligência artificial,Nível sênior,Presencial,6,162333.33,60000,260000
+2023,C002,Desenvolvedor de inteligência artificial,Nível sênior,Remoto,1,53984.0,53984,53984
+2023,C026,Desenvolvedor de inteligência de negócios,Nível executivo,Presencial,2,137000.0,106500,167500
+2023,C020,Desenvolvedor de inteligência de negócios,Nível inicial,Presencial,4,100650.0,57000,160000
+2023,C020,Desenvolvedor de inteligência de negócios,Nível intermediário,Presencial,9,96344.0,49216,154800
+2023,C026,Desenvolvedor de inteligência de negócios,Nível intermediário,Presencial,2,43064.0,30760,55368
+2023,C020,Desenvolvedor de inteligência de negócios,Nível intermediário,Remoto,2,90000.0,80000,100000
+2023,C026,Desenvolvedor de inteligência de negócios,Nível intermediário,Remoto,2,125000.0,110000,140000
+2023,C020,Desenvolvedor de inteligência de negócios,Nível sênior,Presencial,10,107356.4,62442,197000
+2023,C026,Desenvolvedor de inteligência de negócios,Nível sênior,Presencial,8,108241.88,66825,169000
+2023,C020,Desenvolvedor de inteligência de negócios,Nível sênior,Remoto,5,129000.0,100000,160000
+2023,C026,Desenvolvedor de inteligência de negócios,Nível sênior,Remoto,4,109625.0,76500,140000
+2023,C117,Desenvolvedor em Power BI,Nível intermediário,Remoto,1,64781.0,64781,64781
+2023,C068,Diretor de ciência de dados,Nível executivo,Presencial,2,201000.0,190000,212000
+2023,C085,Diretor de ciência de dados,Nível executivo,Presencial,8,248112.0,157500,353200
+2023,C085,Diretor de ciência de dados,Nível executivo,Remoto,10,227388.0,118440,375500
+2023,C085,Diretor de ciência de dados,Nível intermediário,Presencial,2,204500.0,192000,217000
+2023,C085,Diretor de ciência de dados,Nível sênior,Híbrido,1,125948.0,125948,125948
+2023,C009,Engenheiro de análises,Nível executivo,Presencial,2,185000.0,170000,200000
+2023,C009,Engenheiro de análises,Nível executivo,Remoto,4,208500.0,153000,250000
+2023,C009,Engenheiro de análises,Nível inicial,Presencial,3,72333.33,43000,90000
+2023,C009,Engenheiro de análises,Nível inicial,Remoto,3,104407.67,37573,156450
+2023,C009,Engenheiro de análises,Nível intermediário,Presencial,20,155348.45,61520,430640
+2023,C009,Engenheiro de análises,Nível intermediário,Remoto,8,208425.0,84000,700000
+2023,C009,Engenheiro de análises,Nível sênior,Presencial,69,163842.33,75000,289800
+2023,C009,Engenheiro de análises,Nível sênior,Remoto,68,163703.93,50000,700000
+2023,C101,Engenheiro de aprendizado de máquina,Nível executivo,Remoto,6,190950.0,145000,295500
+2023,C098,Engenheiro de aprendizado de máquina,Nível inicial,Presencial,3,142000.0,76000,220000
+2023,C101,Engenheiro de aprendizado de máquina,Nível inicial,Presencial,6,120060.17,47840,163196
+2023,C101,Engenheiro de aprendizado de máquina,Nível inicial,Remoto,3,85000.0,36000,126000
+2023,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Híbrido,2,177000.0,135000,219000
+2023,C098,Engenheiro de aprendizado de máquina,Nível intermediário,Presencial,13,171153.85,85000,300000
+2023,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Presencial,56,178013.29,50000,750000
+2023,C098,Engenheiro de aprendizado de máquina,Nível intermediário,Remoto,4,66375.0,25500,125000
+2023,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Remoto,30,108534.0,36000,280700
+2023,C101,Engenheiro de aprendizado de máquina,Nível sênior,Híbrido,1,113366.0,113366,113366
+2023,C098,Engenheiro de aprendizado de máquina,Nível sênior,Presencial,40,229413.23,121200,383910
+2023,C101,Engenheiro de aprendizado de máquina,Nível sênior,Presencial,246,194698.77,38868,392000
+2023,C098,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,27,220486.85,110000,385000
+2023,C101,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,110,196064.02,70179,330000
+2023,C012,Engenheiro de aprendizado de máquina aplicado,Nível executivo,Remoto,1,225000.0,225000,225000
+2023,C012,Engenheiro de aprendizado de máquina aplicado,Nível intermediário,Presencial,1,130000.0,130000,130000
+2023,C012,Engenheiro de aprendizado de máquina aplicado,Nível intermediário,Remoto,1,70179.0,70179,70179
+2023,C083,Engenheiro de aprendizado profundo,Nível inicial,Presencial,2,135000.0,120000,150000
+2023,C083,Engenheiro de aprendizado profundo,Nível intermediário,Remoto,2,125000.0,100000,150000
+2023,C083,Engenheiro de aprendizado profundo,Nível sênior,Presencial,2,307710.0,283780,331640
+2023,C083,Engenheiro de aprendizado profundo,Nível sênior,Remoto,2,201702.0,100017,303387
+2023,C032,Engenheiro de banco de dados em nuvem,Nível sênior,Remoto,3,141666.67,115000,170000
+2023,C069,Engenheiro de ciência de dados,Nível inicial,Híbrido,1,104024.0,104024,104024
+2023,C069,Engenheiro de ciência de dados,Nível intermediário,Remoto,2,121500.0,113000,130000
+2023,C069,Engenheiro de ciência de dados,Nível sênior,Presencial,4,171037.5,100000,266450
+2023,C069,Engenheiro de ciência de dados,Nível sênior,Remoto,6,163333.33,135000,220000
+2023,C047,Engenheiro de dados,Nível executivo,Presencial,40,182029.0,94000,465000
+2023,C047,Engenheiro de dados,Nível executivo,Remoto,26,208497.46,71908,350000
+2023,C047,Engenheiro de dados,Nível inicial,Híbrido,2,54000.0,18000,90000
+2023,C047,Engenheiro de dados,Nível inicial,Presencial,18,108870.67,52500,220000
+2023,C047,Engenheiro de dados,Nível inicial,Remoto,14,60481.0,17025,130002
+2023,C047,Engenheiro de dados,Nível intermediário,Híbrido,1,80976.0,80976,80976
+2023,C047,Engenheiro de dados,Nível intermediário,Presencial,142,132757.88,39372,750000
+2023,C047,Engenheiro de dados,Nível intermediário,Remoto,83,109970.84,27000,220000
+2023,C047,Engenheiro de dados,Nível sênior,Híbrido,1,77737.0,77737,77737
+2023,C047,Engenheiro de dados,Nível sênior,Presencial,325,162016.65,37788,385000
+2023,C047,Engenheiro de dados,Nível sênior,Remoto,222,152256.46,46565,305000
+2023,C019,Engenheiro de dados de inteligência de negócios,Nível inicial,Remoto,1,60000.0,60000,60000
+2023,C016,Engenheiro de dados em Azure,Nível sênior,Híbrido,1,100000.0,100000,100000
+2023,C031,Engenheiro de dados em nuvem,Nível inicial,Híbrido,1,100000.0,100000,100000
+2023,C031,Engenheiro de dados em nuvem,Nível inicial,Remoto,1,177177.0,177177,177177
+2023,C129,Engenheiro de dados para programas,Nível intermediário,Remoto,1,74883.0,74883,74883
+2023,C129,Engenheiro de dados para programas,Nível sênior,Híbrido,1,50000.0,50000,50000
+2023,C129,Engenheiro de dados para programas,Nível sênior,Remoto,1,210000.0,210000,210000
+2023,C045,Engenheiro de desenvolvimento e operações de dados,Nível intermediário,Híbrido,1,95012.0,95012,95012
+2023,C045,Engenheiro de desenvolvimento e operações de dados,Nível sênior,Híbrido,1,53984.0,53984,53984
+2023,C087,"Engenheiro de extração, transformação e carga",Nível intermediário,Remoto,2,72286.0,58444,86128
+2023,C022,Engenheiro de grandes volumes de dados,Nível inicial,Remoto,1,130000.0,130000,130000
+2023,C022,Engenheiro de grandes volumes de dados,Nível intermediário,Remoto,1,48585.0,48585,48585
+2023,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível intermediário,Presencial,2,188760.0,171600,205920
+2023,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível sênior,Presencial,12,174493.33,127300,250000
+2023,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível sênior,Remoto,12,161411.58,75577,260000
+2023,C048,Engenheiro de infraestrutura de dados,Nível intermediário,Presencial,2,186655.0,183310,190000
+2023,C048,Engenheiro de infraestrutura de dados,Nível intermediário,Remoto,2,175000.0,160000,190000
+2023,C048,Engenheiro de infraestrutura de dados,Nível sênior,Presencial,6,227699.17,145000,385000
+2023,C048,Engenheiro de infraestrutura de dados,Nível sênior,Remoto,2,163500.0,143000,184000
+2023,C124,Engenheiro de instruções para inteligência artificial,Nível sênior,Presencial,4,166500.0,112000,230000
+2023,C049,Engenheiro de integração de dados,Nível sênior,Presencial,2,137500.0,125000,150000
+2023,C049,Engenheiro de integração de dados,Nível sênior,Remoto,2,118000.0,75000,161000
+2023,C003,Engenheiro de inteligência artificial,Nível inicial,Híbrido,1,21593.0,21593,21593
+2023,C003,Engenheiro de inteligência artificial,Nível inicial,Remoto,1,35000.0,35000,35000
+2023,C003,Engenheiro de inteligência artificial,Nível intermediário,Presencial,10,167090.0,40680,369120
+2023,C003,Engenheiro de inteligência artificial,Nível intermediário,Remoto,4,130702.75,32811,300000
+2023,C003,Engenheiro de inteligência artificial,Nível sênior,Presencial,23,184154.13,38868,372000
+2023,C003,Engenheiro de inteligência artificial,Nível sênior,Remoto,5,160626.2,64781,227850
+2023,C027,Engenheiro de inteligência de negócios,Nível executivo,Presencial,2,209850.0,172200,247500
+2023,C027,Engenheiro de inteligência de negócios,Nível intermediário,Presencial,9,108703.56,42030,185000
+2023,C027,Engenheiro de inteligência de negócios,Nível intermediário,Remoto,2,77250.0,65000,89500
+2023,C027,Engenheiro de inteligência de negócios,Nível sênior,Presencial,37,156390.27,49216,259000
+2023,C027,Engenheiro de inteligência de negócios,Nível sênior,Remoto,17,133590.0,78800,204500
+2023,C099,Engenheiro de operações de aprendizado de máquina,Nível inicial,Presencial,2,95650.0,58300,133000
+2023,C099,Engenheiro de operações de aprendizado de máquina,Nível intermediário,Presencial,2,119550.0,73100,166000
+2023,C099,Engenheiro de operações de aprendizado de máquina,Nível intermediário,Remoto,3,95189.33,27568,134000
+2023,C099,Engenheiro de operações de aprendizado de máquina,Nível sênior,Presencial,4,182000.0,139700,247300
+2023,C105,Engenheiro de operações de aprendizado de máquina,Nível sênior,Presencial,2,150000.0,140000,160000
+2023,C105,Engenheiro de operações de aprendizado de máquina,Nível sênior,Remoto,1,60000.0,60000,60000
+2023,C058,Engenheiro de operações de dados,Nível sênior,Presencial,6,191675.0,65000,289120
+2023,C058,Engenheiro de operações de dados,Nível sênior,Remoto,2,164925.0,136850,193000
+2023,C126,Engenheiro de pesquisa,Nível inicial,Presencial,14,135900.0,32390,350000
+2023,C126,Engenheiro de pesquisa,Nível inicial,Remoto,2,90000.0,60000,120000
+2023,C126,Engenheiro de pesquisa,Nível intermediário,Presencial,13,171116.31,80000,300000
+2023,C126,Engenheiro de pesquisa,Nível intermediário,Remoto,5,100760.0,67672,130000
+2023,C126,Engenheiro de pesquisa,Nível sênior,Presencial,63,195317.95,80000,385000
+2023,C126,Engenheiro de pesquisa,Nível sênior,Remoto,8,178374.0,86374,253000
+2023,C106,Engenheiro de pesquisa em aprendizado de máquina,Nível intermediário,Presencial,1,73824.0,73824,73824
+2023,C106,Engenheiro de pesquisa em aprendizado de máquina,Nível intermediário,Remoto,1,90000.0,90000,90000
+2023,C006,Engenheiro de pesquisa em inteligência artificial,Nível inicial,Remoto,2,24631.0,24322,24940
+2023,C006,Engenheiro de pesquisa em inteligência artificial,Nível intermediário,Presencial,1,81206.0,81206,81206
+2023,C006,Engenheiro de pesquisa em inteligência artificial,Nível intermediário,Remoto,1,150000.0,150000,150000
+2023,C116,Engenheiro de processamento de linguagem natural,Nível executivo,Presencial,2,175000.0,150000,200000
+2023,C116,Engenheiro de processamento de linguagem natural,Nível intermediário,Remoto,1,32834.0,32834,32834
+2023,C116,Engenheiro de processamento de linguagem natural,Nível sênior,Presencial,4,205000.0,135000,275000
+2023,C116,Engenheiro de processamento de linguagem natural,Nível sênior,Remoto,6,107139.17,61541,210000
+2023,C109,Engenheiro de programas de aprendizado de máquina,Nível intermediário,Híbrido,2,29402.0,24322,34482
+2023,C109,Engenheiro de programas de aprendizado de máquina,Nível intermediário,Presencial,2,181300.0,145000,217600
+2023,C109,Engenheiro de programas de aprendizado de máquina,Nível sênior,Presencial,6,200500.0,90000,302000
+2023,C035,Engenheiro de programas de visão computacional,Nível sênior,Remoto,1,53984.0,53984,53984
+2023,C064,Engenheiro de qualidade de dados,Nível inicial,Híbrido,1,23753.0,23753,23753
+2023,C064,Engenheiro de qualidade de dados,Nível sênior,Presencial,2,131500.0,121400,141600
+2023,C080,Engenheiro de visualização de dados,Nível sênior,Presencial,4,122975.0,83900,170200
+2023,C034,Engenheiro de visão computacional,Nível inicial,Presencial,1,220000.0,220000,220000
+2023,C034,Engenheiro de visão computacional,Nível inicial,Remoto,1,90000.0,90000,90000
+2023,C034,Engenheiro de visão computacional,Nível intermediário,Remoto,2,101508.0,92280,110736
+2023,C034,Engenheiro de visão computacional,Nível sênior,Presencial,14,226314.29,170000,351000
+2023,C034,Engenheiro de visão computacional,Nível sênior,Remoto,1,200000.0,200000,200000
+2023,C097,Engenheiro líder de aprendizado de máquina,Nível sênior,Remoto,1,115000.0,115000,115000
+2023,C122,Engenheiro principal de aprendizado de máquina,Nível sênior,Híbrido,1,38290.0,38290,38290
+2023,C122,Engenheiro principal de aprendizado de máquina,Nível sênior,Remoto,1,160000.0,160000,160000
+2023,C120,Engenheiro principal de dados,Nível sênior,Remoto,1,91773.0,91773,91773
+2023,C043,Especialista em análise de dados,Nível sênior,Presencial,2,95000.0,85000,105000
+2023,C110,Especialista em aprendizado de máquina,Nível intermediário,Remoto,2,55000.0,40000,70000
+2023,C076,Especialista em dados,Nível intermediário,Presencial,15,93040.0,48000,186000
+2023,C076,Especialista em dados,Nível intermediário,Remoto,4,78250.0,62500,90000
+2023,C076,Especialista em dados,Nível sênior,Presencial,10,95210.0,60000,173100
+2023,C053,Especialista em gestão de dados,Nível sênior,Presencial,4,116523.25,93593,139500
+2023,C050,Especialista em integração de dados,Nível inicial,Presencial,2,100000.0,85000,115000
+2023,C050,Especialista em integração de dados,Nível inicial,Remoto,5,103930.0,46400,240000
+2023,C050,Especialista em integração de dados,Nível sênior,Híbrido,1,36483.0,36483,36483
+2023,C029,Especialista em inteligência de negócios,Nível intermediário,Presencial,2,88756.0,68274,109238
+2023,C029,Especialista em inteligência de negócios,Nível sênior,Presencial,2,199550.0,139200,259900
+2023,C060,Especialista em operações de dados,Nível intermediário,Presencial,2,57500.0,50000,65000
+2023,C060,Especialista em operações de dados,Nível sênior,Remoto,2,53210.0,50700,55720
+2023,C081,Especialista em visualização de dados,Nível inicial,Presencial,2,91050.0,82800,99300
+2023,C081,Especialista em visualização de dados,Nível intermediário,Presencial,4,121850.0,73100,166000
+2023,C081,Especialista em visualização de dados,Nível sênior,Presencial,4,122275.0,50000,185000
+2023,C077,Estrategista de dados,Nível intermediário,Presencial,4,84750.0,65000,115500
+2023,C077,Estrategista de dados,Nível sênior,Presencial,7,113028.57,72000,242000
+2023,C077,Estrategista de dados,Nível sênior,Remoto,4,122502.5,70374,175000
+2023,C042,Gerente de análise de dados,Nível executivo,Presencial,2,147500.0,140000,155000
+2023,C042,Gerente de análise de dados,Nível intermediário,Híbrido,1,38915.0,38915,38915
+2023,C042,Gerente de análise de dados,Nível intermediário,Presencial,8,148162.5,110000,242100
+2023,C042,Gerente de análise de dados,Nível sênior,Presencial,4,169600.0,138900,204500
+2023,C042,Gerente de análise de dados,Nível sênior,Remoto,4,166350.0,120000,254500
+2023,C103,Gerente de aprendizado de máquina,Nível sênior,Remoto,1,129562.0,129562,129562
+2023,C071,Gerente de ciência de dados,Nível executivo,Presencial,2,206250.0,140100,272400
+2023,C071,Gerente de ciência de dados,Nível intermediário,Híbrido,1,38915.0,38915,38915
+2023,C071,Gerente de ciência de dados,Nível intermediário,Presencial,4,147375.0,70000,220000
+2023,C071,Gerente de ciência de dados,Nível intermediário,Remoto,4,178750.0,95000,270000
+2023,C071,Gerente de ciência de dados,Nível sênior,Híbrido,1,107968.0,107968,107968
+2023,C071,Gerente de ciência de dados,Nível sênior,Presencial,16,204906.31,113500,328000
+2023,C071,Gerente de ciência de dados,Nível sênior,Remoto,17,156169.35,43779,297300
+2023,C054,Gerente de dados,Nível executivo,Presencial,5,93000.0,70000,140000
+2023,C054,Gerente de dados,Nível executivo,Remoto,1,72000.0,72000,72000
+2023,C054,Gerente de dados,Nível inicial,Presencial,2,117700.0,85600,149800
+2023,C054,Gerente de dados,Nível intermediário,Presencial,17,105382.12,63000,167000
+2023,C054,Gerente de dados,Nível intermediário,Remoto,2,96000.0,65000,127000
+2023,C054,Gerente de dados,Nível sênior,Presencial,25,121586.72,48000,233500
+2023,C054,Gerente de dados,Nível sênior,Remoto,6,117558.33,82500,172750
+2023,C010,Gerente de engenharia de análises,Nível sênior,Híbrido,1,399880.0,399880,399880
+2023,C078,Gerente de estratégia de dados,Nível sênior,Remoto,4,138750.0,90000,250000
+2023,C028,Gerente de inteligência de negócios,Nível intermediário,Presencial,4,122625.0,100000,166500
+2023,C028,Gerente de inteligência de negócios,Nível intermediário,Remoto,2,135000.0,110000,160000
+2023,C059,Gerente de operações de dados,Nível sênior,Remoto,2,136000.0,129000,143000
+2023,C061,Gerente de produto de dados,Nível intermediário,Presencial,2,173500.0,161000,186000
+2023,C061,Gerente de produto de dados,Nível sênior,Presencial,4,155625.0,120000,220000
+2023,C061,Gerente de produto de dados,Nível sênior,Remoto,4,168500.0,150000,198000
+2023,C004,Gerente de produto de inteligência artificial,Nível sênior,Híbrido,1,120000.0,120000,120000
+2023,C065,Gerente de qualidade de dados,Nível intermediário,Presencial,2,59059.0,49216,68902
+2023,C038,Líder de analistas de dados,Nível inicial,Remoto,1,18000.0,18000,18000
+2023,C041,Líder de análise de dados,Nível intermediário,Híbrido,1,17511.0,17511,17511
+2023,C041,Líder de análise de dados,Nível intermediário,Presencial,2,113812.0,104584,123040
+2023,C041,Líder de análise de dados,Nível sênior,Presencial,2,99960.0,84000,115920
+2023,C070,Líder de ciência de dados,Nível intermediário,Presencial,10,159833.5,61520,244000
+2023,C070,Líder de ciência de dados,Nível sênior,Presencial,10,182370.0,84700,272000
+2023,C051,Líder de dados,Nível executivo,Presencial,4,220500.0,180000,250000
+2023,C051,Líder de dados,Nível intermediário,Remoto,2,122500.0,115000,130000
+2023,C051,Líder de dados,Nível sênior,Presencial,6,174666.67,38000,350000
+2023,C051,Líder de dados,Nível sênior,Remoto,2,162500.0,150000,175000
+2023,C104,Modelador de aprendizado de máquina,Nível sênior,Presencial,2,173350.0,142200,204500
+2023,C055,Modelador de dados,Nível intermediário,Presencial,6,105867.33,55368,166000
+2023,C056,Modelador de dados,Nível intermediário,Presencial,2,83052.0,55368,110736
+2023,C055,Modelador de dados,Nível sênior,Presencial,10,151170.0,90700,258700
+2023,C055,Modelador de dados,Nível sênior,Remoto,4,131250.0,110000,155000
+2023,C107,Pesquisador de aprendizado de máquina,Nível intermediário,Presencial,3,191033.33,138700,224400
+2023,C107,Pesquisador de aprendizado de máquina,Nível intermediário,Remoto,2,125000.0,100000,150000
+2023,C107,Pesquisador de aprendizado de máquina,Nível sênior,Híbrido,1,50000.0,50000,50000
+2023,C107,Pesquisador de aprendizado de máquina,Nível sênior,Presencial,4,136100.0,73100,212000
+2023,C107,Pesquisador de aprendizado de máquina,Nível sênior,Remoto,2,180000.0,170000,190000
+2023,C084,Pesquisador de aprendizado profundo,Nível sênior,Presencial,1,124163.0,124163,124163
+2023,C072,Profissional de ciência de dados,Nível sênior,Presencial,6,144883.33,83900,198800
+2023,C005,Programador de inteligência artificial,Nível inicial,Presencial,3,56735.67,40000,70000
+2023,C005,Programador de inteligência artificial,Nível inicial,Remoto,1,74087.0,74087,74087
+2023,C005,Programador de inteligência artificial,Nível sênior,Remoto,1,120000.0,120000,120000
+2023,C062,Responsável pelo produto de dados,Nível intermediário,Presencial,4,80115.5,55926,104584
+2023,C015,Técnico de veículos autônomos,Nível intermediário,Híbrido,1,120000.0,120000,120000
+2024,C037,Analista de dados,Nível inicial,Presencial,21,103413.0,45700,195500
+2024,C037,Analista de dados,Nível inicial,Remoto,10,74283.4,41419,120000
+2024,C037,Analista de dados,Nível intermediário,Presencial,12,89362.17,42400,158000
+2024,C037,Analista de dados,Nível intermediário,Remoto,4,69145.0,48067,85000
+2024,C037,Analista de dados,Nível sênior,Presencial,18,116533.67,62300,175520
+2024,C037,Analista de dados,Nível sênior,Remoto,13,147105.46,88052,220000
+2024,C024,Analista de inteligência de negócios,Nível inicial,Presencial,3,73750.0,56250,95000
+2024,C024,Analista de inteligência de negócios,Nível intermediário,Presencial,2,163650.0,126900,200400
+2024,C024,Analista de inteligência de negócios,Nível sênior,Presencial,4,103525.0,72600,132000
+2024,C125,Analista de pesquisa,Nível inicial,Presencial,4,150000.0,90000,250000
+2024,C125,Analista de pesquisa,Nível inicial,Remoto,2,112500.0,105000,120000
+2024,C125,Analista de pesquisa,Nível sênior,Presencial,2,175000.0,150000,200000
+2024,C063,Analista de qualidade de dados,Nível inicial,Presencial,2,71750.0,58500,85000
+2024,C044,Arquiteto de dados,Nível sênior,Presencial,14,169742.86,67200,381500
+2024,C044,Arquiteto de dados,Nível sênior,Remoto,2,150000.0,125000,175000
+2024,C001,Arquiteto de inteligência artificial,Nível sênior,Presencial,4,229662.5,137000,317000
+2024,C014,Cientista aplicado,Nível intermediário,Presencial,2,179100.0,136000,222200
+2024,C014,Cientista aplicado,Nível sênior,Presencial,4,256500.0,136000,414000
+2024,C014,Cientista aplicado,Nível sênior,Remoto,2,198375.5,178538,218213
+2024,C108,Cientista de aprendizado de máquina,Nível intermediário,Presencial,2,450000.0,150000,750000
+2024,C108,Cientista de aprendizado de máquina,Nível sênior,Presencial,4,199375.0,153000,252000
+2024,C074,Cientista de dados,Nível executivo,Presencial,2,214000.0,181900,246100
+2024,C074,Cientista de dados,Nível intermediário,Presencial,38,136825.79,54552,385000
+2024,C074,Cientista de dados,Nível intermediário,Remoto,16,135609.06,72870,246000
+2024,C074,Cientista de dados,Nível sênior,Presencial,39,155470.9,66666,324000
+2024,C074,Cientista de dados,Nível sênior,Remoto,11,157100.36,94400,220000
+2024,C127,Cientista de pesquisa,Nível intermediário,Presencial,4,277750.0,100000,720000
+2024,C127,Cientista de pesquisa,Nível intermediário,Remoto,2,78250.0,75000,81500
+2024,C127,Cientista de pesquisa,Nível sênior,Presencial,15,206526.67,86000,440000
+2024,C066,Ciência de dados,Nível executivo,Presencial,2,136508.0,97254,175762
+2024,C066,Ciência de dados,Nível executivo,Remoto,2,257100.0,190500,323700
+2024,C066,Ciência de dados,Nível inicial,Híbrido,1,16666.0,16666,16666
+2024,C066,Ciência de dados,Nível inicial,Remoto,1,26000.0,26000,26000
+2024,C066,Ciência de dados,Nível intermediário,Presencial,2,142750.0,106500,179000
+2024,C066,Ciência de dados,Nível sênior,Presencial,12,163805.42,68195,261050
+2024,C067,Consultor de ciência de dados,Nível sênior,Presencial,4,101250.0,80000,112000
+2024,C046,Desenvolvedor de dados,Nível inicial,Remoto,2,60000.0,50000,70000
+2024,C046,Desenvolvedor de dados,Nível intermediário,Presencial,2,97500.0,95000,100000
+2024,C046,Desenvolvedor de dados,Nível sênior,Remoto,2,155000.0,130000,180000
+2024,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,Presencial,2,76400.0,53300,99500
+2024,C026,Desenvolvedor de inteligência de negócios,Nível executivo,Presencial,2,147500.0,117500,177500
+2024,C020,Desenvolvedor de inteligência de negócios,Nível intermediário,Presencial,4,103300.0,62100,154800
+2024,C026,Desenvolvedor de inteligência de negócios,Nível intermediário,Presencial,6,87416.67,70650,117750
+2024,C026,Desenvolvedor de inteligência de negócios,Nível sênior,Presencial,2,124483.0,104828,144138
+2024,C020,Desenvolvedor de inteligência de negócios,Nível sênior,Remoto,4,83750.0,70000,95000
+2024,C085,Diretor de ciência de dados,Nível executivo,Presencial,2,202500.0,180000,225000
+2024,C112,Diretor executivo de ciência de dados,Nível executivo,Híbrido,1,260000.0,260000,260000
+2024,C009,Engenheiro de análises,Nível intermediário,Presencial,6,96191.67,72240,134160
+2024,C009,Engenheiro de análises,Nível sênior,Presencial,8,147919.13,104220,234200
+2024,C009,Engenheiro de análises,Nível sênior,Remoto,6,164833.33,130000,195000
+2024,C101,Engenheiro de aprendizado de máquina,Nível inicial,Presencial,2,80500.0,70000,91000
+2024,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Presencial,8,149650.0,73100,223000
+2024,C101,Engenheiro de aprendizado de máquina,Nível intermediário,Remoto,4,106860.75,93222,139777
+2024,C098,Engenheiro de aprendizado de máquina,Nível sênior,Presencial,6,222600.0,93300,357900
+2024,C101,Engenheiro de aprendizado de máquina,Nível sênior,Presencial,37,204642.54,93300,331640
+2024,C101,Engenheiro de aprendizado de máquina,Nível sênior,Remoto,16,225600.63,127500,418000
+2024,C069,Engenheiro de ciência de dados,Nível intermediário,Remoto,2,190000.0,135000,245000
+2024,C047,Engenheiro de dados,Nível executivo,Presencial,4,182750.0,112000,225000
+2024,C047,Engenheiro de dados,Nível executivo,Remoto,2,177825.0,136000,219650
+2024,C047,Engenheiro de dados,Nível inicial,Presencial,2,43750.0,37500,50000
+2024,C047,Engenheiro de dados,Nível intermediário,Presencial,30,129529.0,58300,308000
+2024,C047,Engenheiro de dados,Nível intermediário,Remoto,14,115975.0,30000,170000
+2024,C047,Engenheiro de dados,Nível sênior,Presencial,43,173715.0,86000,385000
+2024,C047,Engenheiro de dados,Nível sênior,Remoto,11,148997.73,92190,210000
+2024,C003,Engenheiro de inteligência artificial,Nível intermediário,Presencial,2,127050.0,83900,170200
+2024,C003,Engenheiro de inteligência artificial,Nível sênior,Remoto,2,131250.0,112500,150000
+2024,C027,Engenheiro de inteligência de negócios,Nível sênior,Presencial,2,132300.0,79600,185000
+2024,C099,Engenheiro de operações de aprendizado de máquina,Nível sênior,Presencial,2,142500.0,110000,175000
+2024,C126,Engenheiro de pesquisa,Nível intermediário,Presencial,12,227572.17,70230,720000
+2024,C126,Engenheiro de pesquisa,Nível sênior,Presencial,11,228250.91,62000,450000
+2024,C034,Engenheiro de visão computacional,Nível sênior,Presencial,2,210000.0,185000,235000
+2024,C076,Especialista em dados,Nível intermediário,Presencial,8,72323.5,51000,111000
+2024,C081,Especialista em visualização de dados,Nível intermediário,Presencial,2,127050.0,83900,170200
+2024,C042,Gerente de análise de dados,Nível intermediário,Presencial,2,84500.0,70000,99000
+2024,C071,Gerente de ciência de dados,Nível intermediário,Remoto,2,219225.0,201450,237000
+2024,C071,Gerente de ciência de dados,Nível sênior,Remoto,2,105000.0,90000,120000
+2024,C061,Gerente de produto de dados,Nível sênior,Presencial,2,213150.0,199100,227200
+2024,C051,Líder de dados,Nível sênior,Presencial,2,160000.0,140000,180000
+2024,C055,Modelador de dados,Nível sênior,Presencial,2,131700.0,92190,171210
+2024,C055,Modelador de dados,Nível sênior,Remoto,2,120000.0,110000,130000
+2024,C072,Profissional de ciência de dados,Nível intermediário,Presencial,2,127050.0,83900,170200

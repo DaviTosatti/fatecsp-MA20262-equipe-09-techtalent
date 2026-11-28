@@ -1,0 +1,10 @@
+﻿tabela,id,seq,tabela_referenciada,coluna_origem,coluna_destino,on_update,on_delete,match
+tb_fato_metas,0,0,tb_dim_calendario,mes_inicio,data,NO ACTION,NO ACTION,NONE
+tb_fato_metas,1,0,tb_dim_orgao,cod_orgao,cod_orgao,NO ACTION,NO ACTION,NONE
+tb_fato_salarios,0,0,tb_pais,cod_pais_empresa,cod_pais,NO ACTION,NO ACTION,NONE
+tb_fato_salarios,1,0,tb_pais,cod_pais_residencia,cod_pais,NO ACTION,NO ACTION,NONE
+tb_fato_salarios,2,0,tb_dim_ano,ano,ano,NO ACTION,NO ACTION,NONE
+tb_fato_salarios,3,0,tb_dim_cargo_salarios,cod_cargo_salarial,cod_cargo_salarial,NO ACTION,NO ACTION,NONE
+tb_fato_vagas,0,0,tb_dim_calendario,data_publicacao,data,NO ACTION,NO ACTION,NONE
+tb_fato_vagas,1,0,tb_dim_cargo,cod_cargo,cod_cargo,NO ACTION,NO ACTION,NONE
+tb_fato_vagas,2,0,tb_dim_orgao,cod_orgao,cod_orgao,NO ACTION,NO ACTION,NONE
