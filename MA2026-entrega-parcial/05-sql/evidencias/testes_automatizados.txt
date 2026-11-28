@@ -1,0 +1,11 @@
+test_preserves_all_fields_and_values_in_json (__main__.PrepareRejectedTests.test_preserves_all_fields_and_values_in_json) ... ok
+test_requires_original_id_quantity_and_reason (__main__.PrepareRejectedTests.test_requires_original_id_quantity_and_reason) ... ok
+test_ddl_reexecution_does_not_delete_staging_rows_or_views (__main__.TechTalentSQLiteTests.test_ddl_reexecution_does_not_delete_staging_rows_or_views) ... ok
+test_full_pipeline_and_rejected_preservation (__main__.TechTalentSQLiteTests.test_full_pipeline_and_rejected_preservation) ... ok
+test_load_is_repeatable_without_duplicate_final_rows (__main__.TechTalentSQLiteTests.test_load_is_repeatable_without_duplicate_final_rows) ... ok
+test_nyc_missing_skills_marker_matches_70_of_225 (__main__.TechTalentSQLiteTests.test_nyc_missing_skills_marker_matches_70_of_225) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.053s
+
+OK

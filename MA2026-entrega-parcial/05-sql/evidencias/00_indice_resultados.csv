@@ -1,0 +1,22 @@
+﻿Grupo,Nº,Descrição,Linhas,Arquivo
+Consultas,1,-- ============================================================================,61,consultas_01.csv
+Consultas,2,-- C2) Ranking exploratorio por palavra/expressao completa.,21,consultas_02.csv
+Consultas,3,-- C2.1) Cobertura da coluna Habilidades por fonte.,2,consultas_03.csv
+Consultas,4,"-- C3) Distribuicao dos salarios historicos por cargo, experiencia e ano.",531,consultas_04.csv
+Consultas,5,"-- C3.1) Distribuicao dos salarios historicos por cargo, experiencia, ano e modalidade.",788,consultas_05.csv
+Consultas,6,-- C4) Faixas salariais de anuncios NYC por cargo e periodicidade.,42,consultas_06.csv
+Consultas,7,-- C5) Posicoes anunciadas SIMULADO versus metas ficticias por empresa/mes.,12,consultas_07.csv
+Consultas,8,-- C6) Perfil das publicacoes por fonte e tipo.,3,consultas_08.csv
+Consultas,9,-- C7) Auditoria: rejeitados agrupados por motivo.,8,consultas_09.csv
+Conferência,1,-- ============================================================================,1,conferencia_01.csv
+Conferência,2,-- K1) Batimento com as referencias publicadas nas Etapas 2 e 3.,13,conferencia_02.csv
+Conferência,3,-- K2) Integridade referencial; resultado esperado = nenhuma linha.,0,conferencia_03.csv
+Conferência,4,-- K3) FKs orfas; todas as ocorrencias devem ser 0.,9,conferencia_04.csv
+Conferência,5,-- K4) Chaves vazias/duplicadas. Resultado esperado = 0 ocorrencias.,4,conferencia_05.csv
+Conferência,6,-- K5) Conferencia da preservacao dos rejeitados.,1,conferencia_06.csv
+Conferência,7,-- K5.1) Inspecao integral dos dados originais de cada rejeitado.,8,conferencia_07.csv
+Conferência,8,-- K6) Cobertura de vagas por fonte.,2,conferencia_08.csv
+Conferência,9,-- K7) Calendario: deve cobrir 365 dias entre 01/01 e 31/12/2026.,1,conferencia_09.csv
+Conferência,10,-- K8) Referencia didatica para vagas SIMULADO BRL/Mensal.,1,conferencia_10.csv
+Conferência,11,-- K9) Regressao do indicador de habilidades para NYC.,3,conferencia_11.csv
+Conferência,12,-- K9-FIM),1,conferencia_12.csv

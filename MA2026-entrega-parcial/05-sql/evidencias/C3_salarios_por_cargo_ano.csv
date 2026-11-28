@@ -1,0 +1,532 @@
+﻿ano,cod_cargo_salarial,cargo,experiencia,qtd_observacoes,media_informada_usd,minimo_informado_usd,maximo_informado_usd
+2020,C127,Cientista de pesquisa,Nível intermediário,1,450000.0,450000,450000
+2020,C085,Diretor de ciência de dados,Nível executivo,1,325000.0,325000,325000
+2020,C112,Diretor executivo de ciência de dados,Nível executivo,1,300000.0,300000,300000
+2020,C108,Cientista de aprendizado de máquina,Nível sênior,1,260000.0,260000,260000
+2020,C101,Engenheiro de aprendizado de máquina,Nível inicial,2,194000.0,138000,250000
+2020,C071,Gerente de ciência de dados,Nível sênior,1,190200.0,190200,190200
+2020,C096,Cientista líder de dados,Nível sênior,1,190000.0,190000,190000
+2020,C074,Cientista de dados,Nível sênior,4,172916.25,68428,412000
+2020,C131,Cientista de dados do corpo técnico,Nível sênior,1,164000.0,164000,164000
+2020,C121,Cientista principal de dados,Nível sênior,1,148261.0,148261,148261
+2020,C095,Engenheiro líder de dados,Nível sênior,1,125000.0,125000,125000
+2020,C103,Gerente de aprendizado de máquina,Nível sênior,1,117104.0,117104,117104
+2020,C023,Analista de dados de negócios,Nível intermediário,2,115000.0,95000,135000
+2020,C096,Cientista líder de dados,Nível intermediário,1,115000.0,115000,115000
+2020,C022,Engenheiro de grandes volumes de dados,Nível sênior,2,111535.5,109024,114047
+2020,C067,Consultor de ciência de dados,Nível intermediário,1,103000.0,103000,103000
+2020,C016,Engenheiro de dados em Azure,Nível inicial,1,100000.0,100000,100000
+2020,C023,Analista de dados de negócios,Nível inicial,1,100000.0,100000,100000
+2020,C018,Analista de dados de inteligência de negócios,Nível intermediário,1,98000.0,98000,98000
+2020,C101,Engenheiro de aprendizado de máquina,Nível sênior,2,97809.0,45618,150000
+2020,C047,Engenheiro de dados,Nível intermediário,7,94749.14,59303,130800
+2020,C047,Engenheiro de dados,Nível sênior,3,89803.33,33511,188000
+2020,C094,Analista líder de dados,Nível intermediário,1,87000.0,87000,87000
+2020,C047,Engenheiro de dados,Nível executivo,1,79833.0,79833,79833
+2020,C074,Cientista de dados,Nível intermediário,11,71256.0,35735,138350
+2020,C022,Engenheiro de grandes volumes de dados,Nível inicial,1,70000.0,70000,70000
+2020,C037,Analista de dados,Nível intermediário,2,65879.5,46759,85000
+2020,C034,Engenheiro de visão computacional,Nível sênior,1,60000.0,60000,60000
+2020,C128,Analista de dados de vendas,Nível intermediário,1,60000.0,60000,60000
+2020,C037,Analista de dados,Nível inicial,4,58427.0,22809,91000
+2020,C095,Engenheiro líder de dados,Nível intermediário,1,56000.0,56000,56000
+2020,C074,Cientista de dados,Nível inicial,6,54983.33,21669,105000
+2020,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível intermediário,1,50180.0,50180,50180
+2020,C047,Engenheiro de dados,Nível inicial,2,48215.5,41689,54742
+2020,C007,Cientista de inteligência artificial,Nível inicial,1,45896.0,45896,45896
+2020,C130,Analista de dados do corpo técnico,Nível inicial,1,44753.0,44753,44753
+2020,C127,Cientista de pesquisa,Nível inicial,1,42000.0,42000,42000
+2020,C123,Analista de dados de produto,Nível intermediário,1,20000.0,20000,20000
+2020,C098,Engenheiro de aprendizado de máquina,Nível inicial,1,15966.0,15966,15966
+2020,C130,Analista de dados do corpo técnico,Nível executivo,1,15000.0,15000,15000
+2021,C121,Cientista principal de dados,Nível executivo,1,416000.0,416000,416000
+2021,C098,Engenheiro de aprendizado de máquina,Nível sênior,1,256000.0,256000,256000
+2021,C030,Arquiteto de dados em nuvem,Nível sênior,1,250000.0,250000,250000
+2021,C090,Chefe de dados,Nível executivo,2,232500.0,230000,235000
+2021,C013,Cientista de aprendizado de máquina aplicado,Nível intermediário,2,230700.0,38400,423000
+2021,C108,Cientista de aprendizado de máquina,Nível inicial,1,225000.0,225000,225000
+2021,C121,Cientista principal de dados,Nível sênior,3,209587.33,173762,235000
+2021,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível sênior,1,195000.0,195000,195000
+2021,C120,Engenheiro principal de dados,Nível sênior,2,192500.0,185000,200000
+2021,C132,Engenheiro de aprendizado de máquina do corpo técnico,Nível sênior,1,185000.0,185000,185000
+2021,C095,Engenheiro líder de dados,Nível sênior,3,179720.0,103160,276000
+2021,C108,Cientista de aprendizado de máquina,Nível sênior,2,172500.0,120000,225000
+2021,C094,Analista líder de dados,Nível sênior,1,170000.0,170000,170000
+2021,C118,Analista principal de dados,Nível sênior,1,170000.0,170000,170000
+2021,C085,Diretor de ciência de dados,Nível executivo,4,168884.75,130026,250000
+2021,C085,Diretor de ciência de dados,Nível sênior,1,168000.0,168000,168000
+2021,C044,Arquiteto de dados,Nível intermediário,3,166666.67,150000,180000
+2021,C076,Especialista em dados,Nível sênior,1,165000.0,165000,165000
+2021,C031,Engenheiro de dados em nuvem,Nível sênior,1,160000.0,160000,160000
+2021,C121,Cientista principal de dados,Nível intermediário,1,151000.0,151000,151000
+2021,C018,Analista de dados de inteligência de negócios,Nível executivo,1,150000.0,150000,150000
+2021,C070,Líder de ciência de dados,Nível intermediário,1,150000.0,150000,150000
+2021,C071,Gerente de ciência de dados,Nível sênior,6,143126.5,54094,240000
+2021,C047,Engenheiro de dados,Nível sênior,11,140326.45,76833,200000
+2021,C098,Engenheiro de aprendizado de máquina,Nível intermediário,3,137025.0,63711,270000
+2021,C069,Engenheiro de ciência de dados,Nível sênior,1,127221.0,127221,127221
+2021,C042,Gerente de análise de dados,Nível sênior,3,126666.67,120000,140000
+2021,C011,Cientista de dados aplicados,Nível inicial,1,110037.0,110037,110037
+2021,C040,Engenheiro de análise de dados,Nível intermediário,1,110000.0,110000,110000
+2021,C091,Chefe de ciência de dados,Nível intermediário,1,110000.0,110000,110000
+2021,C101,Engenheiro de aprendizado de máquina,Nível sênior,6,108819.17,24342,200000
+2021,C131,Cientista de dados do corpo técnico,Nível sênior,1,105000.0,105000,105000
+2021,C090,Chefe de dados,Nível sênior,1,102839.0,102839,102839
+2021,C021,Arquiteto de grandes volumes de dados,Nível sênior,1,99703.0,99703,99703
+2021,C037,Analista de dados,Nível sênior,6,96769.5,50000,200000
+2021,C035,Engenheiro de programas de visão computacional,Nível intermediário,1,95746.0,95746,95746
+2021,C127,Cientista de pesquisa,Nível inicial,2,91264.0,82528,100000
+2021,C031,Engenheiro de dados em nuvem,Nível intermediário,1,89294.0,89294,89294
+2021,C113,Analista de dados de comercialização,Nível sênior,1,88654.0,88654,88654
+2021,C127,Cientista de pesquisa,Nível intermediário,5,88127.6,56738,187442
+2021,C074,Cientista de dados,Nível sênior,8,87071.25,20171,165000
+2021,C091,Chefe de ciência de dados,Nível executivo,1,85000.0,85000,85000
+2021,C074,Cientista de dados,Nível intermediário,22,83012.45,16904,160000
+2021,C047,Engenheiro de dados,Nível intermediário,19,78880.79,20000,200000
+2021,C067,Consultor de ciência de dados,Nível inicial,4,76874.25,63831,90000
+2021,C037,Analista de dados,Nível intermediário,8,75427.88,16904,135000
+2021,C067,Consultor de ciência de dados,Nível executivo,1,69741.0,69741,69741
+2021,C127,Cientista de pesquisa,Nível sênior,3,68956.67,50000,96113
+2021,C018,Analista de dados de inteligência de negócios,Nível intermediário,2,68129.5,36259,100000
+2021,C114,Engenheiro de dados de comercialização,Nível inicial,1,66970.0,66970,66970
+2021,C040,Engenheiro de análise de dados,Nível sênior,2,64598.5,50000,79197
+2021,C074,Cientista de dados,Nível inicial,9,63604.33,28399,100000
+2021,C037,Analista de dados,Nível inicial,6,63521.67,42028,90000
+2021,C088,Analista de dados de finanças,Nível sênior,1,61896.0,61896,61896
+2021,C100,Desenvolvedor de aprendizado de máquina,Nível sênior,1,60000.0,60000,60000
+2021,C101,Engenheiro de aprendizado de máquina,Nível inicial,6,59611.17,20000,125000
+2021,C023,Analista de dados de negócios,Nível inicial,1,59102.0,59102,59102
+2021,C100,Desenvolvedor de aprendizado de máquina,Nível inicial,2,57500.0,15000,100000
+2021,C023,Analista de dados de negócios,Nível intermediário,1,56000.0,56000,56000
+2021,C101,Engenheiro de aprendizado de máquina,Nível intermediário,6,55403.33,24823,88654
+2021,C007,Cientista de inteligência artificial,Nível sênior,1,55000.0,55000,55000
+2021,C018,Analista de dados de inteligência de negócios,Nível inicial,1,55000.0,55000,55000
+2021,C011,Cientista de dados aplicados,Nível intermediário,1,54238.0,54238,54238
+2021,C047,Engenheiro de dados,Nível inicial,6,52494.67,21637,80000
+2021,C015,Técnico de veículos autônomos,Nível intermediário,1,45555.0,45555,45555
+2021,C035,Engenheiro de programas de visão computacional,Nível inicial,2,44536.5,19073,70000
+2021,C096,Cientista líder de dados,Nível sênior,1,40570.0,40570,40570
+2021,C069,Engenheiro de ciência de dados,Nível intermediário,1,40189.0,40189,40189
+2021,C022,Engenheiro de grandes volumes de dados,Nível intermediário,3,33537.0,18000,60000
+2021,C007,Cientista de inteligência artificial,Nível intermediário,1,30000.0,30000,30000
+2021,C034,Engenheiro de visão computacional,Nível inicial,1,28609.0,28609,28609
+2021,C034,Engenheiro de visão computacional,Nível sênior,2,21453.5,18907,24000
+2021,C106,Engenheiro de pesquisa em aprendizado de máquina,Nível inicial,1,20000.0,20000,20000
+2021,C094,Analista líder de dados,Nível intermediário,1,19609.0,19609,19609
+2021,C007,Cientista de inteligência artificial,Nível inicial,1,18053.0,18053,18053
+2021,C022,Engenheiro de grandes volumes de dados,Nível inicial,1,16228.0,16228,16228
+2022,C041,Líder de análise de dados,Nível sênior,1,405000.0,405000,405000
+2022,C073,Líder técnico de ciência de dados,Nível sênior,1,375000.0,375000,375000
+2022,C011,Cientista de dados aplicados,Nível sênior,2,278500.0,177000,380000
+2022,C002,Desenvolvedor de inteligência artificial,Nível sênior,1,275000.0,275000,275000
+2022,C109,Engenheiro de programas de aprendizado de máquina,Nível sênior,5,240440.0,168000,375000
+2022,C047,Engenheiro de dados,Nível executivo,12,228066.67,116100,324000
+2022,C007,Cientista de inteligência artificial,Nível executivo,1,200000.0,200000,200000
+2022,C017,Analista de inteligência de negócios,Nível sênior,1,200000.0,200000,200000
+2022,C090,Chefe de dados,Nível sênior,1,200000.0,200000,200000
+2022,C113,Analista de dados de comercialização,Nível sênior,1,200000.0,200000,200000
+2022,C126,Engenheiro de pesquisa,Nível sênior,4,199837.5,149850,250000
+2022,C091,Chefe de ciência de dados,Nível executivo,2,195937.5,167875,224000
+2022,C071,Gerente de ciência de dados,Nível sênior,21,195352.81,120000,300000
+2022,C085,Diretor de ciência de dados,Nível executivo,1,192037.0,192037,192037
+2022,C108,Cientista de aprendizado de máquina,Nível executivo,2,190000.0,180000,200000
+2022,C122,Engenheiro principal de aprendizado de máquina,Nível sênior,1,190000.0,190000,190000
+2022,C071,Gerente de ciência de dados,Nível executivo,5,189280.0,106000,260500
+2022,C127,Cientista de pesquisa,Nível sênior,8,186082.0,89306,300000
+2022,C075,Líder de cientistas de dados,Nível sênior,1,183000.0,183000,183000
+2022,C090,Chefe de dados,Nível executivo,2,182500.0,160000,205000
+2022,C014,Cientista aplicado,Nível sênior,11,181963.64,141525,230000
+2022,C098,Engenheiro de aprendizado de máquina,Nível sênior,10,178670.0,84000,243000
+2022,C032,Engenheiro de banco de dados em nuvem,Nível sênior,2,175000.0,160000,190000
+2022,C103,Gerente de aprendizado de máquina,Nível sênior,2,175000.0,150000,200000
+2022,C007,Cientista de inteligência artificial,Nível intermediário,3,173333.33,120000,200000
+2022,C071,Gerente de ciência de dados,Nível intermediário,4,173000.0,134000,241000
+2022,C126,Engenheiro de pesquisa,Nível intermediário,2,172533.0,105066,240000
+2022,C009,Engenheiro de análises,Nível executivo,6,171166.67,135000,210000
+2022,C108,Cientista de aprendizado de máquina,Nível sênior,4,170800.0,129300,216000
+2022,C044,Arquiteto de dados,Nível sênior,30,170005.1,63000,345600
+2022,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível sênior,2,167400.0,148800,186000
+2022,C070,Líder de ciência de dados,Nível sênior,1,165000.0,165000,165000
+2022,C022,Engenheiro de grandes volumes de dados,Nível sênior,1,161311.0,161311,161311
+2022,C101,Engenheiro de aprendizado de máquina,Nível sênior,54,158032.2,59888,255000
+2022,C011,Cientista de dados aplicados,Nível intermediário,1,157000.0,157000,157000
+2022,C121,Cientista principal de dados,Nível sênior,1,155499.0,155499,155499
+2022,C074,Cientista de dados,Nível sênior,153,154957.5,37824,350000
+2022,C035,Engenheiro de programas de visão computacional,Nível inicial,1,150000.0,150000,150000
+2022,C076,Especialista em dados,Nível intermediário,2,150000.0,135000,165000
+2022,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,6,149411.67,63000,250000
+2022,C047,Engenheiro de dados,Nível sênior,187,149284.71,25000,315000
+2022,C042,Gerente de análise de dados,Nível intermediário,2,147500.0,140000,155000
+2022,C009,Engenheiro de análises,Nível sênior,32,144773.0,48000,250000
+2022,C074,Cientista de dados,Nível executivo,2,144500.0,130000,159000
+2022,C123,Analista de dados de produto,Nível intermediário,1,140000.0,140000,140000
+2022,C040,Engenheiro de análise de dados,Nível intermediário,1,135000.0,135000,135000
+2022,C098,Engenheiro de aprendizado de máquina,Nível intermediário,4,131675.0,98200,180000
+2022,C009,Engenheiro de análises,Nível inicial,1,130000.0,130000,130000
+2022,C020,Desenvolvedor de inteligência de negócios,Nível sênior,3,130000.0,120000,140000
+2022,C099,Engenheiro de operações de aprendizado de máquina,Nível intermediário,2,129000.0,124000,134000
+2022,C042,Gerente de análise de dados,Nível sênior,5,128588.0,105400,150260
+2022,C054,Gerente de dados,Nível executivo,1,125976.0,125976,125976
+2022,C067,Consultor de ciência de dados,Nível sênior,5,125700.0,94500,145000
+2022,C007,Cientista de inteligência artificial,Nível sênior,1,125000.0,125000,125000
+2022,C034,Engenheiro de visão computacional,Nível inicial,1,125000.0,125000,125000
+2022,C111,Gerente de gestão de dados,Nível sênior,1,125000.0,125000,125000
+2022,C108,Cientista de aprendizado de máquina,Nível intermediário,6,124683.33,22800,165000
+2022,C096,Cientista líder de dados,Nível sênior,5,121568.8,29944,192000
+2022,C107,Pesquisador de aprendizado de máquina,Nível intermediário,4,121309.0,100000,150000
+2022,C037,Analista de dados,Nível executivo,2,120000.0,110000,130000
+2022,C127,Cientista de pesquisa,Nível inicial,1,120000.0,120000,120000
+2022,C076,Especialista em dados,Nível sênior,6,119166.67,70000,221300
+2022,C101,Engenheiro de aprendizado de máquina,Nível intermediário,16,116180.06,20984,230000
+2022,C054,Gerente de dados,Nível intermediário,2,116000.0,98000,134000
+2022,C037,Analista de dados,Nível sênior,98,115870.8,36773,236600
+2022,C095,Engenheiro líder de dados,Nível executivo,1,115222.0,115222,115222
+2022,C039,Consultor de análise de dados,Nível intermediário,1,113000.0,113000,113000
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível sênior,3,111706.33,77119,150000
+2022,C076,Especialista em dados,Nível inicial,1,105000.0,105000,105000
+2022,C047,Engenheiro de dados,Nível intermediário,65,101487.86,24000,260000
+2022,C023,Analista de dados de negócios,Nível sênior,1,100000.0,100000,100000
+2022,C089,Analista de dados financeiros,Nível inicial,1,100000.0,100000,100000
+2022,C123,Analista de dados de produto,Nível inicial,1,100000.0,100000,100000
+2022,C037,Analista de dados,Nível intermediário,52,99670.79,20000,430967
+2022,C074,Cientista de dados,Nível intermediário,68,98101.13,25000,225000
+2022,C009,Engenheiro de análises,Nível intermediário,10,97404.3,48000,200000
+2022,C007,Cientista de inteligência artificial,Nível inicial,3,93840.0,31520,200000
+2022,C101,Engenheiro de aprendizado de máquina,Nível inicial,10,91303.9,30000,189750
+2022,C057,Analista de operações de dados,Nível sênior,4,90562.5,66000,123000
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível intermediário,5,90247.0,30523,173000
+2022,C075,Líder de cientistas de dados,Nível intermediário,1,89306.0,89306,89306
+2022,C127,Cientista de pesquisa,Nível intermediário,5,88024.4,23000,145000
+2022,C058,Engenheiro de operações de dados,Nível sênior,2,87500.0,70000,105000
+2022,C047,Engenheiro de dados,Nível inicial,14,85305.57,43096,160000
+2022,C100,Desenvolvedor de aprendizado de máquina,Nível inicial,3,84333.33,33000,180000
+2022,C127,Cientista de pesquisa,Nível executivo,1,84053.0,84053,84053
+2022,C097,Engenheiro líder de aprendizado de máquina,Nível sênior,3,82927.67,69344,95386
+2022,C058,Engenheiro de operações de dados,Nível intermediário,2,80000.0,60000,100000
+2022,C074,Cientista de dados,Nível inicial,27,76922.26,17684,180000
+2022,C100,Desenvolvedor de aprendizado de máquina,Nível intermediário,1,76814.0,76814,76814
+2022,C100,Desenvolvedor de aprendizado de máquina,Nível sênior,1,76814.0,76814,76814
+2022,C092,Chefe de aprendizado de máquina,Nível executivo,1,76309.0,76309,76309
+2022,C017,Analista de inteligência de negócios,Nível inicial,1,76000.0,76000,76000
+2022,C089,Analista de dados financeiros,Nível intermediário,1,75000.0,75000,75000
+2022,C118,Analista principal de dados,Nível intermediário,1,75000.0,75000,75000
+2022,C053,Especialista em gestão de dados,Nível sênior,1,68293.0,68293,68293
+2022,C083,Engenheiro de aprendizado profundo,Nível intermediário,2,67723.0,49253,86193
+2022,C106,Engenheiro de pesquisa em aprendizado de máquina,Nível inicial,1,66192.0,66192,66192
+2022,C023,Analista de dados de negócios,Nível intermediário,4,63813.0,17805,150000
+2022,C018,Analista de dados de inteligência de negócios,Nível intermediário,4,63479.0,45050,105066
+2022,C017,Analista de inteligência de negócios,Nível intermediário,2,63000.0,48000,78000
+2022,C096,Cientista líder de dados,Nível intermediário,1,61566.0,61566,61566
+2022,C054,Gerente de dados,Nível inicial,2,61450.0,45600,77300
+2022,C067,Consultor de ciência de dados,Nível intermediário,2,60951.0,51716,70186
+2022,C069,Engenheiro de ciência de dados,Nível sênior,1,60000.0,60000,60000
+2022,C018,Analista de dados de inteligência de negócios,Nível inicial,2,58969.0,57000,60938
+2022,C085,Diretor de ciência de dados,Nível sênior,1,57786.0,57786,57786
+2022,C108,Cientista de aprendizado de máquina,Nível inicial,2,57336.0,34672,80000
+2022,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível intermediário,1,55685.0,55685,55685
+2022,C037,Analista de dados,Nível inicial,16,55331.75,15000,150000
+2022,C086,"Desenvolvedor de extração, transformação e carga",Nível intermediário,1,52533.0,52533,52533
+2022,C116,Engenheiro de processamento de linguagem natural,Nível intermediário,2,52182.5,44365,60000
+2022,C039,Consultor de análise de dados,Nível inicial,1,50000.0,50000,50000
+2022,C023,Analista de dados de negócios,Nível inicial,2,49000.0,48000,50000
+2022,C011,Cientista de dados aplicados,Nível inicial,2,45000.0,40000,50000
+2022,C005,Programador de inteligência artificial,Nível inicial,1,40000.0,40000,40000
+2022,C119,Arquiteto principal de dados,Nível sênior,1,38154.0,38154,38154
+2022,C034,Engenheiro de visão computacional,Nível intermediário,2,37367.0,15897,58837
+2022,C006,Engenheiro de pesquisa em inteligência artificial,Nível inicial,1,36940.0,36940,36940
+2022,C090,Chefe de dados,Nível intermediário,1,31520.0,31520,31520
+2022,C013,Cientista de aprendizado de máquina aplicado,Nível inicial,1,30469.0,30469,30469
+2022,C126,Engenheiro de pesquisa,Nível inicial,2,29132.0,16455,41809
+2022,C067,Consultor de ciência de dados,Nível inicial,2,25741.0,24165,27317
+2022,C098,Engenheiro de aprendizado de máquina,Nível inicial,1,21013.0,21013,21013
+2022,C040,Engenheiro de análise de dados,Nível inicial,1,20000.0,20000,20000
+2022,C026,Desenvolvedor de inteligência de negócios,Nível intermediário,1,15000.0,15000,15000
+2023,C010,Gerente de engenharia de análises,Nível sênior,1,399880.0,399880,399880
+2023,C088,Analista de dados de finanças,Nível sênior,1,323905.0,323905,323905
+2023,C092,Chefe de aprendizado de máquina,Nível executivo,2,259000.0,188000,330000
+2023,C008,Arquiteto de dados em AWS,Nível intermediário,1,258000.0,258000,258000
+2023,C083,Engenheiro de aprendizado profundo,Nível sênior,4,254706.0,100017,331640
+2023,C108,Cientista de aprendizado de máquina,Nível intermediário,8,246250.0,125000,750000
+2023,C001,Arquiteto de inteligência artificial,Nível sênior,5,237200.0,146900,330000
+2023,C085,Diretor de ciência de dados,Nível executivo,18,236598.67,118440,375500
+2023,C098,Engenheiro de aprendizado de máquina,Nível sênior,67,225816.03,110000,385000
+2023,C012,Engenheiro de aprendizado de máquina aplicado,Nível executivo,1,225000.0,225000,225000
+2023,C034,Engenheiro de visão computacional,Nível sênior,15,224560.0,170000,351000
+2023,C051,Líder de dados,Nível executivo,4,220500.0,180000,250000
+2023,C001,Arquiteto de inteligência artificial,Nível executivo,1,215936.0,215936,215936
+2023,C091,Chefe de ciência de dados,Nível executivo,7,213281.0,129058,330000
+2023,C048,Engenheiro de infraestrutura de dados,Nível sênior,8,211649.38,143000,385000
+2023,C027,Engenheiro de inteligência de negócios,Nível executivo,2,209850.0,172200,247500
+2023,C090,Chefe de dados,Nível executivo,18,206588.89,92280,329500
+2023,C071,Gerente de ciência de dados,Nível executivo,2,206250.0,140100,272400
+2023,C085,Diretor de ciência de dados,Nível intermediário,2,204500.0,192000,217000
+2023,C127,Cientista de pesquisa,Nível executivo,2,202500.0,185000,220000
+2023,C068,Diretor de ciência de dados,Nível executivo,2,201000.0,190000,212000
+2023,C009,Engenheiro de análises,Nível executivo,6,200666.67,153000,250000
+2023,C109,Engenheiro de programas de aprendizado de máquina,Nível sênior,6,200500.0,90000,302000
+2023,C029,Especialista em inteligência de negócios,Nível sênior,2,199550.0,139200,259900
+2023,C101,Engenheiro de aprendizado de máquina,Nível sênior,357,194891.61,38868,392000
+2023,C014,Cientista aplicado,Nível sênior,59,194887.24,72000,350000
+2023,C126,Engenheiro de pesquisa,Nível sênior,71,193408.77,80000,385000
+2023,C066,Ciência de dados,Nível executivo,2,193000.0,168000,218000
+2023,C047,Engenheiro de dados,Nível executivo,66,192455.97,71908,465000
+2023,C074,Cientista de dados,Nível executivo,19,191113.79,78000,300000
+2023,C127,Cientista de pesquisa,Nível sênior,95,191046.91,90600,374000
+2023,C101,Engenheiro de aprendizado de máquina,Nível executivo,6,190950.0,145000,295500
+2023,C007,Cientista de inteligência artificial,Nível sênior,5,190743.6,64781,417937
+2023,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível intermediário,2,188760.0,171600,205920
+2023,C108,Cientista de aprendizado de máquina,Nível sênior,41,188229.02,105500,325000
+2023,C090,Chefe de dados,Nível sênior,3,186859.0,75577,258500
+2023,C058,Engenheiro de operações de dados,Nível sênior,8,184987.5,65000,289120
+2023,C070,Líder de ciência de dados,Nível sênior,10,182370.0,84700,272000
+2023,C099,Engenheiro de operações de aprendizado de máquina,Nível sênior,4,182000.0,139700,247300
+2023,C048,Engenheiro de infraestrutura de dados,Nível intermediário,4,180827.5,160000,190000
+2023,C127,Cientista de pesquisa,Nível intermediário,46,180724.67,70000,405000
+2023,C014,Cientista aplicado,Nível inicial,6,180420.0,110680,281700
+2023,C130,Analista de dados do corpo técnico,Nível intermediário,1,179998.0,179998,179998
+2023,C003,Engenheiro de inteligência artificial,Nível sênior,28,179952.71,38868,372000
+2023,C071,Gerente de ciência de dados,Nível sênior,34,177686.71,43779,328000
+2023,C074,Cientista de dados,Nível sênior,579,176041.1,38868,750000
+2023,C116,Engenheiro de processamento de linguagem natural,Nível executivo,2,175000.0,150000,200000
+2023,C061,Gerente de produto de dados,Nível intermediário,2,173500.0,161000,186000
+2023,C082,Cientista de decisões,Nível intermediário,2,173350.0,142200,204500
+2023,C104,Modelador de aprendizado de máquina,Nível sênior,2,173350.0,142200,204500
+2023,C051,Líder de dados,Nível sênior,8,171625.0,38000,350000
+2023,C009,Engenheiro de análises,Nível intermediário,28,170513.18,61520,700000
+2023,C066,Ciência de dados,Nível intermediário,10,169900.0,80000,280000
+2023,C042,Gerente de análise de dados,Nível sênior,8,167975.0,120000,254500
+2023,C102,Engenheiro de infraestrutura de aprendizado de máquina,Nível sênior,24,167952.46,75577,260000
+2023,C044,Arquiteto de dados,Nível executivo,2,167500.0,155000,180000
+2023,C124,Engenheiro de instruções para inteligência artificial,Nível sênior,4,166500.0,112000,230000
+2023,C069,Engenheiro de ciência de dados,Nível sênior,10,166415.0,100000,266450
+2023,C044,Arquiteto de dados,Nível sênior,112,165338.81,52500,376080
+2023,C107,Pesquisador de aprendizado de máquina,Nível intermediário,5,164620.0,100000,224400
+2023,C014,Cientista aplicado,Nível intermediário,13,164099.23,20000,260000
+2023,C009,Engenheiro de análises,Nível sênior,137,163773.64,50000,700000
+2023,C061,Gerente de produto de dados,Nível sênior,8,162062.5,120000,220000
+2023,C127,Cientista de pesquisa,Nível inicial,15,160589.33,47840,252990
+2023,C070,Líder de ciência de dados,Nível intermediário,10,159833.5,61520,244000
+2023,C047,Engenheiro de dados,Nível sênior,548,157908.91,37788,385000
+2023,C082,Cientista de decisões,Nível sênior,11,156917.82,123040,204500
+2023,C003,Engenheiro de inteligência artificial,Nível intermediário,14,156693.64,32811,369120
+2023,C034,Engenheiro de visão computacional,Nível inicial,2,155000.0,90000,220000
+2023,C101,Engenheiro de aprendizado de máquina,Nível intermediário,88,154304.14,36000,750000
+2023,C021,Arquiteto de grandes volumes de dados,Nível sênior,1,153799.0,153799,153799
+2023,C126,Engenheiro de pesquisa,Nível intermediário,18,151572.89,67672,300000
+2023,C071,Gerente de ciência de dados,Nível intermediário,9,149268.33,38915,270000
+2023,C027,Engenheiro de inteligência de negócios,Nível sênior,54,149212.41,49216,259000
+2023,C002,Desenvolvedor de inteligência artificial,Nível sênior,8,148742.0,53984,260000
+2023,C042,Gerente de análise de dados,Nível executivo,2,147500.0,140000,155000
+2023,C121,Cientista principal de dados,Nível sênior,3,147124.67,86374,195000
+2023,C098,Engenheiro de aprendizado de máquina,Nível intermediário,17,146500.0,25500,300000
+2023,C116,Engenheiro de processamento de linguagem natural,Nível sênior,10,146283.5,61541,275000
+2023,C055,Modelador de dados,Nível sênior,14,145478.57,90700,258700
+2023,C072,Profissional de ciência de dados,Nível sênior,6,144883.33,83900,198800
+2023,C066,Ciência de dados,Nível sênior,24,143003.13,59200,270250
+2023,C098,Engenheiro de aprendizado de máquina,Nível inicial,3,142000.0,76000,220000
+2023,C032,Engenheiro de banco de dados em nuvem,Nível sênior,3,141666.67,115000,170000
+2023,C078,Gerente de estratégia de dados,Nível sênior,4,138750.0,90000,250000
+2023,C031,Engenheiro de dados em nuvem,Nível inicial,2,138588.5,100000,177177
+2023,C002,Desenvolvedor de inteligência artificial,Nível intermediário,3,138294.33,74883,200000
+2023,C026,Desenvolvedor de inteligência de negócios,Nível executivo,2,137000.0,106500,167500
+2023,C107,Pesquisador de aprendizado de máquina,Nível sênior,7,136342.86,50000,212000
+2023,C042,Gerente de análise de dados,Nível intermediário,9,136023.89,38915,242100
+2023,C059,Gerente de operações de dados,Nível sênior,2,136000.0,129000,143000
+2023,C083,Engenheiro de aprendizado profundo,Nível inicial,2,135000.0,120000,150000
+2023,C017,Analista de inteligência de negócios,Nível intermediário,5,133680.0,86100,172300
+2023,C024,Analista de inteligência de negócios,Nível sênior,38,132595.13,40603,200000
+2023,C064,Engenheiro de qualidade de dados,Nível sênior,2,131500.0,121400,141600
+2023,C126,Engenheiro de pesquisa,Nível inicial,16,130162.5,32390,350000
+2023,C022,Engenheiro de grandes volumes de dados,Nível inicial,1,130000.0,130000,130000
+2023,C089,Analista de dados financeiros,Nível intermediário,1,130000.0,130000,130000
+2023,C129,Engenheiro de dados para programas,Nível sênior,2,130000.0,50000,210000
+2023,C103,Gerente de aprendizado de máquina,Nível sênior,1,129562.0,129562,129562
+2023,C044,Arquiteto de dados,Nível intermediário,13,128469.54,79976,240000
+2023,C049,Engenheiro de integração de dados,Nível sênior,4,127750.0,75000,161000
+2023,C028,Gerente de inteligência de negócios,Nível intermediário,6,126750.0,100000,166500
+2023,C067,Consultor de ciência de dados,Nível sênior,17,126741.24,29301,189750
+2023,C017,Analista de inteligência de negócios,Nível sênior,15,126621.4,18381,234485
+2023,C085,Diretor de ciência de dados,Nível sênior,1,125948.0,125948,125948
+2023,C083,Engenheiro de aprendizado profundo,Nível intermediário,2,125000.0,100000,150000
+2023,C084,Pesquisador de aprendizado profundo,Nível sênior,1,124163.0,124163,124163
+2023,C047,Engenheiro de dados,Nível intermediário,226,124160.07,27000,750000
+2023,C037,Analista de dados,Nível sênior,351,124047.67,15809,385000
+2023,C080,Engenheiro de visualização de dados,Nível sênior,4,122975.0,83900,170200
+2023,C074,Cientista de dados,Nível intermediário,174,122699.74,17025,310000
+2023,C051,Líder de dados,Nível intermediário,2,122500.0,115000,130000
+2023,C081,Especialista em visualização de dados,Nível sênior,4,122275.0,50000,185000
+2023,C081,Especialista em visualização de dados,Nível intermediário,4,121850.0,73100,166000
+2023,C069,Engenheiro de ciência de dados,Nível intermediário,2,121500.0,113000,130000
+2023,C054,Gerente de dados,Nível sênior,31,120807.03,48000,233500
+2023,C004,Gerente de produto de inteligência artificial,Nível sênior,1,120000.0,120000,120000
+2023,C005,Programador de inteligência artificial,Nível sênior,1,120000.0,120000,120000
+2023,C015,Técnico de veículos autônomos,Nível intermediário,1,120000.0,120000,120000
+2023,C079,Analista de visualização de dados,Nível sênior,2,120000.0,110000,130000
+2023,C105,Engenheiro de operações de aprendizado de máquina,Nível sênior,3,120000.0,60000,160000
+2023,C036,Consultor de engenharia de dados,Nível sênior,1,118539.0,118539,118539
+2023,C054,Gerente de dados,Nível inicial,2,117700.0,85600,149800
+2023,C125,Analista de pesquisa,Nível sênior,22,117688.14,45150,230000
+2023,C053,Especialista em gestão de dados,Nível sênior,4,116523.25,93593,139500
+2023,C077,Estrategista de dados,Nível sênior,11,116473.64,70374,242000
+2023,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,8,116093.75,53300,182850
+2023,C006,Engenheiro de pesquisa em inteligência artificial,Nível intermediário,2,115603.0,81206,150000
+2023,C046,Desenvolvedor de dados,Nível sênior,2,115100.0,85500,144700
+2023,C097,Engenheiro líder de aprendizado de máquina,Nível sênior,1,115000.0,115000,115000
+2023,C020,Desenvolvedor de inteligência de negócios,Nível sênior,15,114570.93,62442,197000
+2023,C057,Analista de operações de dados,Nível sênior,4,114250.0,77000,154000
+2023,C037,Analista de dados,Nível executivo,12,113125.0,55000,180000
+2023,C002,Desenvolvedor de inteligência artificial,Nível inicial,6,110119.5,50000,215936
+2023,C024,Analista de inteligência de negócios,Nível intermediário,23,109581.91,48450,189000
+2023,C026,Desenvolvedor de inteligência de negócios,Nível sênior,12,108702.92,66825,169000
+2023,C101,Engenheiro de aprendizado de máquina,Nível inicial,9,108373.44,36000,163196
+2023,C023,Analista de dados de negócios,Nível sênior,4,107994.0,78000,180000
+2023,C055,Modelador de dados,Nível intermediário,6,105867.33,55368,166000
+2023,C109,Engenheiro de programas de aprendizado de máquina,Nível intermediário,4,105351.0,24322,217600
+2023,C099,Engenheiro de operações de aprendizado de máquina,Nível intermediário,5,104933.6,27568,166000
+2023,C054,Gerente de dados,Nível intermediário,19,104394.53,63000,167000
+2023,C069,Engenheiro de ciência de dados,Nível inicial,1,104024.0,104024,104024
+2023,C027,Engenheiro de inteligência de negócios,Nível intermediário,11,102984.73,42030,185000
+2023,C050,Especialista em integração de dados,Nível inicial,7,102807.14,46400,240000
+2023,C034,Engenheiro de visão computacional,Nível intermediário,2,101508.0,92280,110736
+2023,C063,Analista de qualidade de dados,Nível sênior,8,100772.5,64980,172000
+2023,C020,Desenvolvedor de inteligência de negócios,Nível inicial,4,100650.0,57000,160000
+2023,C012,Engenheiro de aprendizado de máquina aplicado,Nível intermediário,2,100089.5,70179,130000
+2023,C016,Engenheiro de dados em Azure,Nível sênior,1,100000.0,100000,100000
+2023,C041,Líder de análise de dados,Nível sênior,2,99960.0,84000,115920
+2023,C122,Engenheiro principal de aprendizado de máquina,Nível sênior,2,99145.0,38290,160000
+2023,C025,Analista de dados de inteligência de negócios,Nível inicial,1,99000.0,99000,99000
+2023,C046,Desenvolvedor de dados,Nível intermediário,6,97871.5,69139,130000
+2023,C099,Engenheiro de operações de aprendizado de máquina,Nível inicial,2,95650.0,58300,133000
+2023,C037,Analista de dados,Nível intermediário,171,95624.91,15680,369120
+2023,C076,Especialista em dados,Nível sênior,10,95210.0,60000,173100
+2023,C020,Desenvolvedor de inteligência de negócios,Nível intermediário,11,95190.55,49216,154800
+2023,C045,Engenheiro de desenvolvimento e operações de dados,Nível intermediário,1,95012.0,95012,95012
+2023,C043,Especialista em análise de dados,Nível sênior,2,95000.0,85000,105000
+2023,C074,Cientista de dados,Nível inicial,55,92896.53,16000,190000
+2023,C120,Engenheiro principal de dados,Nível sênior,1,91773.0,91773,91773
+2023,C081,Especialista em visualização de dados,Nível inicial,2,91050.0,82800,99300
+2023,C013,Cientista de aprendizado de máquina aplicado,Nível sênior,1,90000.0,90000,90000
+2023,C115,Cientista de dados de comercialização,Nível sênior,1,90000.0,90000,90000
+2023,C076,Especialista em dados,Nível intermediário,19,89926.32,48000,186000
+2023,C054,Gerente de dados,Nível executivo,6,89500.0,70000,140000
+2023,C125,Analista de pesquisa,Nível intermediário,7,88857.14,57000,142000
+2023,C029,Especialista em inteligência de negócios,Nível intermediário,2,88756.0,68274,109238
+2023,C009,Engenheiro de análises,Nível inicial,6,88370.5,37573,156450
+2023,C047,Engenheiro de dados,Nível inicial,34,85717.82,17025,220000
+2023,C077,Estrategista de dados,Nível intermediário,4,84750.0,65000,115500
+2023,C026,Desenvolvedor de inteligência de negócios,Nível intermediário,4,84032.0,30760,140000
+2023,C123,Analista de dados de produto,Nível inicial,1,83200.0,83200,83200
+2023,C056,Modelador de dados,Nível intermediário,2,83052.0,55368,110736
+2023,C106,Engenheiro de pesquisa em aprendizado de máquina,Nível intermediário,2,81912.0,73824,90000
+2023,C041,Líder de análise de dados,Nível intermediário,3,81711.67,17511,123040
+2023,C062,Responsável pelo produto de dados,Nível intermediário,4,80115.5,55926,104584
+2023,C037,Analista de dados,Nível inicial,104,78751.66,18160,203000
+2023,C024,Analista de inteligência de negócios,Nível inicial,12,76763.25,43064,132567
+2023,C129,Engenheiro de dados para programas,Nível intermediário,1,74883.0,74883,74883
+2023,C007,Cientista de inteligência artificial,Nível intermediário,4,73676.5,38868,120000
+2023,C125,Analista de pesquisa,Nível inicial,23,73432.17,43064,179000
+2023,C063,Analista de qualidade de dados,Nível intermediário,4,72500.0,60000,95000
+2023,C018,Analista de dados de inteligência de negócios,Nível sênior,1,72338.0,72338,72338
+2023,C087,"Engenheiro de extração, transformação e carga",Nível intermediário,2,72286.0,58444,86128
+2023,C052,Analista de gestão de dados,Nível inicial,4,70500.0,50000,120000
+2023,C018,Analista de dados de inteligência de negócios,Nível intermediário,1,70000.0,70000,70000
+2023,C025,Analista de dados de inteligência de negócios,Nível intermediário,1,67419.0,67419,67419
+2023,C067,Consultor de ciência de dados,Nível intermediário,6,67134.67,21000,100000
+2023,C011,Cientista de dados aplicados,Nível sênior,2,66208.0,64781,67635
+2023,C117,Desenvolvedor em Power BI,Nível intermediário,1,64781.0,64781,64781
+2023,C005,Programador de inteligência artificial,Nível inicial,4,61073.5,40000,74087
+2023,C091,Chefe de ciência de dados,Nível intermediário,1,60805.0,60805,60805
+2023,C019,Engenheiro de dados de inteligência de negócios,Nível inicial,1,60000.0,60000,60000
+2023,C065,Gerente de qualidade de dados,Nível intermediário,2,59059.0,49216,68902
+2023,C060,Especialista em operações de dados,Nível intermediário,2,57500.0,50000,65000
+2023,C123,Analista de dados de produto,Nível sênior,1,57000.0,57000,57000
+2023,C089,Analista de dados financeiros,Nível inicial,1,56500.0,56500,56500
+2023,C018,Analista de dados de inteligência de negócios,Nível inicial,4,55000.0,25000,85000
+2023,C110,Especialista em aprendizado de máquina,Nível intermediário,2,55000.0,40000,70000
+2023,C057,Analista de operações de dados,Nível intermediário,2,54870.0,44640,65100
+2023,C035,Engenheiro de programas de visão computacional,Nível sênior,1,53984.0,53984,53984
+2023,C045,Engenheiro de desenvolvimento e operações de dados,Nível sênior,1,53984.0,53984,53984
+2023,C060,Especialista em operações de dados,Nível sênior,2,53210.0,50700,55720
+2023,C011,Cientista de dados aplicados,Nível intermediário,2,50336.5,20673,80000
+2023,C022,Engenheiro de grandes volumes de dados,Nível intermediário,1,48585.0,48585,48585
+2023,C023,Analista de dados de negócios,Nível intermediário,4,48250.0,17000,105000
+2023,C093,Analista de descobertas analíticas,Nível intermediário,6,46339.83,30760,55368
+2023,C013,Cientista de aprendizado de máquina aplicado,Nível inicial,2,45915.5,43187,48644
+2023,C033,Analista de dados de conformidade,Nível inicial,2,45000.0,30000,60000
+2023,C094,Analista líder de dados,Nível intermediário,2,43120.5,18241,68000
+2023,C063,Analista de qualidade de dados,Nível inicial,2,43064.0,36912,49216
+2023,C088,Analista de dados de finanças,Nível inicial,1,40000.0,40000,40000
+2023,C050,Especialista em integração de dados,Nível sênior,1,36483.0,36483,36483
+2023,C096,Cientista líder de dados,Nível sênior,1,36000.0,36000,36000
+2023,C116,Engenheiro de processamento de linguagem natural,Nível intermediário,1,32834.0,32834,32834
+2023,C011,Cientista de dados aplicados,Nível inicial,1,29691.0,29691,29691
+2023,C003,Engenheiro de inteligência artificial,Nível inicial,2,28296.5,21593,35000
+2023,C006,Engenheiro de pesquisa em inteligência artificial,Nível inicial,2,24631.0,24322,24940
+2023,C064,Engenheiro de qualidade de dados,Nível inicial,1,23753.0,23753,23753
+2023,C023,Analista de dados de negócios,Nível inicial,1,21593.0,21593,21593
+2023,C007,Cientista de inteligência artificial,Nível inicial,1,20000.0,20000,20000
+2023,C038,Líder de analistas de dados,Nível inicial,1,18000.0,18000,18000
+2023,C123,Analista de dados de produto,Nível intermediário,1,16417.0,16417,16417
+2024,C108,Cientista de aprendizado de máquina,Nível intermediário,2,450000.0,150000,750000
+2024,C112,Diretor executivo de ciência de dados,Nível executivo,1,260000.0,260000,260000
+2024,C014,Cientista aplicado,Nível sênior,6,237125.17,136000,414000
+2024,C001,Arquiteto de inteligência artificial,Nível sênior,4,229662.5,137000,317000
+2024,C126,Engenheiro de pesquisa,Nível sênior,11,228250.91,62000,450000
+2024,C126,Engenheiro de pesquisa,Nível intermediário,12,227572.17,70230,720000
+2024,C098,Engenheiro de aprendizado de máquina,Nível sênior,6,222600.0,93300,357900
+2024,C071,Gerente de ciência de dados,Nível intermediário,2,219225.0,201450,237000
+2024,C074,Cientista de dados,Nível executivo,2,214000.0,181900,246100
+2024,C061,Gerente de produto de dados,Nível sênior,2,213150.0,199100,227200
+2024,C127,Cientista de pesquisa,Nível intermediário,6,211250.0,75000,720000
+2024,C101,Engenheiro de aprendizado de máquina,Nível sênior,53,210969.51,93300,418000
+2024,C034,Engenheiro de visão computacional,Nível sênior,2,210000.0,185000,235000
+2024,C127,Cientista de pesquisa,Nível sênior,15,206526.67,86000,440000
+2024,C085,Diretor de ciência de dados,Nível executivo,2,202500.0,180000,225000
+2024,C108,Cientista de aprendizado de máquina,Nível sênior,4,199375.0,153000,252000
+2024,C066,Ciência de dados,Nível executivo,4,196804.0,97254,323700
+2024,C069,Engenheiro de ciência de dados,Nível intermediário,2,190000.0,135000,245000
+2024,C047,Engenheiro de dados,Nível executivo,6,181108.33,112000,225000
+2024,C014,Cientista aplicado,Nível intermediário,2,179100.0,136000,222200
+2024,C125,Analista de pesquisa,Nível sênior,2,175000.0,150000,200000
+2024,C047,Engenheiro de dados,Nível sênior,54,168680.0,86000,385000
+2024,C044,Arquiteto de dados,Nível sênior,16,167275.0,67200,381500
+2024,C066,Ciência de dados,Nível sênior,12,163805.42,68195,261050
+2024,C024,Analista de inteligência de negócios,Nível intermediário,2,163650.0,126900,200400
+2024,C051,Líder de dados,Nível sênior,2,160000.0,140000,180000
+2024,C074,Cientista de dados,Nível sênior,50,155829.38,66666,324000
+2024,C009,Engenheiro de análises,Nível sênior,14,155168.07,104220,234200
+2024,C046,Desenvolvedor de dados,Nível sênior,2,155000.0,130000,180000
+2024,C026,Desenvolvedor de inteligência de negócios,Nível executivo,2,147500.0,117500,177500
+2024,C066,Ciência de dados,Nível intermediário,2,142750.0,106500,179000
+2024,C099,Engenheiro de operações de aprendizado de máquina,Nível sênior,2,142500.0,110000,175000
+2024,C125,Analista de pesquisa,Nível inicial,6,137500.0,90000,250000
+2024,C074,Cientista de dados,Nível intermediário,54,136465.28,54552,385000
+2024,C101,Engenheiro de aprendizado de máquina,Nível intermediário,12,135386.92,73100,223000
+2024,C027,Engenheiro de inteligência de negócios,Nível sênior,2,132300.0,79600,185000
+2024,C003,Engenheiro de inteligência artificial,Nível sênior,2,131250.0,112500,150000
+2024,C037,Analista de dados,Nível sênior,31,129354.1,62300,220000
+2024,C003,Engenheiro de inteligência artificial,Nível intermediário,2,127050.0,83900,170200
+2024,C072,Profissional de ciência de dados,Nível intermediário,2,127050.0,83900,170200
+2024,C081,Especialista em visualização de dados,Nível intermediário,2,127050.0,83900,170200
+2024,C055,Modelador de dados,Nível sênior,4,125850.0,92190,171210
+2024,C047,Engenheiro de dados,Nível intermediário,44,125216.36,30000,308000
+2024,C026,Desenvolvedor de inteligência de negócios,Nível sênior,2,124483.0,104828,144138
+2024,C071,Gerente de ciência de dados,Nível sênior,2,105000.0,90000,120000
+2024,C024,Analista de inteligência de negócios,Nível sênior,4,103525.0,72600,132000
+2024,C020,Desenvolvedor de inteligência de negócios,Nível intermediário,4,103300.0,62100,154800
+2024,C067,Consultor de ciência de dados,Nível sênior,4,101250.0,80000,112000
+2024,C046,Desenvolvedor de dados,Nível intermediário,2,97500.0,95000,100000
+2024,C009,Engenheiro de análises,Nível intermediário,6,96191.67,72240,134160
+2024,C037,Analista de dados,Nível inicial,31,94016.35,41419,195500
+2024,C026,Desenvolvedor de inteligência de negócios,Nível intermediário,6,87416.67,70650,117750
+2024,C042,Gerente de análise de dados,Nível intermediário,2,84500.0,70000,99000
+2024,C037,Analista de dados,Nível intermediário,16,84307.88,42400,158000
+2024,C020,Desenvolvedor de inteligência de negócios,Nível sênior,4,83750.0,70000,95000
+2024,C101,Engenheiro de aprendizado de máquina,Nível inicial,2,80500.0,70000,91000
+2024,C086,"Desenvolvedor de extração, transformação e carga",Nível sênior,2,76400.0,53300,99500
+2024,C024,Analista de inteligência de negócios,Nível inicial,3,73750.0,56250,95000
+2024,C076,Especialista em dados,Nível intermediário,8,72323.5,51000,111000
+2024,C063,Analista de qualidade de dados,Nível inicial,2,71750.0,58500,85000
+2024,C046,Desenvolvedor de dados,Nível inicial,2,60000.0,50000,70000
+2024,C047,Engenheiro de dados,Nível inicial,2,43750.0,37500,50000
+2024,C066,Ciência de dados,Nível inicial,2,21333.0,16666,26000

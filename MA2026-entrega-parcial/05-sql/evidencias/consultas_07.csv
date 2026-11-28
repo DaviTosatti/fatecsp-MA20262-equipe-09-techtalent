@@ -1,0 +1,13 @@
+﻿cod_orgao,orgao,ano_mes,posicoes_anunciadas,meta_planejada,diferenca,pct_da_meta
+SIM-E01,Empresa Fictícia Alfa,2026-01,0,2,-2,0.0
+SIM-E02,Empresa Fictícia Beta,2026-01,0,1,-1,0.0
+SIM-E01,Empresa Fictícia Alfa,2026-02,0,3,-3,0.0
+SIM-E02,Empresa Fictícia Beta,2026-02,0,2,-2,0.0
+SIM-E01,Empresa Fictícia Alfa,2026-03,5,4,1,125.0
+SIM-E02,Empresa Fictícia Beta,2026-03,2,3,-1,66.67
+SIM-E01,Empresa Fictícia Alfa,2026-04,0,3,-3,0.0
+SIM-E02,Empresa Fictícia Beta,2026-04,0,2,-2,0.0
+SIM-E01,Empresa Fictícia Alfa,2026-05,0,2,-2,0.0
+SIM-E02,Empresa Fictícia Beta,2026-05,0,3,-3,0.0
+SIM-E01,Empresa Fictícia Alfa,2026-06,0,4,-4,0.0
+SIM-E02,Empresa Fictícia Beta,2026-06,0,2,-2,0.0

@@ -1,0 +1,10 @@
+erDiagram
+    TB_DIM_CARGO ||--o{ TB_FATO_VAGAS : cargo
+    TB_DIM_ORGAO ||--o{ TB_FATO_VAGAS : orgao
+    TB_DIM_CALENDARIO ||--o{ TB_FATO_VAGAS : data_publicacao
+    TB_DIM_ORGAO ||--o{ TB_FATO_METAS : orgao
+    TB_DIM_CALENDARIO ||--o{ TB_FATO_METAS : mes_inicio
+    TB_DIM_CARGO_SALARIOS ||--o{ TB_FATO_SALARIOS : cargo_salarial
+    TB_DIM_ANO ||--o{ TB_FATO_SALARIOS : ano
+    TB_PAIS ||--o{ TB_FATO_SALARIOS : pais_empresa
+    TB_PAIS ||--o{ TB_FATO_SALARIOS : pais_residencia
