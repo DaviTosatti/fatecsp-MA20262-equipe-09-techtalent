@@ -6,13 +6,22 @@ Projeto da equipe 09 de Microinformática Aplicada — Fatec São Paulo, 2026/2.
 
 **Pergunta:** quais são os cargos, habilidades e faixas salariais mais demandados?
 
-## Etapas
+**Pergunta central da N2:** Quais cargos e habilidades técnicas aparecem com mais frequência nos anúncios de tecnologia da Prefeitura de Nova York em 2026, e como os salários históricos de ciência de dados variam por cargo, senioridade e modalidade de trabalho entre 2020 e 2024?
+
+As duas análises usam bases independentes. A frequência de uma habilidade nos anúncios não permite estimar quanto ela paga.
+
+## Etapas da N1
 
 | Etapa | Arquivos |
 | --- | --- |
 | 1. Excel Avançado | [Planilha](MA2026-entrega-parcial/01-excel/TechTalent_01_Excel.xlsx) e [roteiro](MA2026-entrega-parcial/04-documentacao/roteiro-fase-um.md) |
 | 2. Power Query | [Planilha](MA2026-entrega-parcial/02-powerquery/TechTalent_02_PowerQuery.xlsx) e [instruções](MA2026-entrega-parcial/02-powerquery/README.md) |
 | 3. Power Pivot e DAX | [Planilha](MA2026-entrega-parcial/03-powerpivot/TechTalent_03_PowerPivot.xlsx) e [instruções](MA2026-entrega-parcial/03-powerpivot/README.md) |
+
+## Entregas da N2
+
+- [Banco de Dados e SQL](MA2026-entrega-parcial/05-sql/README.md), com [evidências de execução](MA2026-entrega-parcial/05-sql/evidencias/README.md).
+- [Dashboard Power BI e instruções](MA2026-entrega-final/04-powerbi-dashboard/README.md), com [prévia em PDF](MA2026-entrega-final/04-powerbi-dashboard/TechTalent_Dashboard.pdf).
 
 ## Bases utilizadas
 
